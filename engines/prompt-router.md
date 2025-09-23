@@ -1,6 +1,6 @@
 # PROMPT ROUTER
 
-Automatically compose AI developer profiles based on user requests by selecting appropriate roles, enhancements, and operations.
+Automatically compose AI developer profiles based on user requests by selecting appropriate roles, overlays, and goals.
 
 ## ROUTER LOGIC
 
@@ -23,38 +23,40 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Quality**: "test", "testing", "quality", "reliability", "bug-free"
 - **User Focus**: "UX", "user", "accessibility", "usability", "experience"
 - **Urgent**: "critical", "urgent", "production", "down", "emergency"
+- **Investigation**: "outage", "incident", "root cause", "intermittent", "production issue"
 
 ### 2. Select Profile Components
 
 **Role Foundation (Pick One):**
 ```
-IF domain = Frontend → roles/frontend-developer.md
-IF domain = Backend → roles/backend-developer.md  
-IF domain = Architecture → roles/architect.md
-IF domain = Mixed/Unclear → roles/frontend-developer.md (default)
+IF domain = Frontend → foundations/roles/frontend-developer.md
+IF domain = Backend → foundations/roles/backend-developer.md  
+IF domain = Architecture → foundations/roles/architect.md
+IF domain = Mixed/Unclear → foundations/roles/frontend-developer.md (default)
 ```
 
-**Operation (Pick One):**
+**Goal (Pick One):**
 ```
-IF intent = BUILD → operations/feature-request.md
-IF intent = FIX → operations/bug-investigation.md
-IF intent = IMPROVE → operations/code-review.md
-IF intent = LEARN → operations/retrospective.md
+IF intent = BUILD → goals/feature-request.md
+IF intent = FIX → goals/bug-investigation.md
+IF intent = IMPROVE → goals/code-review.md
+IF intent = LEARN → goals/retrospective.md
 ```
 
-**Enhancements (Pick 1-3):**
+**Overlays (Pick 1-3):**
 ```
-IF context = Security → security-specialist.md
-IF context = Performance → performance-optimizer.md
-IF context = Quality → quality-advocate.md
-IF context = User Focus → user-advocate.md
-IF context = Urgent → concise-communicator.md
+IF context = Security → overlays/security-specialist.md
+IF context = Performance → overlays/performance-optimizer.md
+IF context = Quality → overlays/quality-advocate.md
+IF context = User Focus → overlays/user-advocate.md
+IF context = Urgent → overlays/concise-communicator.md
+IF context = Investigation → overlays/root-cause-analyzer.md
 
 Always consider:
-- critical-thinker.md (for complex or risky work)
-- pragmatic-implementer.md (for quick delivery needs)
-- strategic-thinker.md (for business-critical decisions)
-- relentless-problem-solver.md (for deep technical problems)
+- overlays/critical-thinker.md (for complex or risky work)
+- overlays/pragmatic-implementer.md (for quick delivery needs)
+- overlays/strategic-thinker.md (for business-critical decisions)
+- overlays/relentless-problem-solver.md (for deep technical problems)
 ```
 
 ### 3. Compose Profile
@@ -63,11 +65,11 @@ Always consider:
 ```markdown
 🎯 MISSION: [User's specific request]
 
-[foundation/core-doctrine.md content]
-[foundation/roles/[selected-role].md content]
-[enhancements/[selected-enhancement-1].md content]
-[enhancements/[selected-enhancement-2].md content]
-[operations/[selected-operation].md content]
+[foundations/core-doctrine.md content]
+[foundations/roles/[selected-role].md content]
+[overlays/[selected-overlay-1].md content]
+[overlays/[selected-overlay-2].md content]
+[goals/[selected-goal].md content]
 ```
 
 ## EXAMPLE COMPOSITIONS
@@ -82,11 +84,11 @@ Always consider:
 
 **Generated Profile**:
 ```
-foundation/core-doctrine.md +
-foundation/roles/frontend-developer.md +
-enhancements/user-advocate.md +
-enhancements/quality-advocate.md +
-operations/feature-request.md
+foundations/core-doctrine.md +
+foundations/roles/frontend-developer.md +
+overlays/user-advocate.md +
+overlays/quality-advocate.md +
+goals/feature-request.md
 ```
 
 ### Security Bug Fix
@@ -99,12 +101,12 @@ operations/feature-request.md
 
 **Generated Profile**:
 ```
-foundation/core-doctrine.md +
-foundation/roles/backend-developer.md +
-enhancements/security-specialist.md +
-enhancements/critical-thinker.md +
-enhancements/concise-communicator.md +
-operations/bug-investigation.md
+foundations/core-doctrine.md +
+foundations/roles/backend-developer.md +
+overlays/security-specialist.md +
+overlays/critical-thinker.md +
+overlays/concise-communicator.md +
+goals/bug-investigation.md
 ```
 
 ### Architecture Review
@@ -117,12 +119,29 @@ operations/bug-investigation.md
 
 **Generated Profile**:
 ```
-foundation/core-doctrine.md +
-foundation/roles/architect.md +
-enhancements/system-designer.md +
-enhancements/performance-optimizer.md +
-enhancements/strategic-thinker.md +
-operations/code-review.md
+foundations/core-doctrine.md +
+foundations/roles/architect.md +
+overlays/system-designer.md +
+overlays/performance-optimizer.md +
+overlays/strategic-thinker.md +
+goals/code-review.md
+```
+
+### Production Incident Investigation
+**User**: "Payment system is intermittently failing - users report transactions timing out but charges still go through"
+
+**Router Analysis**:
+- Intent: FIX (failing, investigation needed)
+- Domain: Backend (payment system)
+- Context: Investigation (intermittent, production issue)
+
+**Generated Profile**:
+```
+foundations/core-doctrine.md +
+foundations/roles/backend-developer.md +
+overlays/root-cause-analyzer.md +
+overlays/critical-thinker.md +
+goals/bug-investigation.md
 ```
 
 ## USAGE

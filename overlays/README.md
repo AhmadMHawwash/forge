@@ -63,6 +63,11 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Impact**: Finds root causes, delivers thorough solutions  
 **Best with**: Critical bugs, performance issues, architecture problems
 
+### 🔍 `root-cause-analyzer.md`
+**Focus**: Deep investigative analysis, systematic root cause identification  
+**Impact**: Finds true causes through layered investigation, prevents recurring issues  
+**Best with**: Complex failures, production incidents, systemic problems
+
 ## 🏗️ System Design
 
 ### 🏛️ `system-designer.md`
@@ -81,6 +86,8 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Technical Leadership**: `strategic-thinker` + `honest-thought-challenger` + `concise-communicator`
 
 **Deep Problem Solving**: `relentless-problem-solver` + `critical-thinker` + `quality-advocate`
+
+**Root Cause Investigation**: `root-cause-analyzer` + `critical-thinker` + `concise-communicator`
 
 ## 📋 Selection Guide
 

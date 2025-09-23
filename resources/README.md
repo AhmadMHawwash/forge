@@ -1,6 +1,6 @@
-# CONTEXT
+# RESOURCES
 
-Context components add technology-specific and domain-specific knowledge to AI developer profiles. They provide specialized constraints, priorities, and approaches based on your technical stack and business domain.
+Resource components add technology-specific and domain-specific knowledge to AI developer profiles. They provide specialized constraints, priorities, and approaches based on your technical stack and business domain.
 
 ## 📁 Structure
 
@@ -17,21 +17,21 @@ Context components add technology-specific and domain-specific knowledge to AI d
 
 ## 🎯 Usage in Profiles
 
-Context components enhance profiles with specialized knowledge:
+Resource components enhance profiles with specialized knowledge:
 
 ```
-Complete Profile = Foundation + Enhancements + Context + Operation
+Complete Profile = Foundation + Overlays + Resources + Goal
 
 Example:
-foundation/roles/frontend-developer.md +
-enhancements/user-advocate.md +
-enhancements/performance-optimizer.md +
-context/stacks/react-node.md +
-context/domains/e-commerce.md +
-operations/feature-request.md
+foundations/roles/frontend-developer.md +
+overlays/user-advocate.md +
+overlays/performance-optimizer.md +
+resources/stacks/react-node.md +
+resources/domains/e-commerce.md +
+goals/feature-request.md
 ```
 
-## 🎛️ Context Selection Guide
+## 🎛️ Resource Selection Guide
 
 ### Choose Stack Based On:
 - **Primary technology** you're working with
@@ -45,7 +45,7 @@ operations/feature-request.md
 - **Technical challenges** specific to the industry
 - **Performance and reliability** requirements
 
-## 📋 Context Examples
+## 📋 Resource Examples
 
 ### E-commerce Frontend
 ```
@@ -61,14 +61,14 @@ domains/e-commerce.md
 ```
 **Result**: Robust backend services with e-commerce business logic focus
 
-## 🔄 Extending Context
+## 🔄 Extending Resources
 
-**When to add new context files:**
+**When to add new resource files:**
 - New technology stacks become primary in your work
 - Different business domains require specialized knowledge
 - Specific technical patterns need dedicated guidance
 
-**Context file guidelines:**
+**Resource file guidelines:**
 - Focus on constraints, priorities, and decision-making frameworks
 - Include domain-specific technical patterns and challenges
 - Provide business context that affects technical decisions

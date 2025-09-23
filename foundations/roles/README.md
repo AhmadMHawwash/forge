@@ -21,10 +21,10 @@ Role foundations define the core identity, behaviors, and instincts of different
 
 ## Usage in Profiles
 
-Role foundations are combined with enhancements and operations to create complete development profiles:
+Role foundations are combined with overlays and goals to create complete development profiles:
 
 ```
-Profile = Role Foundation + Enhancements + Operation
+Profile = Role Foundation + Overlays + Goal
 Example: Frontend Developer + [User Advocate, Performance Optimizer] + Feature Development
 ```
 

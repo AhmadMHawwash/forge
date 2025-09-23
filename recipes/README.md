@@ -28,6 +28,7 @@ Pre-configured profile combinations for common development scenarios. Each recip
 
 ### 🔧 **Problem Solving**
 - `bug-hunter.md` - Investigating and fixing complex issues  
+- `incident-investigator.md` - Production outages and systematic root cause analysis
 - `performance-optimizer.md` - Deep performance analysis and optimization
 - `legacy-modernizer.md` - Modernizing legacy systems
 

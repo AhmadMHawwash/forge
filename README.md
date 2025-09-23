@@ -27,7 +27,7 @@ Architect + Strategic Thinker + Multi-Angle Analyzer + System Design
 - 🧠 **Thinking**: Critical Thinker, Strategic Thinker, Multi-Angle Analyzer
 - 🎯 **Quality**: Quality Advocate, Performance Optimizer, Security Specialist  
 - 🎨 **Communication**: User Advocate, Concise Communicator, Pragmatic Implementer
-- 🎯 **Problem Solving**: Relentless Problem Solver
+- 🎯 **Problem Solving**: Relentless Problem Solver, Root Cause Analyzer
 - 🏗️ **System Design**: System Designer
 
 ### 🌍 Resources
@@ -122,6 +122,15 @@ goals/bug-investigation.md
 ```
 foundations/roles/[relevant].md +
 overlays/relentless-problem-solver.md +
+overlays/critical-thinker.md +
+goals/bug-investigation.md
+```
+
+### 🔍 **Incident Investigator**
+**Best for**: Production outages, systematic failure analysis
+```
+foundations/roles/[relevant].md +
+overlays/root-cause-analyzer.md +
 overlays/critical-thinker.md +
 goals/bug-investigation.md
 ```
