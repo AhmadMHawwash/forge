@@ -24,6 +24,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **User Focus**: "UX", "user", "accessibility", "usability", "experience"
 - **Urgent**: "critical", "urgent", "production", "down", "emergency"
 - **Investigation**: "outage", "incident", "root cause", "intermittent", "production issue"
+- **Clean Code**: "refactor", "readable", "maintainable", "clean", "technical debt", "legacy"
 
 ### 2. Select Profile Components
 
@@ -51,12 +52,14 @@ IF context = Quality → overlays/quality-advocate.md
 IF context = User Focus → overlays/user-advocate.md
 IF context = Urgent → overlays/concise-communicator.md
 IF context = Investigation → overlays/root-cause-analyzer.md
+IF context = Clean Code → overlays/clean-coder.md
 
 Always consider:
 - overlays/critical-thinker.md (for complex or risky work)
 - overlays/pragmatic-implementer.md (for quick delivery needs)
 - overlays/strategic-thinker.md (for business-critical decisions)
 - overlays/relentless-problem-solver.md (for deep technical problems)
+- overlays/clean-coder.md (for maintainable, readable code)
 ```
 
 ### 3. Present Selection for Confirmation
