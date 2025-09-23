@@ -23,8 +23,9 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Quality**: "test", "testing", "quality", "reliability", "bug-free"
 - **User Focus**: "UX", "user", "accessibility", "usability", "experience"
 - **Urgent**: "critical", "urgent", "production", "down", "emergency"
-- **Investigation**: "outage", "incident", "root cause", "intermittent", "production issue"
+- **Investigation**: "outage", "incident", "root cause", "intermittent", "production issue", "deep analysis", "relentless"
 - **Clean Code**: "refactor", "readable", "maintainable", "clean", "technical debt", "legacy"
+- **Analysis**: "reconsider", "alternative", "different approach", "step back", "challenge", "assumptions", "think critically"
 
 ### 2. Select Profile Components
 
@@ -51,14 +52,15 @@ IF context = Performance → overlays/performance-optimizer.md
 IF context = Quality → overlays/quality-advocate.md
 IF context = User Focus → overlays/user-advocate.md
 IF context = Urgent → overlays/concise-communicator.md
-IF context = Investigation → overlays/root-cause-analyzer.md
+IF context = Investigation → overlays/deep-investigator.md
 IF context = Clean Code → overlays/clean-coder.md
+IF context = Analysis → overlays/analytical-thinker.md
 
 Always consider:
-- overlays/critical-thinker.md (for complex or risky work)
+- overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
 - overlays/pragmatic-implementer.md (for quick delivery needs)
 - overlays/strategic-thinker.md (for business-critical decisions)
-- overlays/relentless-problem-solver.md (for deep technical problems)
+- overlays/deep-investigator.md (for deep technical problems and investigations)
 - overlays/clean-coder.md (for maintainable, readable code)
 ```
 
