@@ -63,30 +63,20 @@ Always consider:
 
 Before composing the profile, present the selected files to the user for confirmation:
 
-**Selection Summary Template:**
+**Simplified Selection Template:**
 ```markdown
-📋 PROFILE SELECTION
-
-Based on your request: "[User's specific request]"
-
-🔍 ANALYSIS:
-- Intent: [BUILD/FIX/IMPROVE/LEARN]
-- Domain: [Frontend/Backend/Architecture]
-- Context: [Security/Performance/Quality/etc.]
-
 📁 SELECTED FILES:
-✅ Foundation: foundations/core-doctrine.md (always included)
-✅ Role: foundations/roles/[selected-role].md
-✅ Goal: goals/[selected-goal].md
-✅ Overlays:
-  - overlays/[selected-overlay-1].md
-  - overlays/[selected-overlay-2].md
-  - overlays/[selected-overlay-3].md (if applicable)
+- foundations/core-doctrine.md
+- foundations/roles/[selected-role].md
+- goals/[selected-goal].md
+- overlays/[selected-overlay-1].md
+- overlays/[selected-overlay-2].md
+- overlays/[selected-overlay-3].md (if applicable)
 
-⚠️  CONFIRMATION REQUIRED:
-Do you want to proceed with this profile composition? 
-Type 'yes' to continue or 'modify' to adjust the selection.
+Proceed? (yes/modify/no)
 ```
+
+**Note:** Skip the detailed analysis output - just show the selected file names for confirmation.
 
 **Wait for user confirmation before proceeding to Step 4.**
 
@@ -115,26 +105,14 @@ Type 'yes' to continue or 'modify' to adjust the selection.
 
 **Step 3: Selection Presented to User**:
 ```markdown
-📋 PROFILE SELECTION
-
-Based on your request: "Build a responsive navigation menu with accessibility support"
-
-🔍 ANALYSIS:
-- Intent: BUILD
-- Domain: Frontend
-- Context: User Focus (accessibility)
-
 📁 SELECTED FILES:
-✅ Foundation: foundations/core-doctrine.md (always included)
-✅ Role: foundations/roles/frontend-developer.md
-✅ Goal: goals/feature-request.md
-✅ Overlays:
-  - overlays/user-advocate.md
-  - overlays/quality-advocate.md
+- foundations/core-doctrine.md
+- foundations/roles/frontend-developer.md
+- goals/feature-request.md
+- overlays/user-advocate.md
+- overlays/quality-advocate.md
 
-⚠️  CONFIRMATION REQUIRED:
-Do you want to proceed with this profile composition? 
-Type 'yes' to continue or 'modify' to adjust the selection.
+Proceed? (yes/modify/no)
 ```
 
 **Step 4: Generated Profile** (after user confirms):
@@ -156,27 +134,15 @@ goals/feature-request.md
 
 **Step 3: Selection Presented to User**:
 ```markdown
-📋 PROFILE SELECTION
-
-Based on your request: "Users can access other users' data through the API"
-
-🔍 ANALYSIS:
-- Intent: FIX
-- Domain: Backend
-- Context: Security, Urgent
-
 📁 SELECTED FILES:
-✅ Foundation: foundations/core-doctrine.md (always included)
-✅ Role: foundations/roles/backend-developer.md
-✅ Goal: goals/bug-investigation.md
-✅ Overlays:
-  - overlays/security-specialist.md
-  - overlays/critical-thinker.md
-  - overlays/concise-communicator.md
+- foundations/core-doctrine.md
+- foundations/roles/backend-developer.md
+- goals/bug-investigation.md
+- overlays/security-specialist.md
+- overlays/critical-thinker.md
+- overlays/concise-communicator.md
 
-⚠️  CONFIRMATION REQUIRED:
-Do you want to proceed with this profile composition? 
-Type 'yes' to continue or 'modify' to adjust the selection.
+Proceed? (yes/modify/no)
 ```
 
 **Step 4: Generated Profile** (after user confirms):
@@ -199,27 +165,15 @@ goals/bug-investigation.md
 
 **Step 3: Selection Presented to User**:
 ```markdown
-📋 PROFILE SELECTION
-
-Based on your request: "Review our microservices architecture for scalability issues"
-
-🔍 ANALYSIS:
-- Intent: IMPROVE
-- Domain: Architecture
-- Context: Performance
-
 📁 SELECTED FILES:
-✅ Foundation: foundations/core-doctrine.md (always included)
-✅ Role: foundations/roles/architect.md
-✅ Goal: goals/code-review.md
-✅ Overlays:
-  - overlays/system-designer.md
-  - overlays/performance-optimizer.md
-  - overlays/strategic-thinker.md
+- foundations/core-doctrine.md
+- foundations/roles/architect.md
+- goals/code-review.md
+- overlays/system-designer.md
+- overlays/performance-optimizer.md
+- overlays/strategic-thinker.md
 
-⚠️  CONFIRMATION REQUIRED:
-Do you want to proceed with this profile composition? 
-Type 'yes' to continue or 'modify' to adjust the selection.
+Proceed? (yes/modify/no)
 ```
 
 **Step 4: Generated Profile** (after user confirms):
@@ -242,26 +196,14 @@ goals/code-review.md
 
 **Step 3: Selection Presented to User**:
 ```markdown
-📋 PROFILE SELECTION
-
-Based on your request: "Payment system is intermittently failing - users report transactions timing out but charges still go through"
-
-🔍 ANALYSIS:
-- Intent: FIX
-- Domain: Backend
-- Context: Investigation
-
 📁 SELECTED FILES:
-✅ Foundation: foundations/core-doctrine.md (always included)
-✅ Role: foundations/roles/backend-developer.md
-✅ Goal: goals/bug-investigation.md
-✅ Overlays:
-  - overlays/root-cause-analyzer.md
-  - overlays/critical-thinker.md
+- foundations/core-doctrine.md
+- foundations/roles/backend-developer.md
+- goals/bug-investigation.md
+- overlays/root-cause-analyzer.md
+- overlays/critical-thinker.md
 
-⚠️  CONFIRMATION REQUIRED:
-Do you want to proceed with this profile composition? 
-Type 'yes' to continue or 'modify' to adjust the selection.
+Proceed? (yes/modify/no)
 ```
 
 **Step 4: Generated Profile** (after user confirms):
