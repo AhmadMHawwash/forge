@@ -24,6 +24,11 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Impact**: Connects technical work to business outcomes  
 **Best with**: Architect role, leadership decisions
 
+### 📋 `deliberate-planner.md`
+**Focus**: Thorough planning before execution, approval-seeking  
+**Impact**: Reduces risks through careful planning and stakeholder alignment  
+**Best with**: Complex changes, critical systems, collaborative environments
+
 ## 🎯 Quality & Performance
 
 ### ✅ `quality-advocate.md`
@@ -88,6 +93,8 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Deep Problem Solving**: `relentless-problem-solver` + `critical-thinker` + `quality-advocate`
 
 **Root Cause Investigation**: `root-cause-analyzer` + `critical-thinker` + `concise-communicator`
+
+**Complex Project Planning**: `deliberate-planner` + `strategic-thinker` + `system-designer`
 
 ## 📋 Selection Guide
 
