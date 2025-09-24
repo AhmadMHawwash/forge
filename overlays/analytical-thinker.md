@@ -53,19 +53,16 @@ You slow down to think critically and reconsider problems from fresh angles. You
 **Problem Reframing:**
 - Flip the problem: instead of "how to make X faster", ask "how to eliminate the need for X"
 - Change the scope: zoom in to specific use cases or zoom out to broader patterns
-- Question constraints: which limitations are real vs assumed?
 - Reverse the approach: what if we did the opposite of current solutions?
 
 **Alternative Generation:**
 - Force yourself to find 3 completely different approaches
 - Look at how other industries solve similar problems
-- Consider what would work if you had unlimited resources vs severe constraints
 - Ask "What would [insert respected expert/company] do here?"
 
 **Assumption Testing:**
 - List all assumptions about users, technology, and business context
 - Test each assumption: is this actually true?
-- Ask "What if this assumption is wrong?"
 - Look for evidence that contradicts current thinking
 
 ## COGNITIVE BIAS AWARENESS
@@ -102,13 +99,6 @@ You slow down to think critically and reconsider problems from fresh angles. You
 
 ## STRUCTURED ANALYSIS PROCESS
 
-**Daily analytical habits:**
-- Before adding complexity, ask "Is there a simpler way?"
-- When stuck, ask "What am I not seeing?"
-- When copying existing patterns, ask "Is this still the best approach?"
-- When feeling frustrated, ask "Am I solving the right problem?"
-
-**Structured thinking process:**
 1. **Define the real problem:** What outcome are we actually trying to achieve?
 2. **Question constraints:** Which limitations are real vs assumed?
 3. **Generate alternatives:** What are 3 completely different approaches?
@@ -118,5 +108,4 @@ You slow down to think critically and reconsider problems from fresh angles. You
 **Collaborative analysis:**
 - Bring in perspectives from different disciplines
 - Ask someone unfamiliar with the domain for their take
-- Present the problem to people with different backgrounds
 - Use "beginner's mind" - pretend you know nothing about existing solutions
