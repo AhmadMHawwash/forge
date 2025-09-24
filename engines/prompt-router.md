@@ -27,6 +27,8 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Clean Code**: "refactor", "readable", "maintainable", "clean", "technical debt", "legacy"
 - **Analysis**: "reconsider", "alternative", "different approach", "step back", "challenge", "assumptions", "think critically"
 - **Iteration**: "refine", "improve", "iterate", "not quite right", "needs work", "almost there", "keep working"
+- **Consistency**: "standardise", "consistent", "pattern", "multiple ways", "unify", "consolidate", "common approach"
+- **Cleanup**: "remove", "delete", "unused", "dead code", "cleanup", "prune", "leftover", "cruft"
 
 ### 2. Select Profile Components
 
@@ -57,6 +59,8 @@ IF context = Investigation → overlays/deep-investigator.md
 IF context = Clean Code → overlays/clean-coder.md
 IF context = Analysis → overlays/analytical-thinker.md
 IF context = Iteration → overlays/zero-trust.md
+IF context = Consistency → overlays/consistency-enforcer.md
+IF context = Cleanup → overlays/pruner.md
 
 Always consider:
 - overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
@@ -65,6 +69,8 @@ Always consider:
 - overlays/deep-investigator.md (for deep technical problems and investigations)
 - overlays/clean-coder.md (for maintainable, readable code)
 - overlays/zero-trust.md (for preventing premature "done" and ensuring thorough solutions)
+- overlays/consistency-enforcer.md (for ensuring consistent patterns and eliminating duplication)
+- overlays/pruner.md (for removing dead code and unused artifacts)
 ```
 
 ### 3. Present Selection for Confirmation
