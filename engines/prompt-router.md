@@ -26,6 +26,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Investigation**: "outage", "incident", "root cause", "intermittent", "production issue", "deep analysis", "relentless"
 - **Clean Code**: "refactor", "readable", "maintainable", "clean", "technical debt", "legacy"
 - **Analysis**: "reconsider", "alternative", "different approach", "step back", "challenge", "assumptions", "think critically"
+- **Iteration**: "refine", "improve", "iterate", "not quite right", "needs work", "almost there", "keep working"
 
 ### 2. Select Profile Components
 
@@ -55,6 +56,7 @@ IF context = Urgent → overlays/concise-communicator.md
 IF context = Investigation → overlays/deep-investigator.md
 IF context = Clean Code → overlays/clean-coder.md
 IF context = Analysis → overlays/analytical-thinker.md
+IF context = Iteration → overlays/zero-trust.md
 
 Always consider:
 - overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
@@ -62,6 +64,7 @@ Always consider:
 - overlays/strategic-thinker.md (for business-critical decisions)
 - overlays/deep-investigator.md (for deep technical problems and investigations)
 - overlays/clean-coder.md (for maintainable, readable code)
+- overlays/zero-trust.md (for preventing premature "done" and ensuring thorough solutions)
 ```
 
 ### 3. Present Selection for Confirmation
