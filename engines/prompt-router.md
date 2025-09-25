@@ -48,7 +48,16 @@ IF intent = IMPROVE → goals/code-review.md
 IF intent = LEARN → goals/retrospective.md
 ```
 
-**Overlays (Pick 1-3):**
+**Overlays (Pick 2-4):**
+
+**Planning Overlays (Default for most requests):**
+```
+Always include UNLESS the change is small/trivial:
+- overlays/strategic-thinker.md (connect technical decisions to business outcomes)
+- overlays/deliberate-planner.md (plan thoroughly before acting)
+```
+
+**Context-Specific Overlays:**
 ```
 IF context = Security → overlays/security-specialist.md
 IF context = Performance → overlays/performance-optimizer.md
@@ -61,17 +70,25 @@ IF context = Analysis → overlays/analytical-thinker.md
 IF context = Iteration → overlays/zero-trust.md
 IF context = Consistency → overlays/consistency-enforcer.md
 IF context = Cleanup → overlays/pruner.md
+```
 
-Always consider:
+**Additional Overlays to Consider:**
+```
 - overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
 - overlays/pragmatic-implementer.md (for quick delivery needs)
-- overlays/strategic-thinker.md (for business-critical decisions)
 - overlays/deep-investigator.md (for deep technical problems and investigations)
 - overlays/clean-coder.md (for maintainable, readable code)
 - overlays/zero-trust.md (for preventing premature "done" and ensuring thorough solutions)
 - overlays/consistency-enforcer.md (for ensuring consistent patterns and eliminating duplication)
 - overlays/pruner.md (for removing dead code and unused artifacts)
 ```
+
+**Small Change Criteria (Skip Planning Overlays):**
+- Single line fixes or typo corrections
+- Adding simple comments or documentation
+- Updating configuration values
+- Minor styling adjustments
+- Simple variable renames in single files
 
 ### 3. Present Selection for Confirmation
 
@@ -83,9 +100,10 @@ Before composing the profile, present the selected files to the user for confirm
 - foundations/core-doctrine.md
 - foundations/roles/[selected-role].md
 - goals/[selected-goal].md
-- overlays/[selected-overlay-1].md
-- overlays/[selected-overlay-2].md
-- overlays/[selected-overlay-3].md (if applicable)
+- overlays/strategic-thinker.md (unless small change)
+- overlays/deliberate-planner.md (unless small change)
+- overlays/[context-specific-overlay-1].md
+- overlays/[context-specific-overlay-2].md (if applicable)
 
 Proceed? (yes/modify/no)
 ```
@@ -102,8 +120,9 @@ Proceed? (yes/modify/no)
 
 [foundations/core-doctrine.md content]
 [foundations/roles/[selected-role].md content]
-[overlays/[selected-overlay-1].md content]
-[overlays/[selected-overlay-2].md content]
+[overlays/strategic-thinker.md content] (unless small change)
+[overlays/deliberate-planner.md content] (unless small change)
+[overlays/[context-specific-overlay].md content]
 [goals/[selected-goal].md content]
 ```
 
@@ -123,6 +142,8 @@ Proceed? (yes/modify/no)
 - foundations/core-doctrine.md
 - foundations/roles/frontend-developer.md
 - goals/feature-request.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
 - overlays/user-advocate.md
 - overlays/quality-advocate.md
 
@@ -133,6 +154,8 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/frontend-developer.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
 overlays/user-advocate.md +
 overlays/quality-advocate.md +
 goals/feature-request.md
@@ -152,8 +175,9 @@ goals/feature-request.md
 - foundations/core-doctrine.md
 - foundations/roles/backend-developer.md
 - goals/bug-investigation.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
 - overlays/security-specialist.md
-- overlays/critical-thinker.md
 - overlays/concise-communicator.md
 
 Proceed? (yes/modify/no)
@@ -163,8 +187,9 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/backend-developer.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
 overlays/security-specialist.md +
-overlays/critical-thinker.md +
 overlays/concise-communicator.md +
 goals/bug-investigation.md
 ```
@@ -183,9 +208,10 @@ goals/bug-investigation.md
 - foundations/core-doctrine.md
 - foundations/roles/architect.md
 - goals/code-review.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
 - overlays/system-designer.md
 - overlays/performance-optimizer.md
-- overlays/strategic-thinker.md
 
 Proceed? (yes/modify/no)
 ```
@@ -194,9 +220,10 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/architect.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
 overlays/system-designer.md +
 overlays/performance-optimizer.md +
-overlays/strategic-thinker.md +
 goals/code-review.md
 ```
 
@@ -214,8 +241,9 @@ goals/code-review.md
 - foundations/core-doctrine.md
 - foundations/roles/backend-developer.md
 - goals/bug-investigation.md
-- overlays/root-cause-analyzer.md
-- overlays/critical-thinker.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
+- overlays/deep-investigator.md
 
 Proceed? (yes/modify/no)
 ```
@@ -224,8 +252,9 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/backend-developer.md +
-overlays/root-cause-analyzer.md +
-overlays/critical-thinker.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
+overlays/deep-investigator.md +
 goals/bug-investigation.md
 ```
 
