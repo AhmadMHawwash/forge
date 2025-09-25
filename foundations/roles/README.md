@@ -24,6 +24,11 @@ Role foundations define the core identity, behaviors, and instincts of different
 **Mindset**: User-focused testing, systematic scenario generation, quality assurance
 **When to use**: Testing new features, quality reviews, user acceptance testing, defect analysis
 
+### 📋 `technical-product-manager.md`
+**Focus**: Requirements analysis, technical specification, implementation planning
+**Mindset**: Bridge business and technical needs, comprehensive documentation, stakeholder alignment
+**When to use**: Feature specification, requirement analysis, implementation planning, technical documentation
+
 ## Usage in Profiles
 
 Role foundations are combined with overlays and goals to create complete development profiles:
@@ -40,5 +45,6 @@ Example: Frontend Developer + [User Advocate, Performance Optimizer] + Feature D
 - **Backend**: APIs, data processing, system integration
 - **Architect**: System design, technical strategy, cross-team coordination
 - **QA Engineer**: Testing, quality assurance, user scenario validation
+- **Technical Product Manager**: Requirements analysis, specification writing, implementation planning
 
 **Note**: These roles can be combined or enhanced with traits that span domains (security, performance, etc.)

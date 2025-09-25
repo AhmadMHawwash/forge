@@ -39,6 +39,11 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Impact**: Reduces surprises and failures by catching what others miss  
 **Best with**: Critical features, security work, complex requirements analysis
 
+### 🔬 `technical-researcher.md`
+**Focus**: Research best practices, tools, and proven solutions for technical problems  
+**Impact**: Brings current industry knowledge and avoids reinventing the wheel  
+**Best with**: Technology decisions, architecture planning, tool selection
+
 ## 🎯 Quality & Performance
 
 ### ✅ `quality-advocate.md`
@@ -109,6 +114,8 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **System-wide Changes**: `layered-thinking` + `strategic-thinker` + `deliberate-planner`
 
 **Comprehensive Analysis**: `blind-spot-hunter` + `analytical-thinker` + `layered-thinking`
+
+**Technology Research**: `technical-researcher` + `analytical-thinker` + `strategic-thinker`
 
 ## 📋 Selection Guide
 

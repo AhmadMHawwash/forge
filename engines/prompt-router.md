@@ -17,6 +17,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Backend**: "API", "database", "server", "auth", "data", "service"
 - **Architecture**: "design", "architecture", "system", "scalability", "integration"
 - **QA**: "test", "testing", "quality", "scenarios", "QA", "validation", "bug", "defect"
+- **Product Management**: "requirements", "specification", "specs", "plan", "feature request", "product", "stakeholder", "documentation"
 
 **Context Indicators:**
 - **Security**: "auth", "login", "security", "encryption", "vulnerability"
@@ -32,6 +33,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Consistency**: "standardise", "consistent", "pattern", "multiple ways", "unify", "consolidate", "common approach"
 - **Cleanup**: "remove", "delete", "unused", "dead code", "cleanup", "prune", "leftover", "cruft"
 - **System-wide**: "system", "architecture", "integration", "cross-cutting", "affects multiple", "layers", "full stack", "end-to-end"
+- **Research**: "best practices", "tools", "research", "compare", "evaluate", "industry standard", "proven solution", "current approach"
 
 ### 2. Select Profile Components
 
@@ -41,6 +43,7 @@ IF domain = Frontend → foundations/roles/frontend-developer.md
 IF domain = Backend → foundations/roles/backend-developer.md  
 IF domain = Architecture → foundations/roles/architect.md
 IF domain = QA → foundations/roles/qa-engineer.md
+IF domain = Product Management → foundations/roles/technical-product-manager.md
 IF domain = Mixed/Unclear → foundations/roles/frontend-developer.md (default)
 ```
 
@@ -76,12 +79,14 @@ IF context = Iteration → overlays/zero-trust.md
 IF context = Consistency → overlays/consistency-enforcer.md
 IF context = Cleanup → overlays/pruner.md
 IF context = System-wide → overlays/layered-thinking.md
+IF context = Research → overlays/technical-researcher.md
 ```
 
 **Additional Overlays to Consider:**
 ```
 - overlays/layered-thinking.md (for systematic analysis of changes across all system layers)
 - overlays/blind-spot-hunter.md (for identifying overlooked considerations and edge cases)
+- overlays/technical-researcher.md (for researching best practices and proven solutions)
 - overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
 - overlays/pragmatic-implementer.md (for quick delivery needs)
 - overlays/deep-investigator.md (for deep technical problems and investigations)
@@ -330,6 +335,72 @@ overlays/deliberate-planner.md +
 overlays/blind-spot-hunter.md +
 overlays/quality-advocate.md +
 goals/feature-request.md
+```
+
+### Product Specification Request
+**User**: "Write detailed specification for a user notification system with email and in-app alerts"
+
+**Step 1-2: Router Analysis**:
+- Intent: BUILD (specification, requirements)
+- Domain: Product Management (specification, feature request, documentation)
+- Context: System-wide (affects multiple systems)
+
+**Step 3: Selection Presented to User**:
+```markdown
+📁 SELECTED FILES:
+- foundations/core-doctrine.md
+- foundations/roles/technical-product-manager.md
+- goals/feature-request.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
+- overlays/layered-thinking.md
+- overlays/blind-spot-hunter.md
+
+Proceed? (yes/modify/no)
+```
+
+**Step 4: Generated Profile** (after user confirms):
+```
+foundations/core-doctrine.md +
+foundations/roles/technical-product-manager.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
+overlays/layered-thinking.md +
+overlays/blind-spot-hunter.md +
+goals/feature-request.md
+```
+
+### Technology Research Request
+**User**: "Research best practices and tools for implementing real-time notifications in a React application"
+
+**Step 1-2: Router Analysis**:
+- Intent: LEARN (research best practices)
+- Domain: Frontend (React application)
+- Context: Research (best practices, tools, evaluate)
+
+**Step 3: Selection Presented to User**:
+```markdown
+📁 SELECTED FILES:
+- foundations/core-doctrine.md
+- foundations/roles/frontend-developer.md
+- goals/retrospective.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
+- overlays/technical-researcher.md
+- overlays/analytical-thinker.md
+
+Proceed? (yes/modify/no)
+```
+
+**Step 4: Generated Profile** (after user confirms):
+```
+foundations/core-doctrine.md +
+foundations/roles/frontend-developer.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
+overlays/technical-researcher.md +
+overlays/analytical-thinker.md +
+goals/retrospective.md
 ```
 
 ## USAGE
