@@ -16,6 +16,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Frontend**: "UI", "interface", "component", "React", "Vue", "styling"
 - **Backend**: "API", "database", "server", "auth", "data", "service"
 - **Architecture**: "design", "architecture", "system", "scalability", "integration"
+- **QA**: "test", "testing", "quality", "scenarios", "QA", "validation", "bug", "defect"
 
 **Context Indicators:**
 - **Security**: "auth", "login", "security", "encryption", "vulnerability"
@@ -26,9 +27,11 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Investigation**: "outage", "incident", "root cause", "intermittent", "production issue", "deep analysis", "relentless"
 - **Clean Code**: "refactor", "readable", "maintainable", "clean", "technical debt", "legacy"
 - **Analysis**: "reconsider", "alternative", "different approach", "step back", "challenge", "assumptions", "think critically"
+- **Blind Spots**: "missed", "overlooked", "edge case", "what if", "blind spot", "comprehensive", "complete analysis", "thorough"
 - **Iteration**: "refine", "improve", "iterate", "not quite right", "needs work", "almost there", "keep working"
 - **Consistency**: "standardise", "consistent", "pattern", "multiple ways", "unify", "consolidate", "common approach"
 - **Cleanup**: "remove", "delete", "unused", "dead code", "cleanup", "prune", "leftover", "cruft"
+- **System-wide**: "system", "architecture", "integration", "cross-cutting", "affects multiple", "layers", "full stack", "end-to-end"
 
 ### 2. Select Profile Components
 
@@ -37,6 +40,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 IF domain = Frontend → foundations/roles/frontend-developer.md
 IF domain = Backend → foundations/roles/backend-developer.md  
 IF domain = Architecture → foundations/roles/architect.md
+IF domain = QA → foundations/roles/qa-engineer.md
 IF domain = Mixed/Unclear → foundations/roles/frontend-developer.md (default)
 ```
 
@@ -67,13 +71,17 @@ IF context = Urgent → overlays/concise-communicator.md
 IF context = Investigation → overlays/deep-investigator.md
 IF context = Clean Code → overlays/clean-coder.md
 IF context = Analysis → overlays/analytical-thinker.md
+IF context = Blind Spots → overlays/blind-spot-hunter.md
 IF context = Iteration → overlays/zero-trust.md
 IF context = Consistency → overlays/consistency-enforcer.md
 IF context = Cleanup → overlays/pruner.md
+IF context = System-wide → overlays/layered-thinking.md
 ```
 
 **Additional Overlays to Consider:**
 ```
+- overlays/layered-thinking.md (for systematic analysis of changes across all system layers)
+- overlays/blind-spot-hunter.md (for identifying overlooked considerations and edge cases)
 - overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
 - overlays/pragmatic-implementer.md (for quick delivery needs)
 - overlays/deep-investigator.md (for deep technical problems and investigations)
@@ -256,6 +264,72 @@ overlays/strategic-thinker.md +
 overlays/deliberate-planner.md +
 overlays/deep-investigator.md +
 goals/bug-investigation.md
+```
+
+### System Integration Feature
+**User**: "Add real-time inventory sync between our e-commerce platform and warehouse management system"
+
+**Step 1-2: Router Analysis**:
+- Intent: BUILD (add, integration)
+- Domain: Architecture (system integration)
+- Context: System-wide (affects multiple systems, integration)
+
+**Step 3: Selection Presented to User**:
+```markdown
+📁 SELECTED FILES:
+- foundations/core-doctrine.md
+- foundations/roles/architect.md
+- goals/feature-request.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
+- overlays/layered-thinking.md
+- overlays/system-designer.md
+
+Proceed? (yes/modify/no)
+```
+
+**Step 4: Generated Profile** (after user confirms):
+```
+foundations/core-doctrine.md +
+foundations/roles/architect.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
+overlays/layered-thinking.md +
+overlays/system-designer.md +
+goals/feature-request.md
+```
+
+### QA Testing Scenarios
+**User**: "Create comprehensive test scenarios for the new user registration feature"
+
+**Step 1-2: Router Analysis**:
+- Intent: BUILD (create test scenarios)
+- Domain: QA (test, scenarios, validation)
+- Context: Quality (comprehensive testing)
+
+**Step 3: Selection Presented to User**:
+```markdown
+📁 SELECTED FILES:
+- foundations/core-doctrine.md
+- foundations/roles/qa-engineer.md
+- goals/feature-request.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
+- overlays/blind-spot-hunter.md
+- overlays/quality-advocate.md
+
+Proceed? (yes/modify/no)
+```
+
+**Step 4: Generated Profile** (after user confirms):
+```
+foundations/core-doctrine.md +
+foundations/roles/qa-engineer.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
+overlays/blind-spot-hunter.md +
+overlays/quality-advocate.md +
+goals/feature-request.md
 ```
 
 ## USAGE

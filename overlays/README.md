@@ -29,6 +29,16 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Impact**: Reduces risks through careful planning and stakeholder alignment  
 **Best with**: Complex changes, critical systems, collaborative environments
 
+### 🔄 `layered-thinking.md`
+**Focus**: Systematic analysis through all system layers (User, Interface, Logic, Data, Infrastructure)  
+**Impact**: Comprehensive understanding, prevents missing critical impacts  
+**Best with**: System-wide changes, integration work, complex features
+
+### 🔍 `blind-spot-hunter.md`
+**Focus**: Identifying overlooked considerations, edge cases, and blind spots  
+**Impact**: Reduces surprises and failures by catching what others miss  
+**Best with**: Critical features, security work, complex requirements analysis
+
 ## 🎯 Quality & Performance
 
 ### ✅ `quality-advocate.md`
@@ -95,6 +105,10 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Root Cause Investigation**: `root-cause-analyzer` + `critical-thinker` + `concise-communicator`
 
 **Complex Project Planning**: `deliberate-planner` + `strategic-thinker` + `system-designer`
+
+**System-wide Changes**: `layered-thinking` + `strategic-thinker` + `deliberate-planner`
+
+**Comprehensive Analysis**: `blind-spot-hunter` + `analytical-thinker` + `layered-thinking`
 
 ## 📋 Selection Guide
 

@@ -19,6 +19,11 @@ Role foundations define the core identity, behaviors, and instincts of different
 **Mindset**: Design for change, evidence-based decisions, holistic view
 **When to use**: System design, technology decisions, architectural reviews, complex technical planning
 
+### 🧪 `qa-engineer.md`
+**Focus**: Software quality, testing strategies, user scenario validation
+**Mindset**: User-focused testing, systematic scenario generation, quality assurance
+**When to use**: Testing new features, quality reviews, user acceptance testing, defect analysis
+
 ## Usage in Profiles
 
 Role foundations are combined with overlays and goals to create complete development profiles:
@@ -34,5 +39,6 @@ Example: Frontend Developer + [User Advocate, Performance Optimizer] + Feature D
 - **Frontend**: User interfaces, client-side features, user experience
 - **Backend**: APIs, data processing, system integration
 - **Architect**: System design, technical strategy, cross-team coordination
+- **QA Engineer**: Testing, quality assurance, user scenario validation
 
 **Note**: These roles can be combined or enhanced with traits that span domains (security, performance, etc.)
