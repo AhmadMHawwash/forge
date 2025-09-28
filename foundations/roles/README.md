@@ -29,6 +29,11 @@ Role foundations define the core identity, behaviors, and instincts of different
 **Mindset**: Bridge business and technical needs, comprehensive documentation, stakeholder alignment
 **When to use**: Feature specification, requirement analysis, implementation planning, technical documentation
 
+### 🗄️ `database-specialist.md`
+**Focus**: Database design, schema optimization, data modeling, query performance
+**Mindset**: Data relationships, performance optimization, scalability planning
+**When to use**: Schema design, database optimization, data migration, query performance tuning
+
 ## Usage in Profiles
 
 Role foundations are combined with overlays and goals to create complete development profiles:
@@ -46,5 +51,6 @@ Example: Frontend Developer + [User Advocate, Performance Optimizer] + Feature D
 - **Architect**: System design, technical strategy, cross-team coordination
 - **QA Engineer**: Testing, quality assurance, user scenario validation
 - **Technical Product Manager**: Requirements analysis, specification writing, implementation planning
+- **Database Specialist**: Schema design, data modeling, database optimization, query performance
 
 **Note**: These roles can be combined or enhanced with traits that span domains (security, performance, etc.)

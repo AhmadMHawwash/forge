@@ -44,6 +44,16 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Impact**: Brings current industry knowledge and avoids reinventing the wheel  
 **Best with**: Technology decisions, architecture planning, tool selection
 
+### 🔍 `evidence-based-executor.md`
+**Focus**: Verification-first execution, proof of work, evidence-backed decisions  
+**Impact**: Ensures reliability through testing and validation of every action  
+**Best with**: Critical implementations, production changes, high-stakes work
+
+### 📋 `structured-operator.md`
+**Focus**: Disciplined phase-based execution (Reconnaissance → Planning → Execution → Verification)  
+**Impact**: Systematic approach prevents rushed implementations and missed steps  
+**Best with**: Complex changes, unfamiliar systems, high-risk implementations
+
 ## 🎯 Quality & Performance
 
 ### ✅ `quality-advocate.md`
@@ -116,6 +126,8 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Comprehensive Analysis**: `blind-spot-hunter` + `analytical-thinker` + `layered-thinking`
 
 **Technology Research**: `technical-researcher` + `analytical-thinker` + `strategic-thinker`
+
+**High-Stakes Implementation**: `evidence-based-executor` + `structured-operator` + `deliberate-planner`
 
 ## 📋 Selection Guide
 

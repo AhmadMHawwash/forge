@@ -18,6 +18,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Architecture**: "design", "architecture", "system", "scalability", "integration"
 - **QA**: "test", "testing", "quality", "scenarios", "QA", "validation", "bug", "defect"
 - **Product Management**: "requirements", "specification", "specs", "plan", "feature request", "product", "stakeholder", "documentation"
+- **Database**: "database", "schema", "SQL", "query", "data model", "migration", "index", "performance", "data"
 
 **Context Indicators:**
 - **Security**: "auth", "login", "security", "encryption", "vulnerability"
@@ -34,6 +35,8 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Cleanup**: "remove", "delete", "unused", "dead code", "cleanup", "prune", "leftover", "cruft"
 - **System-wide**: "system", "architecture", "integration", "cross-cutting", "affects multiple", "layers", "full stack", "end-to-end"
 - **Research**: "best practices", "tools", "research", "compare", "evaluate", "industry standard", "proven solution", "current approach"
+- **Evidence**: "verify", "prove", "evidence", "test", "validate", "demonstrate", "confirm"
+- **Structured**: "phases", "systematic", "disciplined", "structured", "methodical", "step by step"
 
 ### 2. Select Profile Components
 
@@ -44,6 +47,7 @@ IF domain = Backend → foundations/roles/backend-developer.md
 IF domain = Architecture → foundations/roles/architect.md
 IF domain = QA → foundations/roles/qa-engineer.md
 IF domain = Product Management → foundations/roles/technical-product-manager.md
+IF domain = Database → foundations/roles/database-specialist.md
 IF domain = Mixed/Unclear → foundations/roles/frontend-developer.md (default)
 ```
 
@@ -80,6 +84,8 @@ IF context = Consistency → overlays/consistency-enforcer.md
 IF context = Cleanup → overlays/pruner.md
 IF context = System-wide → overlays/layered-thinking.md
 IF context = Research → overlays/technical-researcher.md
+IF context = Evidence → overlays/evidence-based-executor.md
+IF context = Structured → overlays/structured-operator.md
 ```
 
 **Additional Overlays to Consider:**
@@ -87,6 +93,8 @@ IF context = Research → overlays/technical-researcher.md
 - overlays/layered-thinking.md (for systematic analysis of changes across all system layers)
 - overlays/blind-spot-hunter.md (for identifying overlooked considerations and edge cases)
 - overlays/technical-researcher.md (for researching best practices and proven solutions)
+- overlays/evidence-based-executor.md (for verification-first execution and proof of work)
+- overlays/structured-operator.md (for disciplined phase-based execution)
 - overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
 - overlays/pragmatic-implementer.md (for quick delivery needs)
 - overlays/deep-investigator.md (for deep technical problems and investigations)
@@ -401,6 +409,39 @@ overlays/deliberate-planner.md +
 overlays/technical-researcher.md +
 overlays/analytical-thinker.md +
 goals/retrospective.md
+```
+
+### Database Schema Design
+**User**: "Design a database schema for a multi-tenant e-commerce platform with products, orders, and inventory tracking"
+
+**Step 1-2: Router Analysis**:
+- Intent: BUILD (design schema)
+- Domain: Database (database, schema, data model)
+- Context: System-wide (affects multiple systems)
+
+**Step 3: Selection Presented to User**:
+```markdown
+📁 SELECTED FILES:
+- foundations/core-doctrine.md
+- foundations/roles/database-specialist.md
+- goals/feature-request.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
+- overlays/layered-thinking.md
+- overlays/evidence-based-executor.md
+
+Proceed? (yes/modify/no)
+```
+
+**Step 4: Generated Profile** (after user confirms):
+```
+foundations/core-doctrine.md +
+foundations/roles/database-specialist.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
+overlays/layered-thinking.md +
+overlays/evidence-based-executor.md +
+goals/feature-request.md
 ```
 
 ## USAGE
