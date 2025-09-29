@@ -37,6 +37,7 @@ Automatically compose AI developer profiles based on user requests by selecting 
 - **Research**: "best practices", "tools", "research", "compare", "evaluate", "industry standard", "proven solution", "current approach"
 - **Evidence**: "verify", "prove", "evidence", "test", "validate", "demonstrate", "confirm"
 - **Structured**: "phases", "systematic", "disciplined", "structured", "methodical", "step by step"
+- **Refactoring**: "refactor", "refactoring", "code cleanup", "improve code", "technical debt", "code quality"
 
 ### 2. Select Profile Components
 
@@ -86,6 +87,7 @@ IF context = System-wide → overlays/layered-thinking.md
 IF context = Research → overlays/technical-researcher.md
 IF context = Evidence → overlays/evidence-based-executor.md
 IF context = Structured → overlays/structured-operator.md
+IF context = Refactoring → overlays/careful-refactorer.md
 ```
 
 **Additional Overlays to Consider:**
@@ -95,6 +97,7 @@ IF context = Structured → overlays/structured-operator.md
 - overlays/technical-researcher.md (for researching best practices and proven solutions)
 - overlays/evidence-based-executor.md (for verification-first execution and proof of work)
 - overlays/structured-operator.md (for disciplined phase-based execution)
+- overlays/careful-refactorer.md (for safe, behavior-preserving code improvements)
 - overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
 - overlays/pragmatic-implementer.md (for quick delivery needs)
 - overlays/deep-investigator.md (for deep technical problems and investigations)

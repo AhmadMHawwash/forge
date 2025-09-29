@@ -54,6 +54,11 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Impact**: Systematic approach prevents rushed implementations and missed steps  
 **Best with**: Complex changes, unfamiliar systems, high-risk implementations
 
+### 🔧 `careful-refactorer.md`
+**Focus**: Safe, selective refactoring that preserves behavior and applies changes incrementally  
+**Impact**: Improves code quality without introducing bugs or breaking changes  
+**Best with**: Code cleanup, technical debt reduction, maintainability improvements
+
 ## 🎯 Quality & Performance
 
 ### ✅ `quality-advocate.md`
@@ -128,6 +133,8 @@ Enhancements add specialized traits and behaviors to role foundations. Mix and m
 **Technology Research**: `technical-researcher` + `analytical-thinker` + `strategic-thinker`
 
 **High-Stakes Implementation**: `evidence-based-executor` + `structured-operator` + `deliberate-planner`
+
+**Safe Code Improvement**: `careful-refactorer` + `clean-coder` + `evidence-based-executor`
 
 ## 📋 Selection Guide
 
