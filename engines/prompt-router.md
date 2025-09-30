@@ -6,6 +6,22 @@ Automatically compose AI developer profiles based on user requests by selecting 
 
 ### 1. Analyze User Request
 
+**Ambiguity Check (First Priority):**
+Check if request needs requirement clarification before proceeding:
+- **ACTIVATE PRODUCT MANAGER IF**:
+  - Feature requests lack specific implementation details
+  - Vague or high-level requirements that could be interpreted multiple ways
+  - Requests where multiple technical approaches are possible
+  - Missing information about user workflows, success criteria, or constraints
+  - Any request where assumptions would need to be made to proceed
+
+**Signs of Ambiguous Requests:**
+- "Build a feature that..." without specific details
+- "Make it work like..." without defining exact behavior
+- "Add functionality for..." without user workflow details
+- "Improve the..." without specific success criteria
+- "Create a system that..." without technical constraints
+
 **Intent Classification:**
 - **BUILD**: "implement", "add", "create", "develop", "build"
 - **FIX**: "bug", "error", "issue", "broken", "failing", "crash"
@@ -43,11 +59,12 @@ Automatically compose AI developer profiles based on user requests by selecting 
 
 **Role Foundation (Pick One):**
 ```
+IF request is ambiguous → foundations/roles/product-manager.md (FIRST PRIORITY)
 IF domain = Frontend → foundations/roles/frontend-developer.md
 IF domain = Backend → foundations/roles/backend-developer.md  
 IF domain = Architecture → foundations/roles/architect.md
 IF domain = QA → foundations/roles/qa-engineer.md
-IF domain = Product Management → foundations/roles/technical-product-manager.md
+IF domain = Product Management → foundations/roles/product-manager.md
 IF domain = Database → foundations/roles/database-specialist.md
 IF domain = Mixed/Unclear → foundations/roles/frontend-developer.md (default)
 ```
@@ -151,6 +168,36 @@ Proceed? (yes/modify/no)
 ```
 
 ## EXAMPLE COMPOSITIONS
+
+### Ambiguous Feature Request (Product Manager Activation)
+**User**: "Build a user authentication feature"
+
+**Step 1-2: Router Analysis**:
+- **AMBIGUITY DETECTED**: Lacks specific implementation details, multiple approaches possible
+- **ACTIVATE PRODUCT MANAGER**: Request needs requirement clarification
+
+**Step 3: Selection Presented to User**:
+```markdown
+📁 SELECTED FILES:
+- foundations/core-doctrine.md
+- foundations/roles/product-manager.md
+- goals/feature-request.md
+- overlays/strategic-thinker.md
+- overlays/deliberate-planner.md
+
+Proceed? (yes/modify/no)
+```
+
+**Step 4: Generated Profile** (after user confirms):
+```
+foundations/core-doctrine.md +
+foundations/roles/product-manager.md +
+overlays/strategic-thinker.md +
+overlays/deliberate-planner.md +
+goals/feature-request.md
+```
+
+**Note**: Product Manager will gather requirements first, then hand off to appropriate technical role.
 
 ### Frontend Feature Request
 **User**: "Build a responsive navigation menu with accessibility support"
@@ -360,7 +407,7 @@ goals/feature-request.md
 ```markdown
 📁 SELECTED FILES:
 - foundations/core-doctrine.md
-- foundations/roles/technical-product-manager.md
+- foundations/roles/product-manager.md
 - goals/feature-request.md
 - overlays/strategic-thinker.md
 - overlays/deliberate-planner.md
@@ -373,7 +420,7 @@ Proceed? (yes/modify/no)
 **Step 4: Generated Profile** (after user confirms):
 ```
 foundations/core-doctrine.md +
-foundations/roles/technical-product-manager.md +
+foundations/roles/product-manager.md +
 overlays/strategic-thinker.md +
 overlays/deliberate-planner.md +
 overlays/layered-thinking.md +
