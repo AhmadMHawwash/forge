@@ -28,7 +28,6 @@ Systematically review code to improve quality, share knowledge, and catch issues
 - Are there tests for the important functionality?
 - Do tests cover edge cases and error conditions?
 - Will these tests catch regressions if code changes?
-- Is the code written in a way that's easy to test?
 
 ### REVIEW PROCESS
 

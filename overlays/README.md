@@ -1,147 +1,74 @@
-# ENHANCEMENTS
+# OVERLAYS
 
-Enhancements add specialized traits and behaviors to role foundations. Mix and match based on specific needs.
+Behavioral overlays that modify how roles approach work. Each overlay is a distinct behavioral pattern.
 
-## 🧠 Thinking & Analysis
+## ⚠️ COMPATIBILITY RULES
 
-### 🎯 `critical-thinker.md`
-**Focus**: Systematic reasoning, assumption challenging, bias awareness  
-**Impact**: Reduces mistakes through careful analysis  
-**Best with**: All roles, especially complex/high-risk work
+**EXECUTION STYLE** - Choose ONE:
+- `pragmatic-implementer` - Ship fast, iterate
+- `deliberate-planner` - Plan thoroughly, seek approval
+- `zero-trust` - Continuously refine, never settle
 
-### 🤔 `honest-thought-challenger.md`  
-**Focus**: Questioning assumptions, finding blind spots  
-**Impact**: Surfaces problems early, improves decisions  
-**Best with**: Teams prone to groupthink
+**COMBINING**: All others can combine. Limit 2-3 overlays total for focus.
 
-### 🔄 `multi-angle-analyzer.md`
-**Focus**: Multiple perspective analysis, holistic thinking  
-**Impact**: Finds solutions others miss  
-**Best with**: Complex problems requiring stakeholder consideration
+**EXECUTION FLOW** (for 3-overlay profiles):
+```
+1. First Pass: [Execution Style] - Define approach
+2. Second Pass: [Context Overlay] - Apply specific focus
+3. Third Pass: [Context Overlay] - Add perspective
+```
+Example: `zero-trust` → `security-specialist` → `deep-investigator`
 
-### 📈 `strategic-thinker.md`
-**Focus**: Business impact, long-term thinking  
-**Impact**: Connects technical work to business outcomes  
-**Best with**: Architect role, leadership decisions
+## 📂 BY CATEGORY
 
-### 📋 `deliberate-planner.md`
-**Focus**: Thorough planning before execution, approval-seeking  
-**Impact**: Reduces risks through careful planning and stakeholder alignment  
-**Best with**: Complex changes, critical systems, collaborative environments
+### 🎯 EXECUTION STYLE (mutually exclusive - pick ONE)
+- `deliberate-planner` - Plan → Approve → Execute
+- `pragmatic-implementer` - Build → Ship → Iterate
+- `zero-trust` - Build → Verify → Refine → Repeat
 
-### 🔄 `layered-thinking.md`
-**Focus**: Systematic analysis through all system layers (User, Interface, Logic, Data, Infrastructure)  
-**Impact**: Comprehensive understanding, prevents missing critical impacts  
-**Best with**: System-wide changes, integration work, complex features
+### 🧠 THINKING PATTERNS (combinable)
+- `analytical-thinker` - Challenge assumptions, consider alternatives
+- `strategic-thinker` - Connect to business outcomes, long-term view
+- `layered-thinking` - Analyze across all system layers
+- `multi-angle-analyzer` - Multiple perspectives, stakeholder views
+- `honest-thought-challenger` - Question own reasoning
 
-### 🔍 `blind-spot-hunter.md`
-**Focus**: Identifying overlooked considerations, edge cases, and blind spots  
-**Impact**: Reduces surprises and failures by catching what others miss  
-**Best with**: Critical features, security work, complex requirements analysis
+### 🔍 INVESTIGATION (combinable)
+- `deep-investigator` - Pursue root causes, never stop at symptoms
+- `technical-researcher` - Research best practices and proven solutions
 
-### 🔬 `technical-researcher.md`
-**Focus**: Research best practices, tools, and proven solutions for technical problems  
-**Impact**: Brings current industry knowledge and avoids reinventing the wheel  
-**Best with**: Technology decisions, architecture planning, tool selection
+### 🛡️ QUALITY & SAFETY (combinable, but limit scope)
+- `quality-advocate` - Testing strategy, edge cases
+- `security-specialist` - Threat modeling, attack thinking
+- `performance-optimizer` - Measure, profile, optimize
+- `clean-coder` - Readability, maintainability
 
-### 🔍 `evidence-based-executor.md`
-**Focus**: Verification-first execution, proof of work, evidence-backed decisions  
-**Impact**: Ensures reliability through testing and validation of every action  
-**Best with**: Critical implementations, production changes, high-stakes work
+### 🏗️ DESIGN & PERSPECTIVE (combinable)
+- `system-designer` - Component boundaries, architectural thinking
+- `user-advocate` - User experience, accessibility
 
-### 📋 `structured-operator.md`
-**Focus**: Disciplined phase-based execution (Reconnaissance → Planning → Execution → Verification)  
-**Impact**: Systematic approach prevents rushed implementations and missed steps  
-**Best with**: Complex changes, unfamiliar systems, high-risk implementations
+### 💬 COMMUNICATION (standalone)
+- `concise-communicator` - Brief, clear, scannable
 
-### 🔧 `careful-refactorer.md`
-**Focus**: Safe, selective refactoring that preserves behavior and applies changes incrementally  
-**Impact**: Improves code quality without introducing bugs or breaking changes  
-**Best with**: Code cleanup, technical debt reduction, maintainability improvements
+## 🎯 QUICK SELECTION
 
-## 🎯 Quality & Performance
+**For LLM agents working on:**
 
-### ✅ `quality-advocate.md`
-**Focus**: Testing strategy, reliability, systematic quality  
-**Impact**: Prevents bugs, improves user experience  
-**Best with**: All roles, essential for user-facing features
+**User-facing features** → `pragmatic-implementer` + `user-advocate`
+**Backend APIs** → `security-specialist` + `quality-advocate`
+**System architecture** → `system-designer` + `strategic-thinker`
+**Bug investigation** → `deep-investigator` + `analytical-thinker`
+**MVP development** → `pragmatic-implementer` + `user-advocate`
+**Code refactoring** → `clean-coder` + `quality-advocate`
 
-### ⚡ `performance-optimizer.md`
-**Focus**: Speed, efficiency, scalability  
-**Impact**: Faster apps, better UX, lower costs  
-**Best with**: Frontend and Backend developers
+**Complex scenarios (3 overlays with execution flow):**
 
-### 🛡️ `security-specialist.md`
-**Focus**: Security by design, threat modeling  
-**Impact**: Prevents vulnerabilities and breaches  
-**Best with**: Backend developers, auth/data work
+**Production incidents** → `zero-trust` + `deep-investigator` + `layered-thinking`
+- Flow: Verify assumptions → Find root cause → Map across layers
 
-## 🎨 User & Communication
+**Critical migrations** → `deliberate-planner` + `system-designer` + `layered-thinking`
+- Flow: Plan thoroughly → Design components → Validate across layers
 
-### 👤 `user-advocate.md`
-**Focus**: User experience, accessibility, user-centered design  
-**Impact**: Better products users actually want  
-**Best with**: Frontend developers, product development
+**Security vulnerabilities** → `zero-trust` + `security-specialist` + `concise-communicator`
+- Flow: Test assumptions → Think like attacker → Present clearly
 
-### 💬 `concise-communicator.md`
-**Focus**: Clear, efficient communication  
-**Impact**: Faster decisions, less confusion  
-**Best with**: All roles, especially urgent/complex communication
-
-### 🔨 `pragmatic-implementer.md`
-**Focus**: Getting things done, balanced pragmatism  
-**Impact**: Ships working solutions faster  
-**Best with**: All roles, especially MVP development
-
-### 🎯 `relentless-problem-solver.md`
-**Focus**: Deep problem-solving, never settling for surface fixes  
-**Impact**: Finds root causes, delivers thorough solutions  
-**Best with**: Critical bugs, performance issues, architecture problems
-
-### 🔍 `root-cause-analyzer.md`
-**Focus**: Deep investigative analysis, systematic root cause identification  
-**Impact**: Finds true causes through layered investigation, prevents recurring issues  
-**Best with**: Complex failures, production incidents, systemic problems
-
-## 🏗️ System Design
-
-### 🏛️ `system-designer.md`
-**Focus**: System design, component boundaries, architectural decisions  
-**Impact**: Better structure, easier maintenance, clearer thinking  
-**Best with**: Architect role, complex system design
-
-## 🎛️ Common Combinations
-
-**Frontend UI Work**: `user-advocate` + `performance-optimizer` + `quality-advocate`
-
-**Backend API Work**: `security-specialist` + `performance-optimizer` + `quality-advocate`
-
-**System Architecture**: `system-designer` + `strategic-thinker` + `multi-angle-analyzer`
-
-**Technical Leadership**: `strategic-thinker` + `honest-thought-challenger` + `concise-communicator`
-
-**Deep Problem Solving**: `relentless-problem-solver` + `critical-thinker` + `quality-advocate`
-
-**Root Cause Investigation**: `root-cause-analyzer` + `critical-thinker` + `concise-communicator`
-
-**Complex Project Planning**: `deliberate-planner` + `strategic-thinker` + `system-designer`
-
-**System-wide Changes**: `layered-thinking` + `strategic-thinker` + `deliberate-planner`
-
-**Comprehensive Analysis**: `blind-spot-hunter` + `analytical-thinker` + `layered-thinking`
-
-**Technology Research**: `technical-researcher` + `analytical-thinker` + `strategic-thinker`
-
-**High-Stakes Implementation**: `evidence-based-executor` + `structured-operator` + `deliberate-planner`
-
-**Safe Code Improvement**: `careful-refactorer` + `clean-coder` + `evidence-based-executor`
-
-## 📋 Selection Guide
-
-**Choose based on:**
-- **Risk level**: Higher risk → more analysis traits
-- **User impact**: User-facing → user advocate, performance, quality  
-- **Complexity**: Complex systems → architecture, strategic thinking
-- **Team dynamics**: New teams → communication, practical implementation
-
-**Start with 2-3 max, add only if needed**

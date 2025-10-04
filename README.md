@@ -2,180 +2,318 @@
 
 **F**oundations **O**verlays **R**esources **G**oals **E**ngines
 
-Create powerful, specialized AI developer profiles by forging together modular components. Compose the perfect AI assistant for any development scenario.
+A modular prompt framework that helps developers build better AI coding contexts. Stop writing prompts from scratch—compose proven, reusable components that give AI the right mindset for any development task.
 
-## 🎯 Core Concept
+## 🎯 The Problem
 
-**Profile = Foundations + Overlays + Resources + Goals**
+When working with AI coding assistants, developers face consistent challenges:
+
+- **Forgetting context**: "Make it accessible" or "consider performance" slip your mind
+- **Inconsistent quality**: AI output varies wildly between similar tasks
+- **Prompt fatigue**: Writing detailed prompts every time is exhausting
+- **Knowledge gaps**: Not knowing what makes a good prompt in the first place
+
+## 💡 The Solution
+
+FORGE provides **prompt components** that combine into specialized AI developer profiles:
+
+**Profile = Foundation (Role) + Overlays (Behaviors) + Resources (Domain) + Goals (Context)**
 
 ```
 Examples:
-Frontend Developer + User Advocate + Performance Optimizer + React-Node + E-commerce + Feature Development
-Backend Developer + Security Specialist + Critical Thinker + Python-Django + E-commerce + Bug Investigation  
-Architect + Strategic Thinker + Multi-Angle Analyzer + System Design
+Senior Frontend Developer + User Advocate + Performance Optimizer + Feature Development
+→ AI that builds production-ready UIs with focus on UX, performance, and maintainability
+
+Senior Backend Developer + Security Specialist + Deep Investigator + Bug Investigation
+→ AI that implements secure, scalable services and investigates issues deeply
+
+Principal Architect + System Designer + Strategic Thinker + Code Review
+→ AI that evaluates architectural impact, provides clear blueprints, and guides system design
 ```
 
-## 🏗️ FORGE Architecture
+## 🏗️ Framework Components
 
-### 🧭 Foundations
-**Core principles and role identities**
-- `foundations/core-doctrine.md` - Universal development principles
-- `foundations/roles/` - Frontend Developer, Backend Developer, Architect
+### 🧭 Foundations (Roles)
 
-### ⚡ Overlays  
-**Behavioral traits and specialized capabilities**
-- 🧠 **Thinking**: Critical Thinker, Strategic Thinker, Multi-Angle Analyzer
-- 🎯 **Quality**: Quality Advocate, Performance Optimizer, Security Specialist  
-- 🎨 **Communication**: User Advocate, Concise Communicator, Pragmatic Implementer
-- 🎯 **Problem Solving**: Relentless Problem Solver, Root Cause Analyzer
-- 🏗️ **System Design**: System Designer
+**Specialized roles for different aspects of software development**
+
+- **Principal Architect** - High-level system design and architectural blueprints, defines boundaries and integration patterns without implementation details
+- **Senior Frontend Developer** - Builds scalable, accessible UIs with production-ready code and careful attention to architecture
+- **Senior Backend Developer** - Implements reliable, secure backend systems with focus on scalability and operational concerns
+- **Senior Database Specialist** - Designs and optimizes schemas, queries, and migrations with emphasis on performance and integrity
+- **Senior QA Engineer** - Comprehensive testing strategies combining automation and exploratory testing
+- **Senior Product Manager** - Clear requirements with technical understanding and feasibility validation
+
+Architect provides strategic blueprints, while Senior roles focus on implementation excellence.
+
+### ⚡ Overlays (Behavioral Modifiers)
+
+**Behavioral patterns that modify how roles work. Compose 1-3 for focused output.**
+
+#### 🎯 EXECUTION STYLE (Choose ONE)
+- **Pragmatic Implementer** - Ship fast, iterate based on feedback
+- **Deliberate Planner** - Plan thoroughly, seek approval before execution
+- **Zero Trust** - Continuously refine, verify everything
+
+#### 🧠 THINKING & INVESTIGATION (Combinable)
+- **Analytical Thinker** - Challenge assumptions, consider alternatives
+- **Strategic Thinker** - Connect to business outcomes, long-term thinking
+- **Layered Thinking** - Break into system layers for analysis
+- **Multi-Angle Analyzer** - Multiple perspectives, find blind spots
+- **Deep Investigator** - Pursue root causes, never settle for symptoms
+- **Technical Researcher** - Research best practices before building
+
+#### 🛡️ QUALITY & SAFETY (Combinable)
+- **Quality Advocate** - Testing strategy, edge case handling
+- **Security Specialist** - Threat modeling, security by design
+- **Performance Optimizer** - Measure first, optimize what matters
+- **Clean Coder** - Readability, maintainability
+
+#### 🏗️ DESIGN & PERSPECTIVE (Combinable)
+- **System Designer** - Component boundaries, architectural thinking
+- **User Advocate** - User experience, accessibility focus
+
+#### 💬 COMMUNICATION
+- **Concise Communicator** - Brief, clear, scannable output
+
+**⚠️ Conflicts:** Don't combine Pragmatic Implementer + Deliberate Planner + Zero Trust (contradictory execution styles)
 
 ### 🌍 Resources
-**Technology and domain-specific knowledge**
-- 🛠️ **Technology Stacks**: React-Node, Python-Django
-- 🏭 **Business Domains**: E-commerce
 
-### 🎯 Goals
-**Mission-specific workflows**
-- Feature Development, Bug Investigation, Code Review, Retrospective
+**Domain and stack-specific knowledge** (extendable)
+
+- **Stacks**: React+Node, Python+Django
+- **Domains**: E-commerce patterns and best practices
+
+### 🎯 Goals (Mission Context)
+
+**Structured workflows for common development scenarios**
+
+- **Feature Development** - Understand → Plan → Build → Verify
+- **Bug Investigation** - Understand → Reproduce → Investigate → Fix → Verify
+- **Code Review** - Focus areas, review process, feedback guidelines
+- **Retrospective** - Analyze work, learn from successes/failures
 
 ### 🤖 Engines
-**Intelligent composition and automation**
-- Prompt Router - Automatically selects optimal profile combinations
 
-## 🚀 Quick Start
+**Intelligent composition tools** (coming soon)
 
-### 1. Manual Profile Forging
+- **Prompt Router** - Analyzes requests and suggests optimal profile combinations
+
+## 🚀 How to Use
+
+**For LLM Context Engineering:**
+- **Keep it focused:** Role + 1-3 overlays maximum
+- **Avoid conflicts:** Only ONE execution style (Pragmatic/Deliberate/Zero-Trust)
+- **Be specific:** Match overlays to actual task requirements
+- **Context budget:** ~2-4K tokens per profile is optimal
+- **Sequence complex profiles:** For 3 overlays, specify execution flow (see below)
+
+### Method 1: Copy Components to AI Context
+
+1. **Choose your foundation role** based on the work type
+2. **Add 1-3 overlays** for specific behaviors you need
+3. **Include relevant goal** for workflow structure
+4. **Paste into your AI tool's context** (Cursor, Claude, ChatGPT, etc.)
+
+**Example: Building a user-facing feature**
+
 ```markdown
-# Combine these components in your AI context:
+Copy to AI context:
+- foundations/roles/frontend-developer.md
+- overlays/user-advocate.md
+- overlays/performance-optimizer.md
+- goals/feature-request.md
 
-[foundations/core-doctrine.md content]
-[foundations/roles/frontend-developer.md content] 
-[overlays/user-advocate.md content]
-[goals/feature-request.md content]
-
-🎯 MISSION: Build responsive navigation component
+Then prompt: "Build a responsive product card component for e-commerce"
 ```
 
-### 2. Router-Assisted Composition
+The AI will now naturally consider UX, performance, and follow structured feature development.
+
+### Method 2: Execution Flow (For Complex 3-Overlay Profiles)
+
+When combining 3 overlays, add execution flow instructions to sequence behaviors:
+
 ```markdown
-User: "Build a secure login form with good UX"
+🔄 EXECUTION FLOW:
 
-Router analyzes → Recommends:
-- Frontend Developer (role)
-- User Advocate + Security Specialist (overlays)  
-- Feature Development (goal)
+1. **First Pass:** [Execution Style] - Define your approach
+2. **Second Pass:** [Context Overlay 1] - Apply specific focus  
+3. **Third Pass:** [Context Overlay 2] - Add additional perspective
 ```
 
-## 📋 Profile Templates
+**Example: Critical Security Investigation**
 
-### 🌐 **E-commerce Frontend Developer**
-**Best for**: UI components, user-facing features
-```
-foundations/roles/frontend-developer.md +
-overlays/user-advocate.md +
-overlays/performance-optimizer.md +
-resources/stacks/react-node.md +
-resources/domains/e-commerce.md +
-goals/feature-request.md
-```
+```markdown
+Copy to AI context:
+- foundations/roles/backend-developer.md
+- overlays/zero-trust.md
+- overlays/security-specialist.md
+- overlays/deep-investigator.md
+- goals/bug-investigation.md
 
-### ⚙️ **Security-Focused Backend Developer**  
-**Best for**: APIs, data handling, authentication
-```
-foundations/roles/backend-developer.md +
-overlays/security-specialist.md +
-overlays/critical-thinker.md +
-resources/stacks/python-django.md +
-goals/feature-request.md
+🔄 EXECUTION FLOW:
+1. First Pass: zero-trust - Verify every assumption
+2. Second Pass: security-specialist - Think like attacker
+3. Third Pass: deep-investigator - Dig until root cause found
 ```
 
-### 🏗️ **System Architect**
-**Best for**: System design, technical decisions
-```
-foundations/roles/architect.md +
-overlays/system-designer.md +
-overlays/strategic-thinker.md +
-goals/feature-request.md
-```
+This prevents behavioral conflicts by clarifying priority and sequence.
 
-### 🔧 **Quality-Focused Developer**
-**Best for**: Refactoring, code review, technical debt
-```
-foundations/roles/[any].md +
-overlays/quality-advocate.md +
-overlays/critical-thinker.md +
-goals/code-review.md
-```
+### Method 3: Use Pre-Built Recipes
 
-### 🚨 **Bug Hunter**
-**Best for**: Production issues, debugging
+Check `recipes/` folder for common combinations:
+
+- `bug-hunter.md` - For investigating production issues
+- `code-reviewer.md` - For thorough code reviews
+- `system-architect.md` - For technical design decisions
+
+### Method 4: Router-Assisted (Coming Soon)
+
+The Prompt Router will analyze your request and auto-suggest optimal combinations.
+
+## 📋 Common Combinations
+
+### 🎨 **User-Focused Feature Development**
+
 ```
-foundations/roles/[relevant].md +
-overlays/critical-thinker.md +
-overlays/concise-communicator.md +
-goals/bug-investigation.md
+Senior Frontend Developer + User Advocate + Performance Optimizer + Feature Development
 ```
 
-### 🎯 **Deep Problem Solver**
-**Best for**: Complex technical problems, root cause analysis
-```
-foundations/roles/[relevant].md +
-overlays/relentless-problem-solver.md +
-overlays/critical-thinker.md +
-goals/bug-investigation.md
-```
+**When**: Building user-facing features that need to be fast and intuitive
 
-### 🔍 **Incident Investigator**
-**Best for**: Production outages, systematic failure analysis
+### 🔐 **Security-Critical Implementation**
+
 ```
-foundations/roles/[relevant].md +
-overlays/root-cause-analyzer.md +
-overlays/critical-thinker.md +
-goals/bug-investigation.md
+Senior Backend Developer + Security Specialist + Deep Investigator + Feature Development
 ```
 
-## 🎛️ Customization Guide
+**When**: Building authentication, payments, or handling sensitive data
 
-### Choosing Foundations
-- **Frontend Developer**: UI/UX work, client-side features
-- **Backend Developer**: APIs, databases, server logic
-- **Architect**: System design, technical strategy
+### 🏗️ **Architecture & Design**
 
-### Selecting Overlays (2-3 max recommended)
-- **High Risk/Complexity**: Add Critical Thinker, Strategic Thinker
-- **User-Facing**: Add User Advocate, Performance Optimizer
-- **Security-Critical**: Add Security Specialist  
-- **Team Communication**: Add Concise Communicator
-- **Quick Delivery**: Add Pragmatic Implementer
+```
+Principal Architect + System Designer + Strategic Thinker + Deliberate Planner
+```
 
-### Matching Goals
-- **Building new features**: Feature Development
-- **Fixing issues**: Bug Investigation  
-- **Improving code**: Code Review
-- **Learning/planning**: Retrospective
+**When**: Making significant architectural decisions or designing new systems
 
-## 📊 Profile Effectiveness
+### 🧹 **Code Quality & Refactoring**
 
-**Profiles work best when:**
-- ✅ Foundation matches the technical domain (frontend/backend/architecture)
-- ✅ Overlays address specific risks or requirements
-- ✅ Goal aligns with the actual task
-- ✅ Total complexity stays manageable (avoid overlay overload)
+```
+[Any Role] + Clean Coder + Quality Advocate + Zero Trust + Code Review
+```
 
-**Signs a profile isn't working:**
-- ❌ AI asks too many clarifying questions
-- ❌ Output doesn't match expected expertise level
-- ❌ Responses are too generic or too complex
-- ❌ Profile conflicts with itself (e.g., speed vs thoroughness)
+**When**: Improving code quality, reducing technical debt, or cleanup work
 
-## 🔄 Evolution
+### 🐛 **Bug Investigation**
 
-FORGE grows based on real usage:
-- **Add foundations** when new technical domains emerge
-- **Add overlays** when you notice consistent behavior gaps
-- **Refine profiles** based on what actually improves AI output
-- **Update engines** to better match user intent to profiles
+```
+[Relevant Role] + Deep Investigator + Analytical Thinker + Bug Investigation
+```
+
+**When**: Tracking down elusive bugs or production issues
+
+### 📋 **Requirements Gathering**
+
+```
+Senior Product Manager + Analytical Thinker + Multi-Angle Analyzer + Feature Development
+```
+
+**When**: Clarifying requirements before development starts
+
+### 🔍 **Thorough Code Review**
+
+```
+[Relevant Role] + Zero Trust + Multi-Angle Analyzer + Layered Thinking + Code Review
+```
+
+**When**: Reviewing critical changes or unfamiliar code
+
+### 🎯 **Pragmatic Delivery**
+
+```
+[Any Role] + Pragmatic Implementer + Quality Advocate + Feature Development
+```
+
+**When**: Need to ship quickly but maintain quality standards
+
+## 🎯 Selection Guide
+
+### Choose Your Foundation (Required)
+
+Pick the role that matches your work:
+
+- **Principal Architect** - High-level system design, architectural blueprints, component boundaries, and integration patterns (no implementation)
+- **Senior Frontend Developer** - Build scalable UIs with production-ready code, accessibility, and performance
+- **Senior Backend Developer** - Implement reliable backend systems, APIs, and services with operational awareness
+- **Senior Database Specialist** - Design schemas and write optimized queries, migrations, and indexes
+- **Senior QA Engineer** - Comprehensive test strategies combining automation and manual testing
+- **Senior Product Manager** - Define clear requirements with technical understanding and feasibility checks
+
+### Add Overlays (1-3 recommended)
+
+Enhance with specific behavioral traits:
+
+**For Quality & Depth:**
+
+- Deep Investigator, Zero Trust, Quality Advocate, Clean Coder
+
+**For Strategy & Planning:**
+
+- Strategic Thinker, Deliberate Planner, System Designer, Analytical Thinker
+
+**For Speed & Delivery:**
+
+- Pragmatic Implementer, Concise Communicator
+
+**For Specific Concerns:**
+
+- Security Specialist, Performance Optimizer, User Advocate
+
+**For Problem Analysis:**
+
+- Multi-Angle Analyzer, Layered Thinking
+
+### Include a Goal (Optional but Recommended)
+
+Provides structured workflow:
+
+- **Feature Development** - Building new features
+- **Bug Investigation** - Finding and fixing issues
+- **Code Review** - Reviewing and improving code
+- **Retrospective** - Learning from completed work
+
+## ✨ What Makes FORGE Different
+
+**Not just prompt templates** - Each component contains:
+
+- Clear behavioral guidelines
+- Specific technical instincts
+- Decision-making frameworks
+- Communication patterns
+- Real-world habits and practices
+
+**Composable by design** - Mix and match without conflicts:
+
+- Overlays enhance any foundation role
+- Goals provide structure to any combination
+- Components are orthogonal and complementary
+
+**Battle-tested content** - Based on what actually works:
+
+- Distilled from years of development experience
+- Refined through real AI interactions
+- Focused on actionable behaviors, not theory
+
+## 🤝 Contributing
+
+FORGE improves through community feedback:
+
+- **Share your combinations** - What works well for your use cases?
+- **Suggest new overlays** - Notice a behavioral gap?
+- **Add resources** - Know a tech stack or domain deeply?
+- **Improve existing content** - Found better wording or examples?
 
 ---
 

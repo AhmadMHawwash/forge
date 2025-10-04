@@ -77,59 +77,56 @@ IF intent = IMPROVE → goals/code-review.md
 IF intent = LEARN → goals/retrospective.md
 ```
 
-**Overlays (Pick 2-4):**
+**Overlays (Pick 2-3 MAX):**
 
-**Planning Overlays (Default for most requests):**
+**STEP 1: Choose Execution Style (Pick ONE):**
 ```
-Always include UNLESS the change is small/trivial:
-- overlays/strategic-thinker.md (connect technical decisions to business outcomes)
-- overlays/deliberate-planner.md (plan thoroughly before acting)
-```
-
-**Context-Specific Overlays:**
-```
-IF context = Security → overlays/security-specialist.md
-IF context = Performance → overlays/performance-optimizer.md
-IF context = Quality → overlays/quality-advocate.md
-IF context = User Focus → overlays/user-advocate.md
-IF context = Urgent → overlays/concise-communicator.md
-IF context = Investigation → overlays/deep-investigator.md
-IF context = Clean Code → overlays/clean-coder.md
-IF context = Analysis → overlays/analytical-thinker.md
-IF context = Blind Spots → overlays/blind-spot-hunter.md
-IF context = Iteration → overlays/zero-trust.md
-IF context = Consistency → overlays/consistency-enforcer.md
-IF context = Cleanup → overlays/pruner.md
-IF context = System-wide → overlays/layered-thinking.md
-IF context = Research → overlays/technical-researcher.md
-IF context = Evidence → overlays/evidence-based-executor.md
-IF context = Structured → overlays/structured-operator.md
-IF context = Refactoring → overlays/careful-refactorer.md
+IF urgent/MVP/experiment → overlays/pragmatic-implementer.md
+IF critical/migration/high-risk → overlays/deliberate-planner.md
+IF security/payments/data-integrity → overlays/zero-trust.md
+IF small/trivial change → SKIP execution style
 ```
 
-**Additional Overlays to Consider:**
+**STEP 2: Add Context-Specific Overlay (Pick 1-2):**
+
+**Thinking Patterns:**
 ```
-- overlays/layered-thinking.md (for systematic analysis of changes across all system layers)
-- overlays/blind-spot-hunter.md (for identifying overlooked considerations and edge cases)
-- overlays/technical-researcher.md (for researching best practices and proven solutions)
-- overlays/evidence-based-executor.md (for verification-first execution and proof of work)
-- overlays/structured-operator.md (for disciplined phase-based execution)
-- overlays/careful-refactorer.md (for safe, behavior-preserving code improvements)
-- overlays/analytical-thinker.md (for complex or risky work requiring deep thinking)
-- overlays/pragmatic-implementer.md (for quick delivery needs)
-- overlays/deep-investigator.md (for deep technical problems and investigations)
-- overlays/clean-coder.md (for maintainable, readable code)
-- overlays/zero-trust.md (for preventing premature "done" and ensuring thorough solutions)
-- overlays/consistency-enforcer.md (for ensuring consistent patterns and eliminating duplication)
-- overlays/pruner.md (for removing dead code and unused artifacts)
+IF complex/architectural → overlays/strategic-thinker.md
+IF needs analysis → overlays/analytical-thinker.md
+IF system-wide impact → overlays/layered-thinking.md
+IF multiple stakeholders → overlays/multi-angle-analyzer.md
 ```
 
-**Small Change Criteria (Skip Planning Overlays):**
-- Single line fixes or typo corrections
-- Adding simple comments or documentation
-- Updating configuration values
-- Minor styling adjustments
-- Simple variable renames in single files
+**Investigation:**
+```
+IF bug/incident/root-cause → overlays/deep-investigator.md
+IF technology decision → overlays/technical-researcher.md
+```
+
+**Quality & Safety:**
+```
+IF security concern → overlays/security-specialist.md
+IF performance issue → overlays/performance-optimizer.md
+IF user-facing → overlays/quality-advocate.md
+IF refactoring → overlays/clean-coder.md
+```
+
+**Design & Perspective:**
+```
+IF architecture/integration → overlays/system-designer.md
+IF UX/accessibility → overlays/user-advocate.md
+```
+
+**Communication:**
+```
+IF urgent/production → overlays/concise-communicator.md
+```
+
+**⚠️ VALIDATION RULES:**
+1. **MAX 3 overlays total** (including execution style)
+2. **Only ONE execution style** (pragmatic/deliberate/zero-trust)
+3. **Prefer 2 overlays** for focused behavior
+4. **Skip execution style for trivial changes**
 
 ### 3. Present Selection for Confirmation
 
@@ -161,10 +158,35 @@ Proceed? (yes/modify/no)
 
 [foundations/core-doctrine.md content]
 [foundations/roles/[selected-role].md content]
-[overlays/strategic-thinker.md content] (unless small change)
-[overlays/deliberate-planner.md content] (unless small change)
-[overlays/[context-specific-overlay].md content]
+[overlays/[execution-style].md content] (if applicable)
+[overlays/[context-overlay-1].md content]
+[overlays/[context-overlay-2].md content] (optional, max 3 overlays total)
 [goals/[selected-goal].md content]
+```
+
+**Composition Rules:**
+- Total overlays: 2-3 maximum (prefer 2 for focus)
+- Execution style: Only ONE of (pragmatic/deliberate/zero-trust), or skip
+- Context overlays: 1-2 based on specific requirements
+- Validation: Ensure no conflicting execution styles
+
+**Execution Flow (for complex multi-overlay profiles):**
+When combining 3 overlays, specify execution sequence:
+```markdown
+## 🔄 EXECUTION FLOW
+
+1. **First Pass:** [Execution Style] - Define approach
+2. **Second Pass:** [Context Overlay 1] - Apply specific focus
+3. **Third Pass:** [Context Overlay 2] - Add additional perspective
+4. **Output:** Apply communication style if included
+```
+
+Example:
+```
+1. First Pass: zero-trust - Verify at each step
+2. Second Pass: deep-investigator - Find root cause
+3. Third Pass: layered-thinking - Analyze all system layers
+4. Output: Present findings clearly
 ```
 
 ## EXAMPLE COMPOSITIONS
@@ -175,6 +197,14 @@ Proceed? (yes/modify/no)
 **Step 1-2: Router Analysis**:
 - **AMBIGUITY DETECTED**: Lacks specific implementation details, multiple approaches possible
 - **ACTIVATE PRODUCT MANAGER**: Request needs requirement clarification
+- Intent: BUILD, Domain: Product Management
+- Context: Complex/architectural
+- Execution: Deliberate (gathering requirements is methodical)
+
+**Overlay Composition:**
+1. Execution Style: `deliberate-planner` (requirements need thorough planning)
+2. Context: `analytical-thinker` (analyze requirements from multiple angles)
+**Total: 2 overlays** ✅
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -182,8 +212,8 @@ Proceed? (yes/modify/no)
 - foundations/core-doctrine.md
 - foundations/roles/product-manager.md
 - goals/feature-request.md
-- overlays/strategic-thinker.md
 - overlays/deliberate-planner.md
+- overlays/analytical-thinker.md
 
 Proceed? (yes/modify/no)
 ```
@@ -192,8 +222,8 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/product-manager.md +
-overlays/strategic-thinker.md +
 overlays/deliberate-planner.md +
+overlays/analytical-thinker.md +
 goals/feature-request.md
 ```
 
@@ -203,9 +233,14 @@ goals/feature-request.md
 **User**: "Build a responsive navigation menu with accessibility support"
 
 **Step 1-2: Router Analysis**:
-- Intent: BUILD (build)
-- Domain: Frontend (navigation, responsive)
-- Context: User Focus (accessibility)
+- Intent: BUILD, Domain: Frontend
+- Context: User Focus (accessibility, UX)
+- Execution: Pragmatic (standard component, can iterate on feedback)
+
+**Overlay Composition:**
+1. Execution Style: `pragmatic-implementer` (build working version, iterate based on feedback)
+2. Context: `user-advocate` (accessibility is core requirement)
+**Total: 2 overlays** ✅
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -213,10 +248,8 @@ goals/feature-request.md
 - foundations/core-doctrine.md
 - foundations/roles/frontend-developer.md
 - goals/feature-request.md
-- overlays/strategic-thinker.md
-- overlays/deliberate-planner.md
+- overlays/pragmatic-implementer.md
 - overlays/user-advocate.md
-- overlays/quality-advocate.md
 
 Proceed? (yes/modify/no)
 ```
@@ -225,10 +258,8 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/frontend-developer.md +
-overlays/strategic-thinker.md +
-overlays/deliberate-planner.md +
+overlays/pragmatic-implementer.md +
 overlays/user-advocate.md +
-overlays/quality-advocate.md +
 goals/feature-request.md
 ```
 
@@ -236,9 +267,22 @@ goals/feature-request.md
 **User**: "Users can access other users' data through the API"
 
 **Step 1-2: Router Analysis**:
-- Intent: FIX (bug, security issue)
-- Domain: Backend (API)
-- Context: Security (data access), Urgent (security vulnerability)
+- Intent: FIX, Domain: Backend (API)
+- Context: Security (critical vulnerability), Urgent
+- Execution: Zero-Trust (security/data integrity requires continuous verification)
+
+**Overlay Composition:**
+1. Execution Style: `zero-trust` (security bug requires thorough verification)
+2. Context: `security-specialist` (core requirement for this fix)
+3. Communication: `concise-communicator` (urgent, need clear action plan)
+**Total: 3 overlays** ✅
+
+**Execution Flow:**
+```
+1. First Pass: zero-trust - Test every assumption about authorization
+2. Second Pass: security-specialist - Think like attacker, find all vulnerabilities
+3. Output: concise-communicator - Present findings and fix clearly for urgent action
+```
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -246,8 +290,7 @@ goals/feature-request.md
 - foundations/core-doctrine.md
 - foundations/roles/backend-developer.md
 - goals/bug-investigation.md
-- overlays/strategic-thinker.md
-- overlays/deliberate-planner.md
+- overlays/zero-trust.md
 - overlays/security-specialist.md
 - overlays/concise-communicator.md
 
@@ -258,8 +301,7 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/backend-developer.md +
-overlays/strategic-thinker.md +
-overlays/deliberate-planner.md +
+overlays/zero-trust.md +
 overlays/security-specialist.md +
 overlays/concise-communicator.md +
 goals/bug-investigation.md
@@ -269,9 +311,14 @@ goals/bug-investigation.md
 **User**: "Review our microservices architecture for scalability issues"
 
 **Step 1-2: Router Analysis**:
-- Intent: IMPROVE (review, architecture)
-- Domain: Architecture (microservices, scalability)
-- Context: Performance (scalability)
+- Intent: IMPROVE, Domain: Architecture
+- Context: Performance (scalability), System-wide
+- Execution: Skip (review doesn't need execution style)
+
+**Overlay Composition:**
+1. Context: `system-designer` (architectural review)
+2. Context: `performance-optimizer` (scalability focus)
+**Total: 2 overlays** ✅
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -279,8 +326,6 @@ goals/bug-investigation.md
 - foundations/core-doctrine.md
 - foundations/roles/architect.md
 - goals/code-review.md
-- overlays/strategic-thinker.md
-- overlays/deliberate-planner.md
 - overlays/system-designer.md
 - overlays/performance-optimizer.md
 
@@ -291,8 +336,6 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/architect.md +
-overlays/strategic-thinker.md +
-overlays/deliberate-planner.md +
 overlays/system-designer.md +
 overlays/performance-optimizer.md +
 goals/code-review.md
@@ -302,9 +345,22 @@ goals/code-review.md
 **User**: "Payment system is intermittently failing - users report transactions timing out but charges still go through"
 
 **Step 1-2: Router Analysis**:
-- Intent: FIX (failing, investigation needed)
-- Domain: Backend (payment system)
-- Context: Investigation (intermittent, production issue)
+- Intent: FIX, Domain: Backend (payment system)
+- Context: Investigation (intermittent, root cause analysis), System-wide
+- Execution: Zero-Trust (payment integrity critical)
+
+**Overlay Composition:**
+1. Execution Style: `zero-trust` (payment system requires thorough verification)
+2. Investigation: `deep-investigator` (intermittent issue needs deep analysis)
+3. Thinking: `layered-thinking` (analyze across all system layers)
+**Total: 3 overlays** ✅
+
+**Execution Flow:**
+```
+1. First Pass: zero-trust - Never trust assumptions, verify everything
+2. Second Pass: deep-investigator - Dig through all layers for root cause
+3. Third Pass: layered-thinking - Map findings across User → API → Logic → Data → Infrastructure
+```
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -312,9 +368,9 @@ goals/code-review.md
 - foundations/core-doctrine.md
 - foundations/roles/backend-developer.md
 - goals/bug-investigation.md
-- overlays/strategic-thinker.md
-- overlays/deliberate-planner.md
+- overlays/zero-trust.md
 - overlays/deep-investigator.md
+- overlays/layered-thinking.md
 
 Proceed? (yes/modify/no)
 ```
@@ -323,9 +379,9 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/backend-developer.md +
-overlays/strategic-thinker.md +
-overlays/deliberate-planner.md +
+overlays/zero-trust.md +
 overlays/deep-investigator.md +
+overlays/layered-thinking.md +
 goals/bug-investigation.md
 ```
 
@@ -333,9 +389,22 @@ goals/bug-investigation.md
 **User**: "Add real-time inventory sync between our e-commerce platform and warehouse management system"
 
 **Step 1-2: Router Analysis**:
-- Intent: BUILD (add, integration)
-- Domain: Architecture (system integration)
-- Context: System-wide (affects multiple systems, integration)
+- Intent: BUILD, Domain: Architecture (system integration)
+- Context: System-wide (affects multiple systems), Complex
+- Execution: Deliberate (high-risk, cross-system integration)
+
+**Overlay Composition:**
+1. Execution Style: `deliberate-planner` (critical integration requires careful planning)
+2. Design: `system-designer` (cross-system architecture)
+3. Thinking: `layered-thinking` (analyze impact across all layers)
+**Total: 3 overlays** ✅
+
+**Execution Flow:**
+```
+1. First Pass: deliberate-planner - Create detailed plan, identify dependencies
+2. Second Pass: system-designer - Design component boundaries and contracts
+3. Third Pass: layered-thinking - Validate across User → Interface → Logic → Data → Ops
+```
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -343,10 +412,9 @@ goals/bug-investigation.md
 - foundations/core-doctrine.md
 - foundations/roles/architect.md
 - goals/feature-request.md
-- overlays/strategic-thinker.md
 - overlays/deliberate-planner.md
-- overlays/layered-thinking.md
 - overlays/system-designer.md
+- overlays/layered-thinking.md
 
 Proceed? (yes/modify/no)
 ```
@@ -355,10 +423,9 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/architect.md +
-overlays/strategic-thinker.md +
 overlays/deliberate-planner.md +
-overlays/layered-thinking.md +
 overlays/system-designer.md +
+overlays/layered-thinking.md +
 goals/feature-request.md
 ```
 
@@ -366,9 +433,14 @@ goals/feature-request.md
 **User**: "Create comprehensive test scenarios for the new user registration feature"
 
 **Step 1-2: Router Analysis**:
-- Intent: BUILD (create test scenarios)
-- Domain: QA (test, scenarios, validation)
-- Context: Quality (comprehensive testing)
+- Intent: BUILD, Domain: QA
+- Context: Quality (comprehensive testing, edge cases)
+- Execution: Deliberate (thorough test planning required)
+
+**Overlay Composition:**
+1. Execution Style: `deliberate-planner` (systematic test scenario creation)
+2. Thinking: `multi-angle-analyzer` (consider all user perspectives and edge cases)
+**Total: 2 overlays** ✅
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -376,10 +448,8 @@ goals/feature-request.md
 - foundations/core-doctrine.md
 - foundations/roles/qa-engineer.md
 - goals/feature-request.md
-- overlays/strategic-thinker.md
 - overlays/deliberate-planner.md
-- overlays/blind-spot-hunter.md
-- overlays/quality-advocate.md
+- overlays/multi-angle-analyzer.md
 
 Proceed? (yes/modify/no)
 ```
@@ -388,43 +458,8 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/qa-engineer.md +
-overlays/strategic-thinker.md +
 overlays/deliberate-planner.md +
-overlays/blind-spot-hunter.md +
-overlays/quality-advocate.md +
-goals/feature-request.md
-```
-
-### Product Specification Request
-**User**: "Write detailed specification for a user notification system with email and in-app alerts"
-
-**Step 1-2: Router Analysis**:
-- Intent: BUILD (specification, requirements)
-- Domain: Product Management (specification, feature request, documentation)
-- Context: System-wide (affects multiple systems)
-
-**Step 3: Selection Presented to User**:
-```markdown
-📁 SELECTED FILES:
-- foundations/core-doctrine.md
-- foundations/roles/product-manager.md
-- goals/feature-request.md
-- overlays/strategic-thinker.md
-- overlays/deliberate-planner.md
-- overlays/layered-thinking.md
-- overlays/blind-spot-hunter.md
-
-Proceed? (yes/modify/no)
-```
-
-**Step 4: Generated Profile** (after user confirms):
-```
-foundations/core-doctrine.md +
-foundations/roles/product-manager.md +
-overlays/strategic-thinker.md +
-overlays/deliberate-planner.md +
-overlays/layered-thinking.md +
-overlays/blind-spot-hunter.md +
+overlays/multi-angle-analyzer.md +
 goals/feature-request.md
 ```
 
@@ -432,9 +467,14 @@ goals/feature-request.md
 **User**: "Research best practices and tools for implementing real-time notifications in a React application"
 
 **Step 1-2: Router Analysis**:
-- Intent: LEARN (research best practices)
-- Domain: Frontend (React application)
-- Context: Research (best practices, tools, evaluate)
+- Intent: LEARN, Domain: Frontend
+- Context: Research (best practices, tools evaluation)
+- Execution: Skip (research task, no implementation)
+
+**Overlay Composition:**
+1. Investigation: `technical-researcher` (core requirement)
+2. Thinking: `analytical-thinker` (compare options systematically)
+**Total: 2 overlays** ✅
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -442,8 +482,6 @@ goals/feature-request.md
 - foundations/core-doctrine.md
 - foundations/roles/frontend-developer.md
 - goals/retrospective.md
-- overlays/strategic-thinker.md
-- overlays/deliberate-planner.md
 - overlays/technical-researcher.md
 - overlays/analytical-thinker.md
 
@@ -454,8 +492,6 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/frontend-developer.md +
-overlays/strategic-thinker.md +
-overlays/deliberate-planner.md +
 overlays/technical-researcher.md +
 overlays/analytical-thinker.md +
 goals/retrospective.md
@@ -465,9 +501,22 @@ goals/retrospective.md
 **User**: "Design a database schema for a multi-tenant e-commerce platform with products, orders, and inventory tracking"
 
 **Step 1-2: Router Analysis**:
-- Intent: BUILD (design schema)
-- Domain: Database (database, schema, data model)
-- Context: System-wide (affects multiple systems)
+- Intent: BUILD, Domain: Database
+- Context: System-wide (multi-tenant, complex domain), High-risk
+- Execution: Deliberate (schema changes are costly to fix)
+
+**Overlay Composition:**
+1. Execution Style: `deliberate-planner` (schema design needs thorough planning)
+2. Design: `system-designer` (multi-tenant architecture)
+3. Thinking: `layered-thinking` (analyze data model across layers)
+**Total: 3 overlays** ✅
+
+**Execution Flow:**
+```
+1. First Pass: deliberate-planner - Plan schema evolution, migration strategy
+2. Second Pass: system-designer - Design tenant isolation, data boundaries
+3. Third Pass: layered-thinking - Validate across Domain → Schema → Queries → Performance → Operations
+```
 
 **Step 3: Selection Presented to User**:
 ```markdown
@@ -475,10 +524,9 @@ goals/retrospective.md
 - foundations/core-doctrine.md
 - foundations/roles/database-specialist.md
 - goals/feature-request.md
-- overlays/strategic-thinker.md
 - overlays/deliberate-planner.md
+- overlays/system-designer.md
 - overlays/layered-thinking.md
-- overlays/evidence-based-executor.md
 
 Proceed? (yes/modify/no)
 ```
@@ -487,10 +535,9 @@ Proceed? (yes/modify/no)
 ```
 foundations/core-doctrine.md +
 foundations/roles/database-specialist.md +
-overlays/strategic-thinker.md +
 overlays/deliberate-planner.md +
+overlays/system-designer.md +
 overlays/layered-thinking.md +
-overlays/evidence-based-executor.md +
 goals/feature-request.md
 ```
 
@@ -507,6 +554,12 @@ goals/feature-request.md
 - **"modify"**: Allow user to request changes to selection
 - **"no"**: Cancel profile composition
 
-**For simple requests**: Present basic router recommendations
-**For complex requests**: Present router suggestions with explanation of reasoning
-**For unclear requests**: Ask user to clarify intent and domain before presenting selection
+**Execution Flow Guidelines**:
+- **Include execution flow** when using 3 overlays (helps sequence complex behavior)
+- **Skip execution flow** when using 2 overlays or less (simple enough without sequencing)
+- **Flow structure**: Execution Style → Context Overlays → Communication (if applicable)
+
+**Request Complexity**:
+- **Simple requests**: Present basic router recommendations (2 overlays)
+- **Complex requests**: Present suggestions with reasoning (2-3 overlays + execution flow)
+- **Unclear requests**: Ask user to clarify intent and domain before presenting selection
