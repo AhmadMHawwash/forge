@@ -24,6 +24,13 @@ Build new features systematically by understanding requirements, planning implem
 - Consider testing strategy for the functionality
 - Identify any dependencies or integration points
 
+**For complex features (Least-to-Most approach):**
+
+1. Identify the simplest, most basic version that provides value
+2. Design that minimal version first
+3. Layer on additional complexity incrementally
+4. Each layer builds on the validated previous layer
+
 **Document your approach:**
 - What components or files need to be created/modified
 - How data will flow through the system

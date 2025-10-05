@@ -294,17 +294,30 @@ Provides structured workflow:
 - Communication patterns
 - Real-world habits and practices
 
+**Built on prompt engineering best practices:**
+
+- Chain-of-thought reasoning for better decisions
+- ReAct framework (Reason → Act → Observe → Reflect)
+- Reflexion-based self-critique for continuous improvement
+- Least-to-Most problem decomposition
+- Explicit constraints to prevent scope creep
+- Verification gates for quality assurance
+- Categorized overlays to prevent conflicts
+- Execution flow sequencing for complex profiles
+
 **Composable by design** - Mix and match without conflicts:
 
 - Overlays enhance any foundation role
 - Goals provide structure to any combination
 - Components are orthogonal and complementary
+- Category system prevents contradictory behaviors
 
 **Battle-tested content** - Based on what actually works:
 
 - Distilled from years of development experience
 - Refined through real AI interactions
 - Focused on actionable behaviors, not theory
+- Optimized for LLM consumption (2-3 overlays max)
 
 ## 🤝 Contributing
 

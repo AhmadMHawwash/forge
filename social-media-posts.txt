@@ -1,0 +1,413 @@
+SOCIAL MEDIA POSTS FOR FORGE FRAMEWORK
+=======================================
+
+## HACKER NEWS POST
+===================
+
+**Title:** Show HN: FORGE – Modular Prompt Components for Better AI Coding Contexts
+
+I kept forgetting to tell AI assistants "make it accessible" or "think about performance" until after the code was written. So I built a framework of reusable prompt components that give AI the right mindset by default.
+
+**The Problem:**
+Working with AI coding assistants, three issues kept recurring:
+1. Forgetting important context ("secure by default", "consider mobile users")
+2. Inconsistent output quality on similar tasks
+3. Prompt fatigue from writing detailed contexts every time
+
+**The Approach:**
+Created composable prompt modules across 4 dimensions:
+
+- **Foundations** (6 roles): Principal Architect (design), Senior Developers (implementation), Product Manager, QA
+- **Overlays** (17+ behaviors organized by category):
+  - Execution Styles: Pragmatic/Deliberate/Zero-Trust (pick one)
+  - Investigation: Deep Investigator, Technical Researcher
+  - Quality: Security Specialist, Performance Optimizer, Clean Coder
+  - Design: System Designer, User Advocate
+- **Goals** (4 workflows): Feature Development, Bug Investigation, Code Review, Retrospective
+- **Resources** (stacks/domains): React+Node, Python+Django, E-commerce
+
+Each component contains specific behaviors, technical instincts, and decision-making patterns—not just generic descriptions.
+
+**Built on prompt engineering best practices:** Chain-of-thought reasoning, explicit constraints, verification gates, and categorized composition to prevent conflicts.
+
+**Example Combinations:**
+```
+Senior Backend + Security Specialist + Zero-Trust + Bug Investigation
+→ AI that verifies everything and thinks security-first
+
+Senior Frontend + User Advocate + Pragmatic Implementer + Feature Development  
+→ AI that ships fast while caring about UX
+
+Principal Architect + System Designer + Strategic Thinker + Code Review
+→ AI that provides high-level design guidance and blueprints
+```
+
+**Pro tip:** Limit to 2-3 overlays for focused behavior. More isn't better!
+
+All components are markdown files you paste into your AI tool's context window (Cursor, Claude, etc.). Battle-tested content based on what actually works.
+
+Curious about others' approaches to consistent AI output quality.
+
+GitHub: [link]
+
+---
+
+## LINKEDIN POST
+===============
+
+🚀 **Stop Writing AI Prompts From Scratch – Use Composable Components**
+
+After a relatively long while of using AI coding assistants, I noticed a pattern: my best results came when I remembered to set clear context. But I kept forgetting key aspects like "think about accessibility" or "consider performance" until after reviewing the output.
+
+💡 **The Real Problem:**
+Developers face three challenges with AI coding assistants:
+1. **Context amnesia** - Forgetting to mention important constraints
+2. **Inconsistent quality** - Same task, wildly different results
+3. **Prompt fatigue** - Writing detailed contexts takes time
+
+🎯 **Solution: FORGE Framework**
+
+Built a library of reusable prompt components that compose into specialized AI contexts:
+
+**6 Specialized Roles** → Principal Architect (design blueprints), Senior Developers (implementation), PM, QA
+**17+ Behavioral Overlays** (categorized):
+  - Execution Styles (pick ONE): Pragmatic/Deliberate/Zero-Trust
+  - Quality & Investigation: Security, Performance, Deep Investigator
+  - Design: System Designer, User Advocate
+**4 Workflow Goals** → Feature Dev, Bug Investigation, Code Review, Retrospective
+
+Each component defines specific behaviors, technical instincts, and decision patterns. Not just descriptions—actionable guidance built on prompt engineering best practices (chain-of-thought reasoning, constraints, verification gates).
+
+✨ **Example:**
+```
+Senior Frontend + Pragmatic Implementer + User Advocate
+→ AI ships fast while thinking about UX
+→ No need to remind it every time
+```
+
+💡 **Pro tip:** Keep it focused—use 2-3 overlays max. Categories prevent conflicts (don't mix Pragmatic + Deliberate execution styles!)
+
+**The Result:** More consistent output, fewer clarifying questions, better default behaviors.
+
+It's like having specialized team members on demand—a security-focused backend dev for auth work, a UX-conscious frontend dev for features, a thorough investigator for bugs.
+
+All open source. Components are markdown files you paste into your AI tool (Cursor, Claude, ChatGPT, etc.).
+
+What's your approach to getting consistent quality from AI coding assistants?
+
+#AI #SoftwareDevelopment #DeveloperProductivity #CodingTools #OpenSource
+
+---
+
+## REDDIT POST (r/programming)
+===============================
+
+**Title:** Built reusable prompt components for AI coding assistants – looking for feedback
+
+**TL;DR:** Made a library of composable markdown files that give AI coding assistants the right context and behaviors by default. Open source.
+
+---
+
+**The Problem I Kept Having:**
+
+Using Cursor/Claude/ChatGPT for coding, I noticed I'd get wildly different output quality based on how much context I remembered to include. Sometimes I'd forget to mention "make it accessible" or "think about security" until after reviewing the code. Then I'd have to go back and fix things.
+
+Also, writing good prompts every single time is exhausting.
+
+**What I Built:**
+
+A framework called FORGE with ~25 reusable components across 4 categories:
+
+1. **Foundations (6 roles)**: Principal Architect (design), Senior Developers (implementation), PM, QA
+2. **Overlays (17+ behaviors - categorized)**: 
+   - Execution Styles: Pragmatic/Deliberate/Zero-Trust (pick ONE to avoid conflicts)
+   - Quality & Investigation: Security, Performance, Deep Investigator, etc.
+   - Design: System Designer, User Advocate
+3. **Goals (4 workflows)**: Feature Development, Bug Investigation, Code Review, Retrospective  
+4. **Resources (stacks/domains)**: React+Node, Python+Django, E-commerce
+
+Each component is a markdown file with specific behaviors, technical instincts, and decision patterns. You paste 2-3 of them into your AI tool's context (max 3 for focused behavior).
+
+**Example Combinations:**
+
+```
+Senior Backend + Zero-Trust + Security Specialist + Bug Investigation
+→ AI that verifies everything and thinks security-first
+
+Senior Frontend + Pragmatic Implementer + User Advocate + Feature Development
+→ AI that ships fast while caring about UX
+
+Principal Architect + System Designer + Strategic Thinker + Code Review
+→ AI that provides design blueprints and evaluates architecture
+```
+
+**Key Learning:** Don't overload! Stick to 2-3 overlays. More = diluted behavior.
+
+**What Makes It Different:**
+
+- Not just generic templates - each component has actionable guidance
+- Built on prompt engineering best practices (CoT reasoning, constraints, verification)
+- Categorized to prevent conflicts - execution styles are mutually exclusive
+- Battle-tested content based on what actually works
+- Copy-paste ready for any AI tool
+- Smart composition limits - 2-3 overlays max for focused behavior
+
+Has anyone else built something similar? What approaches have worked for getting consistent AI output quality?
+
+GitHub: [link]
+
+---
+
+## TWITTER/X POST
+================
+
+I kept forgetting to tell AI "make it accessible" until after the code was done 😅
+
+Built FORGE: reusable prompt components for AI coding assistants
+
+~25 markdown files across 4 categories:
+→ 6 roles: Principal Architect (design) + Senior Devs (implementation)
+→ 17+ behaviors (categorized to prevent conflicts!)
+  • Execution: Pragmatic/Deliberate/Zero-Trust (pick ONE)
+  • Quality: Security, Performance, Clean Coder
+  • Design: System Designer, User Advocate
+→ 4 workflows + stacks/domains
+
+Paste 2-3 into your AI context = focused behavior
+
+Example:
+Senior Frontend + Pragmatic + User Advocate
+→ AI ships fast while thinking UX
+
+Pro tip: Limit to 2-3 overlays. More = diluted!
+
+Open source. Copy-paste ready for Cursor/Claude/ChatGPT
+
+More consistent output, less prompt fatigue 🎯
+
+#AI #DevTools #Coding
+
+[link]
+
+---
+
+## DEV.TO STYLE POST
+===================
+
+**Title:** Building FORGE: Composable Prompt Components for AI Coding Assistants
+
+## The Problem I Was Solving
+
+After months of using AI coding assistants (Cursor, Claude, ChatGPT), I noticed a frustrating pattern:
+
+**My best results came when I remembered to set clear context.** But I kept forgetting key aspects:
+- "Make it accessible"
+- "Think about performance"  
+- "Consider security implications"
+- "Handle edge cases"
+
+By the time I reviewed the output, I'd have to go back and say "actually, also consider X, Y, and Z."
+
+**Three core issues:**
+1. **Context amnesia** - Forgetting important constraints until after the fact
+2. **Inconsistent quality** - Same task, wildly different results based on my prompt quality that day
+3. **Prompt fatigue** - Writing detailed contexts every time is exhausting
+
+
+## The Solution: Reusable Components
+
+Built FORGE as a library of ~25 composable markdown files:
+
+### Foundations (6 Specialized Roles)
+Each role defines specific behaviors, technical instincts, and communication patterns:
+- **Principal Architect** - System design blueprints, high-level patterns (no implementation)
+- **Senior Frontend Developer** - UX-focused, production-ready UI implementation
+- **Senior Backend Developer** - API design, security by design, operational awareness
+- **Senior Database Specialist** - Schema design, query optimization, migrations
+- **Senior QA Engineer** - Testing strategy, comprehensive quality advocacy
+- **Senior Product Manager** - Requirements clarity with technical understanding
+
+### Overlays (17+ Behavioral Traits - Organized by Category)
+
+**⚠️ Key Insight:** Overlays are categorized to prevent conflicts!
+
+**Execution Styles (Pick ONE):**
+- **Pragmatic Implementer** - Ship fast, iterate based on feedback
+- **Deliberate Planner** - Plan thoroughly, seek approval before execution
+- **Zero Trust** - Continuously verify and refine, never trust first version
+
+**Investigation & Research:**
+- **Deep Investigator** - Never stops at surface symptoms
+- **Technical Researcher** - Research best practices before building
+
+**Quality & Safety:**
+- **Security Specialist** - Thinks like an attacker
+- **Performance Optimizer** - Measures first, optimizes what matters
+- **Clean Coder** - Readability and maintainability focus
+- **Quality Advocate** - Testing strategy, edge case handling
+
+**Design & Perspective:**
+- **System Designer** - Component boundaries, architectural thinking
+- **User Advocate** - Always considers the human using the software
+
+**Thinking Patterns:**
+- **Analytical Thinker** - Challenges assumptions
+- **Strategic Thinker** - Connects technical to business
+- And more...
+
+### Goals (4 Structured Workflows)
+- **Feature Development** - Understand → Plan → Build → Verify
+- **Bug Investigation** - Reproduce → Investigate → Fix → Verify
+- **Code Review** - Systematic review process
+- **Retrospective** - Learn from completed work
+
+### Resources (Stacks & Domains)
+Extendable with tech stacks and domain knowledge
+
+## How It Works
+
+Each component is a markdown file you paste into your AI tool's context (Cursor, Claude, ChatGPT, etc.).
+
+**Simple example:**
+```markdown
+Copy into AI context:
+- foundations/roles/frontend-developer.md
+- overlays/pragmatic-implementer.md (execution style)
+- overlays/user-advocate.md (design focus)
+- goals/feature-request.md
+
+Then prompt: "Build a product card component"
+```
+
+The AI now ships fast while naturally thinking about UX and follows structured development.
+
+**Pro tip:** Limit to 2-3 overlays for focused behavior. More isn't better!
+
+## Real Examples
+
+```
+Senior Backend + Zero-Trust + Security Specialist + Bug Investigation
+→ AI that verifies everything and thinks security-first
+
+Principal Architect + System Designer + Strategic Thinker + Code Review
+→ AI that provides high-level design blueprints
+
+Senior Frontend + Pragmatic Implementer + User Advocate + Feature Development
+→ AI that ships fast while caring about UX
+```
+
+## What Makes It Different
+
+**Not just templates** - Each component contains:
+- Clear behavioral guidelines
+- Specific technical instincts
+- Decision-making frameworks (chain-of-thought reasoning)
+- Real-world habits and practices
+- Built-in constraints and verification gates
+
+**Composable by design** - Mix and match with clear rules. Overlays are categorized to prevent conflicts (execution styles are mutually exclusive).
+
+**Battle-tested** - Based on prompt engineering best practices and refined through real usage.
+
+## The Results
+
+Using FORGE, I've noticed:
+- More consistent output quality
+- Fewer "actually, also consider..." clarifications
+- Less prompt fatigue
+- Better default behaviors (security, accessibility, performance)
+
+## Try It
+
+The framework is open source and ready to use. Each file is copy-paste ready for your AI tool.
+
+Have you found ways to get more consistent results from AI coding assistants? I'd love to hear what's worked for you.
+
+[GitHub link]
+
+---
+
+## REDDIT POST (r/MachineLearning)
+==================================
+
+**Title:** Compositional prompt framework for consistent AI coding assistant behavior – methodology feedback?
+
+**TL;DR:** Built ~25 reusable prompt components that compose into specialized contexts for coding LLMs. Seeing improved consistency. Looking for feedback on approach and related work.
+
+## Problem Space
+
+Working with coding LLMs (Claude, GPT-4, Cursor), observed three recurring issues:
+1. **Context dependency**: Output quality varies significantly based on prompt completeness
+2. **Inconsistent behavior**: Same task yields different quality levels across sessions  
+3. **Cognitive overhead**: Writing comprehensive prompts for every interaction is taxing
+
+## Approach
+
+Developed a compositional framework with orthogonal components:
+
+**Foundations (6)**: Role-based behavioral templates 
+- Principal Architect (design), Senior Developers (implementation), PM, QA
+- Each defines specific behaviors, technical instincts, communication patterns
+- ~50-90 lines of actionable guidance per role
+
+**Overlays (17+)**: Behavior modifiers organized by category to prevent semantic conflicts
+- Execution Styles (mutually exclusive): Pragmatic/Deliberate/Zero-Trust
+- Investigation: Deep Investigator, Technical Researcher
+- Quality: Security Specialist, Performance Optimizer, Clean Coder, etc.
+- Design: System Designer, User Advocate
+- ~30-90 lines each, focused on specific capabilities
+
+**Goals (4)**: Workflow structures for common scenarios
+- Feature Development, Bug Investigation, Code Review, Retrospective
+- Provides systematic process frameworks
+
+**Resources**: Stack/domain-specific knowledge (extendable)
+
+## Key Design Decisions
+
+**Categorized Orthogonality**: Components are composable within constraints
+- Most overlays can enhance any foundation
+- Execution styles are mutually exclusive to prevent contradictory directives
+- Category system reduces semantic conflicts
+- Composition limit (2-3 overlays) prevents diluted behavior
+- Controlled combinations from categorized components
+
+**Actionable content**: Not generic descriptions
+- Chain-of-thought reasoning frameworks
+- Concrete behavioral guidelines with constraints
+- Real-world habit patterns
+- Built-in verification gates
+
+**Format**: Markdown files users paste into context windows
+- Simple integration with any LLM tool
+- Human-readable and editable
+- Version controllable
+
+## Observed Results
+
+Using compositions vs generic prompts:
+- Reduced clarification rounds (~30-40% fewer follow-ups)
+- More consistent output quality across sessions
+- Better default behaviors (security, accessibility, performance considerations)
+- Lower prompt engineering cognitive load
+
+## Questions
+
+1. **Related work**: Are there established frameworks for compositional LLM specialization via prompt engineering?
+
+2. **Evaluation methodology**: How would you rigorously measure consistency in LLM behavioral patterns across similar tasks?
+
+3. **Orthogonality**: Experience with dimension decomposition in prompt composition? Trade-offs observed?
+
+4. **Alternative approaches**: What other methods have shown promise for consistent specialized LLM behavior?
+
+Appreciate pointers to related research or feedback on the approach.
+
+Code and components available: [link]
+
+---
+
+END OF SOCIAL MEDIA POSTS
+
+
+

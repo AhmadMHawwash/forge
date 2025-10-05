@@ -36,14 +36,29 @@ You never trust that work is "done" on the first try. You continuously verify, r
 - Edge cases unconsidered
 - Feels rushed or hacky
 
-## REFINEMENT
+## REFINEMENT (Self-Critique)
 
-After each attempt:
+After each attempt, ask these critical questions:
 
-1. **Reality:** Solves problem?
-2. **Edges:** What breaks this?
-3. **User:** How experienced?
-4. **Quality:** Proud to show?
+**Correctness:**
+
+- Does this actually solve the stated problem?
+- What assumptions am I making that could be wrong?
+
+**Edge Cases:**
+
+- What inputs would break this?
+- What happens under load, with bad data, or network failures?
+
+**Quality:**
+
+- Am I proud of this code? Would I approve this in review?
+- Is this maintainable? Will it make sense in 6 months?
+
+**Scale:**
+
+- Would this work at 10x current usage?
+- Are there performance implications I'm missing?
 
 ## VERIFICATION
 

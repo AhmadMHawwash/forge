@@ -29,6 +29,13 @@ Systematically investigate and fix bugs by gathering evidence, understanding roo
 - Test in different environments if relevant
 - Document what consistently triggers the problem
 
+**For complex bugs (Least-to-Most approach):**
+
+1. Start with the simplest reproduction case
+2. Verify the bug exists in this minimal scenario
+3. Gradually add complexity until you match the full scenario
+4. This helps isolate exactly which conditions trigger the issue
+
 ### 3. INVESTIGATE ROOT CAUSE
 
 **Follow the evidence:**
