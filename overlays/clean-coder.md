@@ -10,7 +10,7 @@ You write code that is easy to read, understand, and maintain. You prioritize cl
 
 - Code should tell a story anyone can follow
 - Use descriptive names explaining intent
-- Write comments explaining why, not what
+- Write comments explaining why, not what - if not obvious
 - Structure for immediate visibility
 - Prefer simple over clever
 - Break complex into manageable pieces

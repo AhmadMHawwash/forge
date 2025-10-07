@@ -45,8 +45,9 @@ Check if request needs requirement clarification before proceeding:
 - **Investigation**: "outage", "incident", "root cause", "intermittent", "production issue", "deep analysis", "relentless"
 - **Clean Code**: "refactor", "readable", "maintainable", "clean", "technical debt", "legacy"
 - **Analysis**: "reconsider", "alternative", "different approach", "step back", "challenge", "assumptions", "think critically"
-- **Blind Spots**: "missed", "overlooked", "edge case", "what if", "blind spot", "comprehensive", "complete analysis", "thorough"
+- **Blind Spots**: "missed", "overlooked", "edge case", "what if", "blind spot", "comprehensive", "complete analysis", "thorough", "all angles", "consider all", "multiple perspectives"
 - **Iteration**: "refine", "improve", "iterate", "not quite right", "needs work", "almost there", "keep working"
+- **Tradeoffs**: "tradeoff", "pros and cons", "weigh options", "compare approaches", "evaluate alternatives", "decision", "choose between"
 - **Consistency**: "standardise", "consistent", "pattern", "multiple ways", "unify", "consolidate", "common approach"
 - **Cleanup**: "remove", "delete", "unused", "dead code", "cleanup", "prune", "leftover", "cruft"
 - **System-wide**: "system", "architecture", "integration", "cross-cutting", "affects multiple", "layers", "full stack", "end-to-end"
@@ -94,7 +95,9 @@ IF small/trivial change → SKIP execution style
 IF complex/architectural → overlays/strategic-thinker.md
 IF needs analysis → overlays/analytical-thinker.md
 IF system-wide impact → overlays/layered-thinking.md
-IF multiple stakeholders → overlays/multi-angle-analyzer.md
+IF multiple stakeholders/perspectives → overlays/multi-angle-analyzer.md
+IF design decisions/tradeoffs → overlays/multi-angle-analyzer.md
+IF requirements gathering → overlays/multi-angle-analyzer.md
 ```
 
 **Investigation:**
@@ -128,27 +131,22 @@ IF urgent/production → overlays/concise-communicator.md
 3. **Prefer 2 overlays** for focused behavior
 4. **Skip execution style for trivial changes**
 
-### 3. Present Selection for Confirmation
+### 3. Present Selection and Compose Profile
 
-Before composing the profile, present the selected files to the user for confirmation:
+Present the selected files to the user, then immediately proceed to compose the profile:
 
-**Simplified Selection Template:**
+**Selection Display Template:**
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/[selected-role].md
 - goals/[selected-goal].md
-- overlays/strategic-thinker.md (unless small change)
-- overlays/deliberate-planner.md (unless small change)
-- overlays/[context-specific-overlay-1].md
-- overlays/[context-specific-overlay-2].md (if applicable)
-
-Proceed? (yes/modify/no)
+- overlays/[execution-style].md (if applicable)
+- overlays/[context-overlay-1].md
+- overlays/[context-overlay-2].md (if applicable)
 ```
 
-**Note:** Skip the detailed analysis output - just show the selected file names for confirmation.
-
-**Wait for user confirmation before proceeding to Step 4.**
+**Then immediately proceed to compose the profile.**
 
 ### 4. Compose Profile
 
@@ -206,19 +204,17 @@ Example:
 2. Context: `analytical-thinker` (analyze requirements from multiple angles)
 **Total: 2 overlays** ✅
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/product-manager.md
 - goals/feature-request.md
 - overlays/deliberate-planner.md
 - overlays/analytical-thinker.md
-
-Proceed? (yes/modify/no)
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/product-manager.md +
@@ -242,19 +238,17 @@ goals/feature-request.md
 2. Context: `user-advocate` (accessibility is core requirement)
 **Total: 2 overlays** ✅
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/frontend-developer.md
 - goals/feature-request.md
 - overlays/pragmatic-implementer.md
 - overlays/user-advocate.md
-
-Proceed? (yes/modify/no)
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/frontend-developer.md +
@@ -284,20 +278,18 @@ goals/feature-request.md
 3. Output: concise-communicator - Present findings and fix clearly for urgent action
 ```
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/backend-developer.md
 - goals/bug-investigation.md
 - overlays/zero-trust.md
 - overlays/security-specialist.md
 - overlays/concise-communicator.md
-
-Proceed? (yes/modify/no)
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/backend-developer.md +
@@ -312,32 +304,30 @@ goals/bug-investigation.md
 
 **Step 1-2: Router Analysis**:
 - Intent: IMPROVE, Domain: Architecture
-- Context: Performance (scalability), System-wide
+- Context: Performance (scalability), System-wide, Tradeoffs (architectural decisions)
 - Execution: Skip (review doesn't need execution style)
 
 **Overlay Composition:**
-1. Context: `system-designer` (architectural review)
-2. Context: `performance-optimizer` (scalability focus)
+1. Design: `system-designer` (architectural review)
+2. Context: `multi-angle-analyzer` (evaluate technical, operational, team perspectives)
 **Total: 2 overlays** ✅
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/architect.md
 - goals/code-review.md
 - overlays/system-designer.md
-- overlays/performance-optimizer.md
-
-Proceed? (yes/modify/no)
+- overlays/multi-angle-analyzer.md
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/architect.md +
 overlays/system-designer.md +
-overlays/performance-optimizer.md +
+overlays/multi-angle-analyzer.md +
 goals/code-review.md
 ```
 
@@ -362,20 +352,18 @@ goals/code-review.md
 3. Third Pass: layered-thinking - Map findings across User → API → Logic → Data → Infrastructure
 ```
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/backend-developer.md
 - goals/bug-investigation.md
 - overlays/zero-trust.md
 - overlays/deep-investigator.md
 - overlays/layered-thinking.md
-
-Proceed? (yes/modify/no)
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/backend-developer.md +
@@ -406,20 +394,18 @@ goals/bug-investigation.md
 3. Third Pass: layered-thinking - Validate across User → Interface → Logic → Data → Ops
 ```
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/architect.md
 - goals/feature-request.md
 - overlays/deliberate-planner.md
 - overlays/system-designer.md
 - overlays/layered-thinking.md
-
-Proceed? (yes/modify/no)
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/architect.md +
@@ -442,19 +428,17 @@ goals/feature-request.md
 2. Thinking: `multi-angle-analyzer` (consider all user perspectives and edge cases)
 **Total: 2 overlays** ✅
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/qa-engineer.md
 - goals/feature-request.md
 - overlays/deliberate-planner.md
 - overlays/multi-angle-analyzer.md
-
-Proceed? (yes/modify/no)
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/qa-engineer.md +
@@ -468,32 +452,30 @@ goals/feature-request.md
 
 **Step 1-2: Router Analysis**:
 - Intent: LEARN, Domain: Frontend
-- Context: Research (best practices, tools evaluation)
+- Context: Research (best practices, tools evaluation), Tradeoffs (compare approaches)
 - Execution: Skip (research task, no implementation)
 
 **Overlay Composition:**
 1. Investigation: `technical-researcher` (core requirement)
-2. Thinking: `analytical-thinker` (compare options systematically)
+2. Thinking: `multi-angle-analyzer` (evaluate from technical, user, operational perspectives)
 **Total: 2 overlays** ✅
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/frontend-developer.md
 - goals/retrospective.md
 - overlays/technical-researcher.md
-- overlays/analytical-thinker.md
-
-Proceed? (yes/modify/no)
+- overlays/multi-angle-analyzer.md
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/frontend-developer.md +
 overlays/technical-researcher.md +
-overlays/analytical-thinker.md +
+overlays/multi-angle-analyzer.md +
 goals/retrospective.md
 ```
 
@@ -518,20 +500,18 @@ goals/retrospective.md
 3. Third Pass: layered-thinking - Validate across Domain → Schema → Queries → Performance → Operations
 ```
 
-**Step 3: Selection Presented to User**:
+**Step 3: Selection Displayed**:
 ```markdown
-📁 SELECTED FILES:
+📁 SELECTED PROFILE:
 - foundations/core-doctrine.md
 - foundations/roles/database-specialist.md
 - goals/feature-request.md
 - overlays/deliberate-planner.md
 - overlays/system-designer.md
 - overlays/layered-thinking.md
-
-Proceed? (yes/modify/no)
 ```
 
-**Step 4: Generated Profile** (after user confirms):
+**Step 4: Generated Profile**:
 ```
 foundations/core-doctrine.md +
 foundations/roles/database-specialist.md +
@@ -545,14 +525,8 @@ goals/feature-request.md
 
 **For all requests**: 
 1. Analyze user request (Steps 1-2)
-2. Present file selection for confirmation (Step 3)
-3. Wait for user approval before proceeding
-4. Compose profile only after confirmation (Step 4)
-
-**User Response Options**:
-- **"yes"** or **"proceed"**: Continue with selected files
-- **"modify"**: Allow user to request changes to selection
-- **"no"**: Cancel profile composition
+2. Display selected profile files (Step 3)
+3. Immediately compose and execute profile (Step 4)
 
 **Execution Flow Guidelines**:
 - **Include execution flow** when using 3 overlays (helps sequence complex behavior)
