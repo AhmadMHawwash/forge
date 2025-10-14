@@ -61,6 +61,10 @@ Example: `zero-trust` → `security-specialist` → `deep-investigator`
 
 - `concise-communicator` - Brief, clear, scannable
 
+### 🔥 EXPERIMENTAL
+
+- `pressure-cooker` - Emotional framing for maximum effort (EmotionPrompt research)
+
 ## 🎯 QUICK SELECTION
 
 **For LLM agents working on:**

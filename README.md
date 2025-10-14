@@ -76,6 +76,9 @@ Architect provides strategic blueprints, while Senior roles focus on implementat
 #### 💬 COMMUNICATION
 - **Concise Communicator** - Brief, clear, scannable output
 
+#### 🔥 EXPERIMENTAL 
+- **Pressure Cooker** - Emotional framing for maximum effort (EmotionPrompt research - for science!)
+
 **⚠️ Conflicts:** Don't combine Pragmatic Implementer + Deliberate Planner + Zero Trust (contradictory execution styles)
 
 ### 🌍 Resources
