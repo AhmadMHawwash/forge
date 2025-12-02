@@ -1,10 +1,13 @@
 # FEATURE DEVELOPMENT
 
-Build new features systematically by understanding requirements, planning implementation, and delivering working code.
+Build new features systematically using a two-phase workflow: Planning Phase (understand and design) followed by Execution Phase (build and verify).
 
-## PROCESS
+## TWO-PHASE WORKFLOW
 
-### 1. UNDERSTAND
+### 📋 PHASE 1: PLANNING
+**Purpose:** Understand requirements, design solution, and create implementation plan before coding.
+
+#### 1. UNDERSTAND
 **Before writing any code:**
 - Read and understand the requirements
 - Look at existing code patterns and architecture
@@ -17,7 +20,12 @@ Build new features systematically by understanding requirements, planning implem
 - What existing code or patterns can I build on?
 - What could go wrong or be complicated?
 
-### 2. PLAN
+**Scale-Adaptive Depth:**
+- **Simple features:** Quick understanding check, identify 2-3 key components
+- **Medium features:** Map user flows, identify affected systems, list dependencies
+- **Complex features:** Full requirements analysis, stakeholder perspectives, risk assessment, architectural impact
+
+#### 2. PLAN
 **Design the solution:**
 - Break down the feature into logical components
 - Plan the data model and API changes needed
@@ -37,7 +45,19 @@ Build new features systematically by understanding requirements, planning implem
 - What testing will validate the feature works
 - What could be risky or require extra attention
 
-### 3. BUILD
+**Planning Artifacts:**
+- Component breakdown and responsibilities
+- Data flow diagrams or descriptions
+- API contracts or interface specifications
+- Testing strategy and key scenarios
+- Risk assessment and mitigation plans
+
+**Phase Gate:** Present plan for review/approval before proceeding to execution (especially for complex features)
+
+### 🚀 PHASE 2: EXECUTION
+**Purpose:** Implement the planned solution incrementally with continuous validation.
+
+#### 3. BUILD
 **Implement incrementally:**
 - Start with the core functionality
 - Write tests as you implement features
@@ -50,7 +70,13 @@ Build new features systematically by understanding requirements, planning implem
 - Write clear commit messages explaining what and why
 - Test the feature works in realistic scenarios
 
-### 4. VERIFY
+**Incremental Delivery:**
+- Build smallest working version first
+- Add complexity layer by layer
+- Validate each increment before proceeding
+- Keep implementation aligned with plan (or update plan if needed)
+
+#### 4. VERIFY
 **Validate the solution:**
 - Test the feature with realistic data and usage
 - Verify it meets the original requirements
@@ -63,13 +89,40 @@ Build new features systematically by understanding requirements, planning implem
 - Code follows project conventions
 - Documentation is updated if needed
 
+**Verification Gates:**
+- ✅ Functionality: Works as specified?
+- ✅ Testing: Tests run, output captured?
+- ✅ Edge Cases: Realistic data tested?
+- ✅ Integration: Doesn't break existing functionality?
+- ✅ Evidence: Proof provided for all claims?
+
+## PHASE TRANSITIONS
+
+**Planning → Execution:**
+- Present plan summary and get approval (for complex features)
+- Confirm understanding of requirements
+- Identify any blockers or dependencies
+- Set expectations for delivery timeline
+
+**Execution → Complete:**
+- Verify all gates passed
+- Document what was delivered
+- Note any deviations from plan and why
+- Share knowledge and lessons learned
+
 ## COMMUNICATION
 
-**Keep stakeholders informed:**
+**During Planning Phase:**
 - Share your understanding of requirements for validation
 - Explain your approach and any trade-offs
-- Report progress and any blockers discovered
 - Ask for clarification when requirements are unclear
+- Present plan artifacts for review
+
+**During Execution Phase:**
+- Report progress and any blockers discovered
+- Flag when plan needs adjustment
+- Share incremental progress for complex features
+- Communicate when verification gates are passed
 
 **When stuck:**
 - Clearly describe what you're trying to achieve

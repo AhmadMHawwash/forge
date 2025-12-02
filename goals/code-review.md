@@ -1,8 +1,11 @@
 # CODE REVIEW
 
-Systematically review code to improve quality, share knowledge, and catch issues before they reach production.
+Systematically review code using a two-phase workflow: Planning Phase (understand and analyze) followed by Execution Phase (provide feedback and verify).
 
-## REVIEW APPROACH
+## TWO-PHASE WORKFLOW
+
+### 📋 PHASE 1: PLANNING (Analysis)
+**Purpose:** Understand the code, identify issues, and prepare comprehensive feedback.
 
 ### WHAT TO FOCUS ON
 
@@ -31,22 +34,41 @@ Systematically review code to improve quality, share knowledge, and catch issues
 
 ### REVIEW PROCESS
 
-**Before starting:**
+**Before starting (Understanding Phase):**
 - Understand what problem this code is solving
 - Check if the approach makes sense for the requirements
 - Look at the scope and size of changes
+- Read related context (PR description, linked issues)
 
-**During review:**
+**During analysis (Planning Phase):**
 - Read the code as if you're trying to understand it for the first time
 - Consider how this fits with the existing codebase
 - Think about what could go wrong in production
 - Look for simpler ways to achieve the same result
+- Identify all issues before providing feedback
+
+**Scale-Adaptive Depth:**
+- **Simple changes:** Quick scan, check correctness and style
+- **Medium changes:** Full code read, check all focus areas, identify 5-10 issues
+- **Complex changes:** Deep analysis, architectural impact, security review, performance implications, comprehensive issue list
+
+**Phase Gate:** Complete analysis before providing feedback (ensures comprehensive review)
+
+### 🚀 PHASE 2: EXECUTION (Feedback & Verification)
+**Purpose:** Provide structured feedback and verify understanding.
 
 **Provide feedback:**
 - Point out specific issues with clear explanations
 - Suggest alternatives when criticizing approaches
 - Ask questions when you don't understand something
 - Acknowledge good practices and clever solutions
+- Structure feedback by priority and category
+
+**Verification Gates:**
+- ✅ Analysis: All focus areas reviewed?
+- ✅ Feedback: Issues clearly explained with context?
+- ✅ Prioritization: Critical issues flagged appropriately?
+- ✅ Constructive: Feedback actionable and helpful?
 
 ## FEEDBACK GUIDELINES
 
@@ -92,3 +114,17 @@ Systematically review code to improve quality, share knowledge, and catch issues
 - Authentication and authorization checks
 - Sensitive data exposure in logs or errors
 - Unsafe use of external libraries or dependencies
+
+## PHASE TRANSITIONS
+
+**Planning → Execution:**
+- Complete full analysis before providing feedback
+- Organize findings by category and priority
+- Prepare clear explanations for each issue
+- Identify what's working well to acknowledge
+
+**Execution → Complete:**
+- Verify all critical issues addressed
+- Confirm feedback is actionable
+- Document any follow-up needed
+- Share knowledge and learning points

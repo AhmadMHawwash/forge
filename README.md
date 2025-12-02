@@ -90,12 +90,17 @@ Architect provides strategic blueprints, while Senior roles focus on implementat
 
 ### 🎯 Goals (Mission Context)
 
-**Structured workflows for common development scenarios**
+**Structured workflows for common development scenarios using two-phase approach**
 
-- **Feature Development** - Understand → Plan → Build → Verify
-- **Bug Investigation** - Understand → Reproduce → Investigate → Fix → Verify
-- **Code Review** - Focus areas, review process, feedback guidelines
+- **Feature Development** - Planning Phase (Understand → Plan) → Execution Phase (Build → Verify)
+- **Bug Investigation** - Planning Phase (Understand → Investigate) → Execution Phase (Fix → Verify)
+- **Code Review** - Planning Phase (Analysis) → Execution Phase (Feedback → Verify)
 - **Retrospective** - Analyze work, learn from successes/failures
+
+**Two-Phase Workflow (BMAD-inspired):**
+- **Planning Phase:** Understand requirements, design solution, create plan
+- **Execution Phase:** Implement solution, verify results, deliver
+- **Phase Gates:** Review/approval checkpoints between phases for complex tasks
 
 ### 🤖 Engines
 
@@ -308,6 +313,13 @@ Provides structured workflow:
 - Categorized overlays to prevent conflicts
 - Execution flow sequencing for complex profiles
 
+**BMAD-inspired patterns:**
+
+- **Two-Phase Workflow:** Planning Phase → Execution Phase with phase gates
+- **Agent Collaboration:** Multi-role workflows with clear handoffs and artifacts
+- **Scale-Adaptive Planning:** Planning depth adjusts based on task complexity
+- **Structured Handoffs:** Clear artifacts and context transfer between roles
+
 **Composable by design** - Mix and match without conflicts:
 
 - Overlays enhance any foundation role
@@ -321,6 +333,30 @@ Provides structured workflow:
 - Refined through real AI interactions
 - Focused on actionable behaviors, not theory
 - Optimized for LLM consumption (2-3 overlays max)
+
+## 🔄 BMAD-Inspired Patterns
+
+FORGE incorporates patterns from BMAD (Build More, Architect Dreams) method:
+
+### Two-Phase Workflow
+All Goals follow a **Planning Phase → Execution Phase** structure:
+- **Planning Phase:** Understand, analyze, design, create plan
+- **Execution Phase:** Implement, verify, deliver
+- **Phase Gates:** Review checkpoints for complex tasks
+
+### Agent Collaboration
+Multi-role workflows with structured handoffs:
+- **Clear Handoffs:** Each role completes phase before handing off
+- **Handoff Artifacts:** PRDs, architecture designs, implementation summaries
+- **Parallel Work:** Roles work independently when possible, coordinate when needed
+- See `foundations/agent-collaboration.md` for detailed patterns
+
+### Scale-Adaptive Planning
+Planning depth adjusts based on complexity:
+- **Simple tasks:** Quick understanding, 3-5 key steps
+- **Medium tasks:** Full analysis, component breakdown, risk assessment
+- **Complex tasks:** Comprehensive analysis, multi-layer design, detailed planning
+- Planning time scales from minutes to days based on complexity
 
 ## 🤝 Contributing
 

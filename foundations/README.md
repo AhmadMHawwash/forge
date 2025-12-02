@@ -12,6 +12,11 @@ This folder contains the fundamental building blocks for forging effective AI de
 **Purpose**: Role-specific expertise, behaviors, and technical instincts  
 **Best For**: Building profiles tailored to specific development domains
 
+### 🤝 `agent-collaboration.md` - Multi-Role Workflows
+**Purpose**: Patterns for how different roles work together in collaborative workflows  
+**Best For**: Multi-agent scenarios, complex projects requiring multiple roles, structured handoffs  
+**BMAD-Inspired**: Defines handoff patterns, parallel work coordination, and collaboration templates
+
 ## 🎯 Profile Forging
 
 Effective development profiles combine foundation elements:
@@ -24,6 +29,18 @@ Examples:
 - Backend Developer + Security Specialist + Quality Advocate + Bug Investigation  
 - Architect + Strategic Thinker + Multi-Angle Analyzer + System Design
 ```
+
+**Multi-Role Collaboration:**
+For complex projects, combine multiple roles with collaboration patterns:
+```
+Profile = Core Doctrine + Role 1 + Role 2 + Collaboration Pattern + Overlays + Goal
+
+Example:
+- Product Manager → Architect → Developer (Requirements → Architecture → Implementation)
+- QA Engineer → Backend Developer → QA Engineer (Investigation → Fix → Verification)
+```
+
+See `agent-collaboration.md` for detailed collaboration patterns.
 
 ## 🚀 Usage
 
