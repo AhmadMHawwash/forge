@@ -18,17 +18,18 @@ Working with AI coding assistants, three issues kept recurring:
 Created composable prompt modules across 4 dimensions:
 
 - **Foundations** (6 roles): Principal Architect (design), Senior Developers (implementation), Product Manager, QA
-- **Overlays** (17+ behaviors organized by category):
+- **Overlays** (18+ behaviors organized by category):
   - Execution Styles: Pragmatic/Deliberate/Zero-Trust (pick one)
   - Investigation: Deep Investigator, Technical Researcher
   - Quality: Security Specialist, Performance Optimizer, Clean Coder
   - Design: System Designer, User Advocate
+  - Experimental: Pressure Cooker (EmotionPrompt research - for science!), High-Stakes
 - **Goals** (4 workflows): Feature Development, Bug Investigation, Code Review, Retrospective
 - **Resources** (stacks/domains): React+Node, Python+Django, E-commerce
 
 Each component contains specific behaviors, technical instincts, and decision-making patterns—not just generic descriptions.
 
-**Built on prompt engineering best practices:** Chain-of-thought reasoning, explicit constraints, verification gates, and categorized composition to prevent conflicts.
+**Built on advanced prompt engineering:** ReAct framework (validate actions), Reflexion (self-critique), Least-to-Most decomposition, chain-of-thought reasoning, and categorized composition to prevent conflicts.
 
 **Example Combinations:**
 ```
@@ -76,7 +77,7 @@ Built a library of reusable prompt components that compose into specialized AI c
   - Design: System Designer, User Advocate
 **4 Workflow Goals** → Feature Dev, Bug Investigation, Code Review, Retrospective
 
-Each component defines specific behaviors, technical instincts, and decision patterns. Not just descriptions—actionable guidance built on prompt engineering best practices (chain-of-thought reasoning, constraints, verification gates).
+Each component defines specific behaviors, technical instincts, and decision patterns. Not just descriptions—actionable guidance built on advanced prompt engineering (ReAct, Reflexion, Least-to-Most, chain-of-thought reasoning).
 
 ✨ **Example:**
 ```
@@ -119,10 +120,11 @@ Also, writing good prompts every single time is exhausting.
 A framework called FORGE with ~25 reusable components across 4 categories:
 
 1. **Foundations (6 roles)**: Principal Architect (design), Senior Developers (implementation), PM, QA
-2. **Overlays (17+ behaviors - categorized)**: 
+2. **Overlays (18+ behaviors - categorized)**: 
    - Execution Styles: Pragmatic/Deliberate/Zero-Trust (pick ONE to avoid conflicts)
    - Quality & Investigation: Security, Performance, Deep Investigator, etc.
    - Design: System Designer, User Advocate
+   - Experimental: Pressure Cooker (emotional framing for max effort - yes, for science!)
 3. **Goals (4 workflows)**: Feature Development, Bug Investigation, Code Review, Retrospective  
 4. **Resources (stacks/domains)**: React+Node, Python+Django, E-commerce
 
@@ -146,7 +148,7 @@ Principal Architect + System Designer + Strategic Thinker + Code Review
 **What Makes It Different:**
 
 - Not just generic templates - each component has actionable guidance
-- Built on prompt engineering best practices (CoT reasoning, constraints, verification)
+- Built on advanced prompt engineering (ReAct, Reflexion, Least-to-Most, CoT)
 - Categorized to prevent conflicts - execution styles are mutually exclusive
 - Battle-tested content based on what actually works
 - Copy-paste ready for any AI tool
@@ -227,7 +229,7 @@ Each role defines specific behaviors, technical instincts, and communication pat
 - **Senior QA Engineer** - Testing strategy, comprehensive quality advocacy
 - **Senior Product Manager** - Requirements clarity with technical understanding
 
-### Overlays (17+ Behavioral Traits - Organized by Category)
+### Overlays (18+ Behavioral Traits - Organized by Category)
 
 **⚠️ Key Insight:** Overlays are categorized to prevent conflicts!
 
@@ -254,6 +256,9 @@ Each role defines specific behaviors, technical instincts, and communication pat
 - **Analytical Thinker** - Challenges assumptions
 - **Strategic Thinker** - Connects technical to business
 - And more...
+
+**Experimental (for science!):**
+- **Pressure Cooker** - Emotional framing based on EmotionPrompt research (yes, really!)
 
 ### Goals (4 Structured Workflows)
 - **Feature Development** - Understand → Plan → Build → Verify
@@ -301,13 +306,13 @@ Senior Frontend + Pragmatic Implementer + User Advocate + Feature Development
 **Not just templates** - Each component contains:
 - Clear behavioral guidelines
 - Specific technical instincts
-- Decision-making frameworks (chain-of-thought reasoning)
+- Advanced decision frameworks (ReAct, Reflexion, Least-to-Most, CoT)
 - Real-world habits and practices
 - Built-in constraints and verification gates
 
 **Composable by design** - Mix and match with clear rules. Overlays are categorized to prevent conflicts (execution styles are mutually exclusive).
 
-**Battle-tested** - Based on prompt engineering best practices and refined through real usage.
+**Battle-tested** - Based on state-of-the-art prompt engineering research and refined through real usage.
 
 ## The Results
 
@@ -350,11 +355,12 @@ Developed a compositional framework with orthogonal components:
 - Each defines specific behaviors, technical instincts, communication patterns
 - ~50-90 lines of actionable guidance per role
 
-**Overlays (17+)**: Behavior modifiers organized by category to prevent semantic conflicts
+**Overlays (18+)**: Behavior modifiers organized by category to prevent semantic conflicts
 - Execution Styles (mutually exclusive): Pragmatic/Deliberate/Zero-Trust
 - Investigation: Deep Investigator, Technical Researcher
 - Quality: Security Specialist, Performance Optimizer, Clean Coder, etc.
 - Design: System Designer, User Advocate
+- Experimental: Pressure Cooker (EmotionPrompt-based emotional framing)
 - ~30-90 lines each, focused on specific capabilities
 
 **Goals (4)**: Workflow structures for common scenarios
@@ -373,7 +379,7 @@ Developed a compositional framework with orthogonal components:
 - Controlled combinations from categorized components
 
 **Actionable content**: Not generic descriptions
-- Chain-of-thought reasoning frameworks
+- Advanced reasoning frameworks (ReAct, Reflexion, Least-to-Most, CoT)
 - Concrete behavioral guidelines with constraints
 - Real-world habit patterns
 - Built-in verification gates
