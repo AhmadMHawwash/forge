@@ -22,6 +22,7 @@ interface SavedProfile {
   foundation?: string;
   overlays: string[];
   goal?: string;
+  resources?: string[];
 }
 
 async function loadSavedProfiles(): Promise<SavedProfile[]> {
@@ -75,7 +76,7 @@ async function installFramework() {
   s.start("Installing framework files...");
 
   try {
-    const components = ["foundations", "overlays", "goals", "engines", "verification-templates"];
+    const components = ["foundations", "overlays", "goals", "engines", "verification-templates", "resources"];
 
     for (const component of components) {
       s.message(`Copying ${component}...`);
@@ -225,7 +226,23 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
 
   if (p.isCancel(goal)) return;
 
-  // Step 4: Select Verification Template (optional)
+  // Step 4: Select Resources (multi-select)
+  const resourceOptions = components.resources.map(r => ({
+    value: r,
+    label: `${r.category ? `[${r.category}]` : "[Resource]"} ${formatName(r.name)}`,
+    hint: r.description.slice(0, 60),
+  }));
+
+  const selectedResources = await p.multiselect({
+    message: "Select resources (stacks, domains):",
+    options: resourceOptions,
+    required: false,
+  });
+
+  if (p.isCancel(selectedResources)) return;
+  const resources = selectedResources as Component[];
+
+  // Step 5: Select Verification Template (optional)
   const verification = await p.select({
     message: "Include a verification template?",
     options: [
@@ -249,6 +266,7 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
     overlays: overlays,
     goal: goal as Component | undefined,
     verificationTemplate: verification as Component | undefined,
+    resources: resources,
   });
 
   s.stop("Profile composed!");
@@ -293,6 +311,7 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
       foundation: (foundation as Component)?.name,
       overlays: overlays.map((o: Component) => o.name),
       goal: (goal as Component | null)?.name,
+      resources: resources.map(r => r.name),
     };
     savedProfiles.push(newProfile);
     await saveProfileIndex(savedProfiles);
@@ -374,6 +393,7 @@ async function viewSavedProfiles(savedProfiles: SavedProfile[], components: Awai
     p.log.info(`Foundation: ${selectedProfile.foundation || "None"}`);
     p.log.info(`Overlays: ${selectedProfile.overlays.join(", ") || "None"}`);
     p.log.info(`Goal: ${selectedProfile.goal || "None"}`);
+    p.log.info(`Resources: ${selectedProfile.resources?.join(", ") || "None"}`);
     p.log.info(`File: ${filePath}`);
   }
 }
@@ -385,6 +405,7 @@ async function listComponents(components: Awaited<ReturnType<typeof discoverComp
       { value: "foundations", label: "🧭 Foundations (Roles)", hint: `${components.foundations.length} available` },
       { value: "overlays", label: "⚡ Overlays (Behaviors)", hint: `${components.overlays.length} available` },
       { value: "goals", label: "🎯 Goals (Workflows)", hint: `${components.goals.length} available` },
+      { value: "resources", label: "📚 Resources (Stacks, Domains)", hint: `${components.resources.length} available` },
       { value: "verification", label: "✅ Verification Templates", hint: `${components.verificationTemplates.length} available` },
       { value: "all", label: "📋 All components" },
     ],
@@ -413,6 +434,17 @@ async function listComponents(components: Awaited<ReturnType<typeof discoverComp
       for (const o of overlays) {
         console.log(`    ${formatName(o.name)}${o.conflicts ? ` ⚠️ Conflicts: ${o.conflicts.join(", ")}` : ""}`);
       }
+    }
+    console.log();
+  }
+
+  if (category === "resources" || category === "all") {
+    console.log("📚 RESOURCES (Stacks, Domains)");
+    console.log("─".repeat(40));
+    for (const r of components.resources) {
+      console.log(`  ${formatName(r.name)}`);
+      if (r.category) console.log(`    [${r.category}]`);
+      console.log(`    ${r.description}`);
     }
     console.log();
   }

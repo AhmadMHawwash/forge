@@ -19,6 +19,7 @@ export interface Components {
   overlays: Component[];
   goals: Component[];
   verificationTemplates: Component[];
+  resources: Component[];
 }
 
 const ROOT_DIR = join(import.meta.dir, "..", "..");
@@ -105,11 +106,13 @@ async function scanDirectory(dirPath: string, subDir?: string): Promise<Componen
  * Discover all available FORGE components
  */
 export async function discoverComponents(): Promise<Components> {
-  const [foundations, overlays, goals, verificationTemplates] = await Promise.all([
+  const [foundations, overlays, goals, verificationTemplates, stacks, domains] = await Promise.all([
     scanDirectory(join(ROOT_DIR, "foundations"), "roles"),
     scanDirectory(join(ROOT_DIR, "overlays")),
     scanDirectory(join(ROOT_DIR, "goals")),
     scanDirectory(join(ROOT_DIR, "verification-templates")),
+    scanDirectory(join(ROOT_DIR, "resources"), "stacks"),
+    scanDirectory(join(ROOT_DIR, "resources"), "domains"),
   ]);
 
   return {
@@ -117,6 +120,7 @@ export async function discoverComponents(): Promise<Components> {
     overlays,
     goals,
     verificationTemplates,
+    resources: [...stacks, ...domains],
   };
 }
 
@@ -135,6 +139,7 @@ export async function composeProfile(components: {
   overlays: Component[];
   goal?: Component;
   verificationTemplate?: Component;
+  resources?: Component[];
 }): Promise<string> {
   const parts: string[] = [];
 
@@ -181,6 +186,16 @@ export async function composeProfile(components: {
     const content = await readComponent(components.verificationTemplate.path);
     parts.push(`\n## VERIFICATION: ${components.verificationTemplate.name.toUpperCase()}\n`);
     parts.push(content);
+  }
+
+  // Add resources
+  if (components.resources && components.resources.length > 0) {
+    for (const resource of components.resources) {
+      const content = await readComponent(resource.path);
+      parts.push(`\n## RESOURCE: ${resource.name.toUpperCase()}\n`);
+      parts.push(content);
+      parts.push("\n---\n");
+    }
   }
 
   return parts.join("\n");
