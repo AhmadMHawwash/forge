@@ -14,7 +14,7 @@ import { join, dirname } from "path";
 import { existsSync } from "fs";
 import { discoverComponents, composeProfile, type Component } from "./utils/components";
 
-const SAVED_PROFILES_DIR = join(import.meta.dir, "..", ".forge", "creations");
+const SAVED_PROFILES_DIR = join(process.cwd(), ".forge", "creations");
 
 interface SavedProfile {
   name: string;
