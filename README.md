@@ -114,9 +114,10 @@ Architect provides strategic blueprints, while Senior roles focus on implementat
 
 ### 🤖 Engines
 
-**Intelligent composition tools** (coming soon)
+**Intelligent composition tools** (in `engines/`)
 
-- **Prompt Router** - Analyzes requests and suggests optimal profile combinations
+- **Profile Builder** - Meta-prompt that creates custom profiles from your requirements
+- **Profile Router** - Analyzes requests and suggests optimal profile combinations
 
 ## 🚀 How to Use
 
@@ -127,7 +128,28 @@ Architect provides strategic blueprints, while Senior roles focus on implementat
 - **Context budget:** ~2-4K tokens per profile is optimal
 - **Sequence complex profiles:** For 3 overlays, specify execution flow (see below)
 
-### Method 1: Copy Components to AI Context
+### Method 1: Interactive CLI (Recommended)
+
+Use the interactive CLI to build and save profiles:
+
+```bash
+# Install dependencies (first time only)
+bun install
+
+# Run the interactive profile builder
+bun run forge
+
+# Or directly
+bun run cli/forge.ts
+```
+
+The CLI lets you:
+- 🆕 **Create profiles** — Select foundations, overlays, and goals interactively
+- 📂 **Save profiles** — Store and reload your custom profiles anytime
+- 📋 **Copy to clipboard** — Load saved profiles by bringing them into conversation context
+- ⚠️ **Conflict detection** — Warns about incompatible overlays
+
+### Method 2: Copy Components Manually
 
 1. **Choose your foundation role** based on the work type
 2. **Add 1-3 overlays** for specific behaviors you need
@@ -188,7 +210,7 @@ Check `recipes/` folder for common combinations:
 
 ### Method 4: Router-Assisted (Coming Soon)
 
-The Prompt Router will analyze your request and auto-suggest optimal combinations.
+The Profile Router will analyze your request and auto-suggest optimal combinations.
 
 ## 📋 Common Combinations
 

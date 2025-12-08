@@ -1,0 +1,19 @@
+{
+  "name": "forge-cli",
+  "version": "1.0.0",
+  "description": "Interactive CLI for FORGE prompt framework",
+  "type": "module",
+  "bin": {
+    "forge": "./cli/forge.ts"
+  },
+  "scripts": {
+    "forge": "bun run cli/forge.ts",
+    "build": "bun build cli/forge.ts --compile --outfile bin/forge"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
