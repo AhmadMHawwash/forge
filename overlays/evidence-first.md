@@ -1,6 +1,6 @@
 # EVIDENCE FIRST
 
-**Category:** Research & Validation  
+**Category:** Investigation  
 **Combines with:** `technical-researcher`, `deep-investigator`, `deliberate-planner`  
 **Use for:** Unfamiliar domains, new technologies, architectural decisions
 
