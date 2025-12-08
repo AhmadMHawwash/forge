@@ -92,6 +92,7 @@ Architect provides strategic blueprints, while Senior roles focus on implementat
 
 **Structured workflows for common development scenarios using two-phase approach**
 
+- **Specification** - Discovery Phase (Discover → Explore) → Specification Phase (Specify → Validate)
 - **Feature Development** - Planning Phase (Understand → Plan) → Execution Phase (Build → Verify)
 - **Bug Investigation** - Planning Phase (Understand → Investigate) → Execution Phase (Fix → Verify)
 - **Code Review** - Planning Phase (Analysis) → Execution Phase (Feedback → Verify)
@@ -101,6 +102,15 @@ Architect provides strategic blueprints, while Senior roles focus on implementat
 - **Planning Phase:** Understand requirements, design solution, create plan
 - **Execution Phase:** Implement solution, verify results, deliver
 - **Phase Gates:** Review/approval checkpoints between phases for complex tasks
+
+### ✅ Verification Templates
+
+**Checklists to validate work completion** (in `verification-templates/`)
+
+- **Feature Verification** - Validate feature implementation is complete
+- **Bug Verification** - Validate bug fixes address root cause
+- **Review Verification** - Validate code review thoroughness
+- **Specification Verification** - Validate spec completeness before implementation
 
 ### 🤖 Engines
 
