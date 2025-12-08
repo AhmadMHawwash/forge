@@ -1,24 +1,26 @@
 # VERIFICATION TEMPLATES
 
-Validate work completion. Prove, don't claim.
+Checklists to validate work completion. Prove, don't claim.
 
-## TEMPLATES
+## Available Templates
 
-| Template | Goal | Purpose |
-|----------|------|---------|
-| [feature-verification](./feature-verification.md) | `feature-request.md` | Validate implementation |
-| [bug-verification](./bug-verification.md) | `bug-investigation.md` | Validate fix |
-| [review-verification](./review-verification.md) | `code-review.md` | Validate review |
-| [specification-verification](./specification-verification.md) | `specification.md` | Validate spec |
+| Template | Use After | Purpose |
+|----------|-----------|---------|
+| [feature-verification](feature-verification.md) | `goals/feature-request.md` | Validate implementation |
+| [bug-verification](bug-verification.md) | `goals/bug-investigation.md` | Validate fix completeness |
+| [review-verification](review-verification.md) | `goals/code-review.md` | Validate review thoroughness |
+| [specification-verification](specification-verification.md) | `goals/specification.md` | Validate spec readiness |
 
-## USAGE
-1. Open template after completing work
-2. Check each item
-3. Document evidence (output, screenshots, logs)
-4. Address gaps before marking complete
+## How to Use
 
-## PHILOSOPHY
-- **Evidence > Assertion**: "Tests pass" with output, not "I tested it"
-- **Realistic Scenarios**: Production-like data
-- **Edge Cases**: What could go wrong
-- **Regression**: Existing features still work
+1. Complete work using the corresponding goal
+2. Run through the verification checklist
+3. Provide evidence for each item
+4. Assess confidence level
+
+## Template Structure
+
+Each template includes:
+- **Checklist items** — Pass/fail criteria
+- **Evidence requirements** — What proves completion
+- **Confidence levels** — HIGH / MEDIUM / LOW assessment

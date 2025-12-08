@@ -1,91 +1,63 @@
 # OVERLAYS
 
-Behavioral overlays that modify how roles approach work. Each overlay is a distinct behavioral pattern.
+Behavioral modifiers that enhance any foundation. Add 1-3 overlays to focus the AI on specific concerns.
 
-Built using advanced prompt engineering techniques: Chain of Thought ReAct framework, Reflexion-based self-critique, Least-to-Most decomposition, categorized to prevent conflicts, and optimized for LLM consumption with explicit execution sequencing.
+## Categories
 
-## ⚠️ COMPATIBILITY RULES
+Overlays are categorized to prevent conflicts. Choose **one** execution style, combine others freely.
 
-**EXECUTION STYLE** - Choose ONE:
+### Execution Style (Pick ONE)
+| Overlay | Behavior |
+|---------|----------|
+| [pragmatic-implementer](pragmatic-implementer.md) | Ship fast, 80/20, iterate |
+| [deliberate-planner](deliberate-planner.md) | Plan thoroughly, then execute |
+| [zero-trust](zero-trust.md) | Verify everything, refine continuously |
+| [pressure-cooker](pressure-cooker.md) | Maximum effort under deadline |
 
-- `pragmatic-implementer` - Ship fast, iterate
-- `deliberate-planner` - Plan thoroughly, seek approval
-- `zero-trust` - Continuously refine, never settle
+### Investigation (Combinable)
+| Overlay | Behavior |
+|---------|----------|
+| [deep-investigator](deep-investigator.md) | Root cause analysis, never stop at symptoms |
+| [technical-researcher](technical-researcher.md) | Research before building |
+| [evidence-first](evidence-first.md) | Cite sources, no fabrication |
 
-**COMBINING**: All others can combine. Limit 2-3 overlays total for focus.
+### Thinking Patterns (Combinable)
+| Overlay | Behavior |
+|---------|----------|
+| [analytical-thinker](analytical-thinker.md) | Challenge assumptions |
+| [strategic-thinker](strategic-thinker.md) | Long-term, business impact |
+| [layered-thinking](layered-thinking.md) | Analyze by system layer |
+| [multi-angle-analyzer](multi-angle-analyzer.md) | Multiple perspectives |
+| [honest-thought-challenger](honest-thought-challenger.md) | Prevent groupthink |
 
-**EXECUTION FLOW** (for 3-overlay profiles):
+### Quality & Safety (Combinable)
+| Overlay | Behavior |
+|---------|----------|
+| [security-specialist](security-specialist.md) | Threat modeling |
+| [performance-optimizer](performance-optimizer.md) | Measure, then optimize |
+| [quality-advocate](quality-advocate.md) | Testing strategy |
+| [clean-coder](clean-coder.md) | Readability, maintainability |
 
-```
-1. First Pass: [Execution Style] - Define approach
-2. Second Pass: [Context Overlay] - Apply specific focus
-3. Third Pass: [Context Overlay] - Add perspective
-```
+### Design & Perspective (Combinable)
+| Overlay | Behavior |
+|---------|----------|
+| [system-designer](system-designer.md) | Component boundaries |
+| [user-advocate](user-advocate.md) | UX, accessibility |
 
-Example: `zero-trust` → `security-specialist` → `deep-investigator`
+### Communication
+| Overlay | Behavior |
+|---------|----------|
+| [concise-communicator](concise-communicator.md) | Brief, scannable output |
 
-## 📂 BY CATEGORY
+## Conflict Rules
 
-### 🎯 EXECUTION STYLE (mutually exclusive - pick ONE)
+- **Execution styles conflict** — Don't combine pragmatic + deliberate + zero-trust
+- **Everything else combines** — Stack freely
 
-- `deliberate-planner` - Plan → Approve → Execute
-- `pragmatic-implementer` - Build → Ship → Iterate
-- `zero-trust` - Build → Verify → Refine → Repeat
+## Overlay Structure
 
-### 🧠 THINKING PATTERNS (combinable)
-
-- `analytical-thinker` - Challenge assumptions, consider alternatives
-- `strategic-thinker` - Connect to business outcomes, long-term view
-- `layered-thinking` - Analyze across all system layers
-- `multi-angle-analyzer` - Multiple perspectives, stakeholder views
-- `honest-thought-challenger` - Question own reasoning
-
-### 🔍 INVESTIGATION (combinable)
-
-- `deep-investigator` - Pursue root causes, never stop at symptoms
-- `technical-researcher` - Research best practices and proven solutions
-
-### 🛡️ QUALITY & SAFETY (combinable, but limit scope)
-
-- `quality-advocate` - Testing strategy, edge cases
-- `security-specialist` - Threat modeling, attack thinking
-- `performance-optimizer` - Measure, profile, optimize
-- `clean-coder` - Readability, maintainability
-
-### 🏗️ DESIGN & PERSPECTIVE (combinable)
-
-- `system-designer` - Component boundaries, architectural thinking
-- `user-advocate` - User experience, accessibility
-
-### 💬 COMMUNICATION (standalone)
-
-- `concise-communicator` - Brief, clear, scannable
-
-### 🔥 EXPERIMENTAL
-
-- `pressure-cooker` - Emotional framing for maximum effort (EmotionPrompt research)
-
-## 🎯 QUICK SELECTION
-
-**For LLM agents working on:**
-
-**User-facing features** → `pragmatic-implementer` + `user-advocate`
-**Backend APIs** → `security-specialist` + `quality-advocate`
-**System architecture** → `system-designer` + `strategic-thinker`
-**Bug investigation** → `deep-investigator` + `analytical-thinker`
-**MVP development** → `pragmatic-implementer` + `user-advocate`
-**Code refactoring** → `clean-coder` + `quality-advocate`
-
-**Complex scenarios (3 overlays with execution flow):**
-
-**Production incidents** → `zero-trust` + `deep-investigator` + `layered-thinking`
-
-- Flow: Verify assumptions → Find root cause → Map across layers
-
-**Critical migrations** → `deliberate-planner` + `system-designer` + `layered-thinking`
-
-- Flow: Plan thoroughly → Design components → Validate across layers
-
-**Security vulnerabilities** → `zero-trust` + `security-specialist` + `concise-communicator`
-
-- Flow: Test assumptions → Think like attacker → Present clearly
+Each overlay includes:
+- **Category/Combines with/Use for** — Metadata
+- **ROLE** — One-line identity modifier
+- **DIRECTIVES** — Behavioral changes
+- **THINKING PROCESS** — Reasoning patterns

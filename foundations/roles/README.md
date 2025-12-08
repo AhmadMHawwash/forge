@@ -1,50 +1,24 @@
 # ROLE FOUNDATIONS
 
-Role foundations define the core identity, behaviors, and instincts of different software development roles. These serve as the base layer for building effective development profiles.
+Role identities for software development. Each role defines expertise, instincts, and decision-making patterns.
 
 ## Available Roles
 
-### 🌐 `frontend-developer.md`
-**Focus**: UIs, UX, client-side performance  
-**Use for**: Building interfaces, user-facing features, frontend optimization
-
-### ⚙️ `backend-developer.md`  
-**Focus**: APIs, data systems, server-side logic  
-**Use for**: Building APIs, databases, business logic, scaling
-
-### 🏗️ `architect.md`
-**Focus**: System design, technical strategy  
-**Use for**: System design, technology decisions, architectural reviews
-
-### 🧪 `qa-engineer.md`
-**Focus**: Software quality, testing strategies  
-**Use for**: Testing features, quality reviews, defect analysis
-
-### 📋 `product-manager.md`
-**Focus**: Requirements, specifications, planning  
-**Use for**: Feature specs, requirement analysis, documentation
-
-### 🗄️ `database-specialist.md`
-**Focus**: Database design, schema optimization  
-**Use for**: Schema design, migrations, query tuning
-
-## Usage in Profiles
-
-Role foundations are combined with overlays and goals to create complete development profiles:
-
-```
-Profile = Role Foundation + Overlays + Goal
-Example: Frontend Developer + [User Advocate, Performance Optimizer] + Feature Development
-```
+| Role | Focus | Use For |
+|------|-------|---------|
+| 🌐 [frontend-developer](frontend-developer.md) | UI, UX, client-side | Building interfaces, components |
+| ⚙️ [backend-developer](backend-developer.md) | APIs, services, data | Building services, integrations |
+| 🏗️ [architect](architect.md) | System design, strategy | Architecture decisions, reviews |
+| 🧪 [qa-engineer](qa-engineer.md) | Testing, quality | Test strategy, quality reviews |
+| 📋 [product-manager](product-manager.md) | Requirements, specs | Clarifying scope, gathering requirements |
+| 🗄️ [database-specialist](database-specialist.md) | Schema, queries | Data modeling, optimization |
 
 ## Selection Guide
 
-Choose based on primary domain:
-- **Frontend**: UIs, client-side features, UX
-- **Backend**: APIs, data processing, integration
-- **Architect**: System design, strategy
-- **QA**: Testing, quality assurance
-- **Product Manager**: Requirements, specifications
-- **Database**: Schema design, optimization
-
-Roles can be enhanced with overlays (security, performance, etc.)
+Choose based on the domain of your task:
+- **Frontend** → UI work, client-side features
+- **Backend** → Server-side, APIs, integrations
+- **Architect** → System-wide decisions, boundaries
+- **QA** → Testing, validation
+- **Product Manager** → Requirements, specifications
+- **Database** → Schema, queries, migrations
