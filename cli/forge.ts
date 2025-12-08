@@ -94,28 +94,52 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
   if (p.isCancel(foundation)) return;
 
   // Step 2: Select Overlays (multi-select)
-  // Group overlays by category
-  const overlaysByCategory = groupByCategory(components.overlays);
+  // Sort overlays by category priority
+  const categoryPriority: Record<string, number> = {
+    "Execution Style": 1,
+    "Thinking Pattern": 2,
+    "Quality & Safety": 3,
+    "Investigation": 4,
+    "Design & Perspective": 5,
+    "Communication": 6,
+    "Experimental": 99
+  };
 
-  const selectedOverlays: Component[] = [];
+  const sortedOverlays = [...components.overlays].sort((a, b) => {
+    const catA = a.category || "General";
+    const catB = b.category || "General";
 
-  for (const [category, overlays] of Object.entries(overlaysByCategory)) {
-    const categorySelection = await p.multiselect({
-      message: `Select overlays - ${category || "General"}: (space to select, enter to continue)`,
-      options: overlays.map(o => ({
-        value: o,
-        label: formatName(o.name),
-        hint: o.conflicts ? `⚠️ Conflicts: ${o.conflicts.join(", ")}` : undefined,
-      })),
-      required: false,
-    });
+    // Compare categories based on priority
+    const priorityA = categoryPriority[catA] || 50;
+    const priorityB = categoryPriority[catB] || 50;
 
-    if (p.isCancel(categorySelection)) return;
-    selectedOverlays.push(...(categorySelection as Component[]));
-  }
+    if (priorityA !== priorityB) return priorityA - priorityB;
+
+    // If same category, sort by category name (for non-prioritized ones)
+    if (catA !== catB) return catA.localeCompare(catB);
+
+    // If same category, sort by name
+    return a.name.localeCompare(b.name);
+  });
+
+  const overlayOptions = sortedOverlays.map(o => ({
+    value: o,
+    label: `${o.category ? `[${o.category}]` : "[General]"} ${formatName(o.name)}`,
+    hint: o.conflicts ? `⚠️ Conflicts: ${o.conflicts.join(", ")}` : undefined,
+  }));
+
+  const selectedOverlays = await p.multiselect({
+    message: "Select overlays (space to toggle, enter to confirm):",
+    options: overlayOptions,
+    required: false,
+  });
+
+  if (p.isCancel(selectedOverlays)) return;
+
+  const overlays = selectedOverlays as Component[];
 
   // Check for conflicts
-  const conflicts = checkConflicts(selectedOverlays);
+  const conflicts = checkConflicts(overlays);
   if (conflicts.length > 0) {
     p.log.warning(`⚠️ Potential conflicts detected: ${conflicts.join(", ")}`);
     const proceed = await p.confirm({
@@ -161,7 +185,7 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
 
   const profile = await composeProfile({
     foundation: foundation as Component,
-    overlays: selectedOverlays,
+    overlays: overlays,
     goal: goal as Component | undefined,
     verificationTemplate: verification as Component | undefined,
   });
@@ -206,7 +230,7 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
       name: profileName,
       createdAt: new Date().toISOString(),
       foundation: (foundation as Component)?.name,
-      overlays: selectedOverlays.map(o => o.name),
+      overlays: overlays.map((o: Component) => o.name),
       goal: (goal as Component | null)?.name,
     };
     savedProfiles.push(newProfile);

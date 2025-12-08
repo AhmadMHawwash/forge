@@ -1,14 +1,38 @@
 {
-  "name": "forge-cli",
+  "name": "forge-framework-cli",
   "version": "1.0.0",
-  "description": "Interactive CLI for FORGE prompt framework",
+  "description": "Interactive CLI for FORGE - The composable AI coding framework",
   "type": "module",
   "bin": {
     "forge": "./cli/forge.ts"
   },
+  "files": [
+    "cli",
+    "foundations",
+    "overlays",
+    "goals",
+    "verification-templates",
+    "engines",
+    "README.md"
+  ],
   "scripts": {
     "forge": "bun run cli/forge.ts",
-    "build": "bun build cli/forge.ts --compile --outfile bin/forge"
+    "build": "bun build cli/forge.ts --compile --outfile bin/forge",
+    "prepublishOnly": "echo 'Run bun install before publishing'"
+  },
+  "keywords": [
+    "ai",
+    "prompt-engineering",
+    "framework",
+    "cli",
+    "llm",
+    "agentic"
+  ],
+  "author": "Ahmad Hawwash <ahmad.m.hawwash@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmadMHawwash/forge-framework.git"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0"

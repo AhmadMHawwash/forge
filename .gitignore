@@ -1,1 +1,9 @@
 node_modules
+dist
+bin
+.DS_Store
+.env
+.forge
+.forge-profiles
+npm-debug.log
+bun.lockb

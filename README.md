@@ -130,17 +130,33 @@ Architect provides strategic blueprints, while Senior roles focus on implementat
 
 ### Method 1: Interactive CLI (Recommended)
 
+**Option A: No Installation (npx/bunx)**
+```bash
+# Run immediately without installing
+bunx forge-framework-cli
+
+# Or if you have Node.js installed
+npx forge-framework-cli
+```
+
+**Option B: Global Installation**
+```bash
+# Install globally
+bun add -g forge-framework-cli
+
+# Run anytime
+forge
+```
+
+**Option C: Local Clone**
 Use the interactive CLI to build and save profiles:
 
 ```bash
-# Install dependencies (first time only)
+# Install dependencies
 bun install
 
-# Run the interactive profile builder
+# Run locally
 bun run forge
-
-# Or directly
-bun run cli/forge.ts
 ```
 
 The CLI lets you:
