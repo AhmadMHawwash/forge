@@ -1,134 +1,98 @@
-# Specification Verification Checklist
+# SPECIFICATION VERIFICATION
 
-Use after completing work with `goals/specification.md` to verify the specification is complete and ready for implementation.
+## ROLE
+Validate spec completeness. Use after `goals/specification.md`.
 
-## ✅ Problem Clarity
+## PROBLEM CLARITY
+- [ ] Problem clearly articulated
+- [ ] Target users identified
+- [ ] Impact/value explained
+- [ ] Context sufficient
 
-**Problem statement:**
-- [ ] Problem is clearly articulated
-- [ ] Target users are identified
-- [ ] Impact/value is explained
-- [ ] Context is sufficient
+> **Test:** Can someone unfamiliar understand what we're solving?
 
-**Clarity test:** Can someone unfamiliar with the project understand what we're solving?
+## REQUIREMENTS
 
-## ✅ Requirements Completeness
+### Functional
+- [ ] All stories have testable acceptance criteria
+- [ ] Key workflows documented
+- [ ] Happy path clear
 
-**Functional requirements:**
-- [ ] All user stories have acceptance criteria
-- [ ] Acceptance criteria are testable (not vague)
-- [ ] All key workflows are documented
-- [ ] Happy path is clear
+### Non-Functional
+- [ ] Performance expectations (if relevant)
+- [ ] Security requirements
+- [ ] Scalability considerations
+- [ ] Accessibility (if user-facing)
 
-**Non-functional requirements:**
-- [ ] Performance expectations specified (if relevant)
-- [ ] Security requirements documented
-- [ ] Scalability considerations (if relevant)
-- [ ] Accessibility requirements (if user-facing)
+### Gaps
+- [ ] No TBD/placeholders
+- [ ] Open questions resolved or flagged
+- [ ] Assumptions documented
 
-**Gaps check:**
-- [ ] No "TBD" or placeholder sections
-- [ ] Open questions are answered or explicitly flagged
-- [ ] Assumptions are documented
+## SCOPE
+- [ ] In-scope clearly listed
+- [ ] Out-of-scope explicitly stated
+- [ ] Future work separated
 
-## ✅ Scope Definition
+## TESTABILITY
+- [ ] Every requirement testable
+- [ ] No subjective criteria
 
-**In scope:**
-- [ ] What's included is clearly listed
-- [ ] Boundaries are well-defined
-
-**Out of scope:**
-- [ ] What's NOT included is explicitly stated
-- [ ] Future considerations are documented separately
-- [ ] Scope creep prevention is clear
-
-## ✅ Testability
-
-**Every requirement is testable:**
-- [ ] Can write a test for each acceptance criterion
-- [ ] Success/failure conditions are measurable
-- [ ] No subjective criteria ("should be fast", "user-friendly")
-
-**Test transformation:**
 ```
-❌ "System should be responsive"
-✅ "Page load time < 2 seconds at 95th percentile"
+❌ "Should be responsive"
+✅ "Page load < 2s at p95"
 
 ❌ "Easy to use"
-✅ "User can complete [task] in < 5 clicks"
+✅ "Complete [task] in < 5 clicks"
 ```
 
-## ✅ Edge Cases
-
-**Edge cases documented:**
+## EDGE CASES
 - [ ] Error scenarios defined
-- [ ] Boundary conditions specified
+- [ ] Boundaries specified
 - [ ] Empty/null states addressed
-- [ ] Concurrent access scenarios (if applicable)
+- [ ] Concurrency (if applicable)
 
-## ✅ Technical Feasibility
-
-**Implementation viability:**
-- [ ] Technical approach is realistic
-- [ ] Dependencies are identified
-- [ ] Constraints are acknowledged
-- [ ] Risks are documented with mitigations
-
-**Architecture alignment:**
-- [ ] Fits existing system architecture
+## FEASIBILITY
+- [ ] Approach realistic
+- [ ] Dependencies identified
+- [ ] Constraints acknowledged
+- [ ] Risks + mitigations documented
+- [ ] Fits architecture
 - [ ] Integration points defined
-- [ ] Data model impacts understood
 
-## ✅ Clarity for Implementation
+## CLARITY FOR DEVS
+- [ ] Implementable without major clarifications
+- [ ] No ambiguous terms
+- [ ] Examples for complex requirements
 
-**Developer readiness test:**
-- [ ] Developer can implement without major clarifications
-- [ ] No ambiguous terms or undefined concepts
-- [ ] Examples provided for complex requirements
+> **Test:** Will devs ask "What happens when X?" or "Is Y in scope?"
 
-**Ambiguity check:**
-Questions a developer shouldn't have to ask:
-- [ ] "What should happen when X?"
-- [ ] "Is Y in scope or not?"
-- [ ] "How do we handle Z?"
-
-## ✅ Consistency
-
-**Internal consistency:**
-- [ ] No contradicting requirements
-- [ ] Terminology is consistent throughout
-- [ ] Referenced components/terms are defined
-
-**External consistency:**
-- [ ] Aligns with existing system behavior
+## CONSISTENCY
+- [ ] No contradictions
+- [ ] Terminology consistent
+- [ ] Aligns with existing system
 - [ ] Matches user expectations
-- [ ] Compatible with technical constraints
 
-## ✅ Stakeholder Alignment
+## STAKEHOLDER SIGN-OFF
+- [ ] Key stakeholders reviewed
+- [ ] Concerns addressed
+- [ ] Approval obtained
 
-**Review status:**
-- [ ] Key stakeholders have reviewed
-- [ ] Concerns have been addressed
-- [ ] Approval obtained (if required)
+---
 
-## Verification Summary
+## SUMMARY
+**Status:** ⬜ Ready for Implementation / ⬜ Needs Refinement
 
-**Spec Status:** ⬜ Ready for Implementation / ⬜ Needs Refinement
+**Gaps:** [Gap] → [Action]
 
-**Completeness Score:** ___/___
+**Ambiguities:** [Unclear] → [Question]
 
-**Gaps Identified:**
-1. [Gap]: [Required action]
-
-**Ambiguities Remaining:**
-1. [Unclear area]: [Question to resolve]
-
-**Implementability Assessment:**
-- [ ] High - Comprehensive, clear, ready to build
-- [ ] Medium - Mostly complete, minor clarifications needed
-- [ ] Low - Significant gaps, not ready for implementation
+**Implementability:**
+- [ ] HIGH: Comprehensive, ready
+- [ ] MEDIUM: Minor clarifications
+- [ ] LOW: Not ready
 
 **Sign-off:**
-- [ ] Author confirms spec is complete
-- [ ] Technical reviewer confirms feasibility
-- [ ] Product owner confirms requirements
+- [ ] Author
+- [ ] Technical Reviewer
+- [ ] Product Owner

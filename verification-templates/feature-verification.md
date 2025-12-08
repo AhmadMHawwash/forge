@@ -1,119 +1,73 @@
-# Feature Verification Checklist
+# FEATURE VERIFICATION
 
-Use after completing work with `goals/feature-request.md` to verify the feature is ready.
+## ROLE
+Validate feature readiness. Use after `goals/feature-request.md`.
 
-## ✅ Requirements Verification
-
-**Functional Requirements:**
-- [ ] All acceptance criteria from the spec/story are met
-- [ ] Feature works as described in requirements
-- [ ] All user flows work end-to-end
-
-**Evidence required:**
+## REQUIREMENTS
+- [ ] All acceptance criteria met
+- [ ] All user flows work E2E
 ```
-[ ] Acceptance criterion 1: [PASS/FAIL] - [Evidence]
-[ ] Acceptance criterion 2: [PASS/FAIL] - [Evidence]
-...
+[Criterion 1]: [PASS/FAIL] - [Evidence]
+[Criterion 2]: [PASS/FAIL] - [Evidence]
 ```
 
-## ✅ Code Quality
+## CODE QUALITY
+- [ ] Follows patterns/conventions
+- [ ] No code smells
+- [ ] Error handling comprehensive
+- [ ] Logging added
+- [ ] Functions focused, well-named
+- [ ] No dead code
 
-**Implementation:**
-- [ ] Code follows existing patterns and conventions
-- [ ] No obvious code smells or anti-patterns
-- [ ] Error handling is comprehensive
-- [ ] Logging/observability added where appropriate
-
-**Clean code checklist:**
-- [ ] Functions are focused and reasonably sized
-- [ ] Naming is clear and consistent
-- [ ] No dead code or commented-out blocks
-- [ ] Dependencies are appropriate (no unnecessary additions)
-
-## ✅ Testing
-
-**Test coverage:**
-- [ ] Unit tests cover core logic
-- [ ] Integration tests cover key workflows
-- [ ] Edge cases are tested
-- [ ] Error scenarios are tested
-
-**Test execution:**
+## TESTING
+- [ ] Unit: Core logic covered
+- [ ] Integration: Key workflows
+- [ ] Edge cases + error scenarios
 ```bash
-# Capture and include test output
-npm test  # or equivalent
-
-# Expected: All tests passing
-# Actual: [paste output]
+[test command] → [output]
 ```
+- [ ] Manual: Realistic data, error scenarios
 
-**Manual testing:**
-- [ ] Tested with realistic data
-- [ ] Tested error scenarios manually
-- [ ] Tested in environment similar to production
+## INTEGRATION
+- [ ] Existing functionality intact
+- [ ] API contracts maintained
+- [ ] Migrations work (if applicable)
+- [ ] External services work
 
-## ✅ Integration
+## NON-FUNCTIONAL
 
-**System integration:**
-- [ ] Doesn't break existing functionality
-- [ ] API contracts are maintained (if applicable)
-- [ ] Database migrations work (if applicable)
-- [ ] External service integrations work
+### Performance
+- [ ] Meets expectations
+- [ ] No regressions
+- [ ] Queries efficient
 
-**Regression check:**
-- [ ] Existing tests still pass
-- [ ] Related features still work
-- [ ] No unintended side effects observed
+### Security
+- [ ] Input validated
+- [ ] Auth respected
+- [ ] No data exposure
+- [ ] No injections
 
-## ✅ Non-Functional Requirements
+### Accessibility (user-facing)
+- [ ] Keyboard nav
+- [ ] Screen reader
+- [ ] Color contrast
 
-**Performance:**
-- [ ] Meets performance expectations (if specified)
-- [ ] No obvious performance regressions
-- [ ] Database queries are efficient (if applicable)
+## DOCS
+- [ ] Complex logic commented
+- [ ] APIs documented
+- [ ] README/Changelog updated
 
-**Security:**
-- [ ] Input validation in place
-- [ ] Authentication/authorization respected
-- [ ] No sensitive data exposed
-- [ ] Injection vulnerabilities addressed
+## DEPLOY READY
+- [ ] Feature flag configured
+- [ ] Rollback plan exists
+- [ ] Monitoring in place
 
-**Accessibility (if user-facing):**
-- [ ] Keyboard navigation works
-- [ ] Screen reader compatible
-- [ ] Color contrast sufficient
+---
 
-## ✅ Documentation
+## SUMMARY
+**Status:** ⬜ Ready / ⬜ Needs Work
 
-**Code documentation:**
-- [ ] Complex logic is commented
-- [ ] Public APIs/functions are documented
-- [ ] README updated if needed
+**Issues:**
+1. [Issue] → [Action]
 
-**External documentation:**
-- [ ] User-facing docs updated (if applicable)
-- [ ] API docs updated (if applicable)
-- [ ] Changelog entry added (if applicable)
-
-## ✅ Deployment Readiness
-
-**Release preparation:**
-- [ ] Feature flag configured (if applicable)
-- [ ] Rollback plan identified
-- [ ] Monitoring/alerts in place (if applicable)
-- [ ] Database migrations are reversible (if applicable)
-
-## Verification Summary
-
-**Overall Status:** ⬜ Ready / ⬜ Needs Work
-
-**Completed Checkpoints:** ___/___
-
-**Remaining Issues:**
-1. [Issue and required action]
-2. [Issue and required action]
-
-**Evidence Compilation:**
-- Test results: [link or paste]
-- Screenshots: [if applicable]
-- Performance metrics: [if applicable]
+**Evidence:** [Tests, screenshots, metrics]

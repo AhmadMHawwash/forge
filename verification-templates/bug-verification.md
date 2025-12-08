@@ -1,128 +1,58 @@
-# Bug Fix Verification Checklist
+# BUG FIX VERIFICATION
 
-Use after completing work with `goals/bug-investigation.md` to verify the bug is properly fixed.
+## ROLE
+Validate bug fix completeness. Use after `goals/bug-investigation.md`.
 
-## ✅ Root Cause Verification
+## ROOT CAUSE
+- [ ] Root cause identified (not symptom)
+- [ ] Documented: What → Why → Fix
 
-**Understanding:**
-- [ ] Root cause is clearly identified
-- [ ] Root cause (not just symptom) is addressed
-- [ ] Explanation of why the bug occurred is documented
-
-**Root cause documentation:**
+## FIX PROOF
+- [ ] Original repro steps no longer trigger bug
+- [ ] Verified in same environment/data
 ```
-What: [What was happening]
-Why: [Why it was happening - the actual root cause]
-Fix: [How the fix addresses the root cause]
-```
-
-## ✅ Fix Verification
-
-**Bug is fixed:**
-- [ ] Original reproduction steps no longer reproduce the bug
-- [ ] Fix has been verified in the same environment where bug occurred
-- [ ] Fix works with the same data that triggered the bug
-
-**Reproduction test:**
-```
-Before fix:
-1. [Step] → [Bug behavior]
-
-After fix:
-1. [Step] → [Expected behavior] ✅
+Before: [Step] → [Bug] ❌
+After:  [Step] → [Expected] ✅
 ```
 
-## ✅ Regression Prevention
-
-**New tests added:**
-- [ ] Unit test specifically for this bug scenario
-- [ ] Integration test if cross-component
-- [ ] Test captures the exact conditions that caused the bug
-
-**Test verification:**
-```bash
-# Run the new test(s)
-[test command]
-
-# Should FAIL with bug present, PASS with fix
-# Actual output: [paste]
-```
-
-## ✅ Side Effect Analysis
-
-**Impact assessment:**
-- [ ] Fix doesn't break other functionality
-- [ ] Related features still work correctly
+## REGRESSION GUARD
+- [ ] New test captures exact bug conditions
+- [ ] Test FAILs without fix, PASSes with
 - [ ] All existing tests pass
-
-**Areas checked:**
-- [ ] [Related area 1]: [Status]
-- [ ] [Related area 2]: [Status]
-
-**Regression test results:**
 ```bash
-# Full test suite
-[test command]
-
-# Output: [paste or summarize]
+[test command] → [output]
 ```
 
-## ✅ Edge Cases
+## SIDE EFFECTS
+- [ ] Related features verified
+- [ ] No new breakage
 
-**Similar scenarios:**
-- [ ] Similar edge cases checked and don't have the same bug
-- [ ] Edge cases added to test suite
-- [ ] Boundary conditions tested
+## EDGE CASES
+- [ ] Similar scenarios checked
+- [ ] Boundaries: null, max, concurrent, error
 
-**Edge case checklist:**
-- [ ] Empty/null inputs
-- [ ] Maximum values
-- [ ] Concurrent access (if applicable)
-- [ ] Error conditions
-- [ ] [Domain-specific edge case]
+## CODE QUALITY
+- [ ] Minimal, focused fix
+- [ ] Follows patterns
+- [ ] No new debt
+- [ ] Understandable
 
-## ✅ Code Quality
+## DOCS
+- [ ] Ticket updated with RCA
+- [ ] Comments if non-obvious
 
-**Fix quality:**
-- [ ] Fix is minimal and focused (not over-engineered)
-- [ ] Fix follows existing code patterns
-- [ ] No new technical debt introduced
-- [ ] Fix is understandable without deep context
+## PRODUCTION (if applicable)
+- [ ] Metrics confirm fix
+- [ ] Alerts updated
 
-**Code review readiness:**
-- [ ] Changes are well-scoped and reviewable
-- [ ] Commit message explains what and why
-- [ ] PR description includes bug context
+---
 
-## ✅ Documentation
+## SUMMARY
+**Status:** ⬜ Fixed / ⬜ Needs Work
 
-**Knowledge capture:**
-- [ ] Bug ticket updated with root cause analysis
-- [ ] Comments added if fix is non-obvious
-- [ ] Known issues doc updated (if applicable)
+**Confidence:**
+- [ ] HIGH: Root cause proven, comprehensive tests
+- [ ] MEDIUM: Fix works, basic tests
+- [ ] LOW: Symptom addressed, needs investigation
 
-## ✅ Monitoring (Production Bugs)
-
-**For production bugs:**
-- [ ] Metrics/logs confirm fix is working in production
-- [ ] Alerting updated to catch recurrence
-- [ ] Runbook updated (if applicable)
-
-## Verification Summary
-
-**Bug Status:** ⬜ Fixed / ⬜ Needs More Work
-
-**Verification Checklist:** ___/___
-
-**Confidence Level:** 
-- [ ] High - Root cause proven, comprehensive tests, no side effects
-- [ ] Medium - Fix works, basic tests, some uncertainty
-- [ ] Low - Symptom addressed, needs more investigation
-
-**Evidence:**
-- Before/after comparison: [describe or link]
-- Test output: [paste]
-- Logs/metrics: [if applicable]
-
-**Outstanding Concerns:**
-1. [Any remaining uncertainty]
+**Evidence:** [Before/after, test output, logs]

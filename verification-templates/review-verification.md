@@ -1,108 +1,68 @@
-# Code Review Verification Checklist
+# CODE REVIEW VERIFICATION
 
-Use after completing work with `goals/code-review.md` to verify the review is thorough.
+## ROLE
+Validate review thoroughness. Use after `goals/code-review.md`.
 
-## ✅ Review Completeness
-
-**All code examined:**
+## COMPLETENESS
 - [ ] All changed files reviewed
-- [ ] All functions/methods understood
-- [ ] Test changes reviewed alongside implementation
+- [ ] Tests reviewed with implementation
+- [ ] Purpose + mechanism understood
 
-**Understanding:**
-- [ ] Purpose of the change is clear
-- [ ] How it works is understood
-- [ ] Why decisions were made is clear (or asked about)
+## CORRECTNESS
+- [ ] Code does what it claims
+- [ ] Edge cases handled
+- [ ] Errors handled properly
 
-## ✅ Correctness
+### Red Flags Checked
+- [ ] Off-by-one
+- [ ] Null/undefined
+- [ ] Boundaries
+- [ ] Race conditions
+- [ ] Resource leaks
 
-**Logic review:**
-- [ ] Code does what it claims to do
-- [ ] Edge cases are handled
-- [ ] Error conditions are handled properly
-- [ ] No obvious logic errors
-
-**Red flags checked:**
-- [ ] No off-by-one errors
-- [ ] Null/undefined handling
-- [ ] Boundary conditions
-- [ ] Race conditions (if concurrent)
-- [ ] Resource leaks (connections, memory, files)
-
-## ✅ Quality Assessment
-
-**Code quality:**
-- [ ] Code is readable and understandable
-- [ ] Naming is clear and consistent
-- [ ] Functions are appropriately sized
+## QUALITY
+- [ ] Readable, understandable
+- [ ] Clear naming
+- [ ] Appropriate function size
 - [ ] No unnecessary complexity
+- [ ] Follows patterns
+- [ ] No anti-patterns
+- [ ] No new tech debt (or documented)
 
-**Patterns:**
-- [ ] Follows existing codebase patterns
-- [ ] Consistent with team conventions
-- [ ] No anti-patterns introduced
+## TESTS
+- [ ] Tests verify behavior
+- [ ] Important paths covered
+- [ ] Not brittle, not loose
+- [ ] Edge cases tested
+- [ ] Coverage maintained
 
-**Technical debt:**
-- [ ] Doesn't add significant technical debt
-- [ ] Any intentional shortcuts are documented
-- [ ] TODO/FIXME comments are tracked
+## SECURITY
+- [ ] Input validated
+- [ ] No injection vulns
+- [ ] Auth respected
+- [ ] Secrets not in code
 
-## ✅ Testing Assessment
+## PERFORMANCE
+- [ ] No obvious issues
+- [ ] Queries efficient
+- [ ] No N+1
+- [ ] Caching considered
 
-**Test quality:**
-- [ ] Tests actually verify the behavior
-- [ ] Tests cover the important paths
-- [ ] Tests aren't too brittle or too loose
-- [ ] Edge cases are tested
+## FEEDBACK
+- [ ] Comments constructive + actionable
+- [ ] Blockers marked
+- [ ] Suggestions vs requirements clear
 
-**Coverage:**
-- [ ] New code has appropriate test coverage
-- [ ] Changed code maintains test coverage
-- [ ] Integration tests where appropriate
+### Feedback Legend
+- 🔴 **Blocking**: Must fix
+- 🟡 **Suggestion**: Discuss
+- 🟢 **Nitpick**: Optional
+- 💡 **Question**: Clarify
 
-## ✅ Security Review
+---
 
-**Security checklist:**
-- [ ] Input validation is present
-- [ ] No injection vulnerabilities (SQL, XSS, etc.)
-- [ ] Authentication/authorization respected
-- [ ] Sensitive data handled appropriately
-- [ ] No secrets in code
-
-## ✅ Performance Considerations
-
-**Performance review:**
-- [ ] No obvious performance issues
-- [ ] Database queries are efficient (if applicable)
-- [ ] No N+1 queries
-- [ ] Caching considered where appropriate
-
-## ✅ Feedback Delivery
-
-**Feedback provided:**
-- [ ] Comments are constructive and actionable
-- [ ] Blocking issues clearly marked
-- [ ] Suggestions vs requirements distinguished
-- [ ] Positive feedback included where warranted
-
-**Feedback categories used:**
-- 🔴 **Blocking**: Must fix before merge
-- 🟡 **Suggestion**: Should consider, discuss
-- 🟢 **Nitpick**: Optional improvement
-- 💡 **Question**: Need clarification
-
-## ✅ Review Documentation
-
-**Review record:**
-- [ ] All comments documented in PR/review system
-- [ ] Approval/rejection clearly stated
-- [ ] Follow-up items tracked
-
-## Review Summary
-
-**Review Status:** ⬜ Approved / ⬜ Changes Requested / ⬜ Needs Discussion
-
-**Key Findings:**
+## SUMMARY
+**Status:** ⬜ Approved / ⬜ Changes Requested / ⬜ Needs Discussion
 
 | Type | Count |
 |------|-------|
@@ -111,11 +71,6 @@ Use after completing work with `goals/code-review.md` to verify the review is th
 | 🟢 Nitpicks | ___ |
 | 💡 Questions | ___ |
 
-**Blocking Issues:**
-1. [Issue]: [Required action]
+**Blocking:** [Issue] → [Action]
 
-**Main Suggestions:**
-1. [Suggestion]: [Rationale]
-
-**Overall Assessment:**
-[2-3 sentences on overall code quality and readiness]
+**Assessment:** [2-3 sentences on quality/readiness]
