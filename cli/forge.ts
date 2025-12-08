@@ -9,7 +9,7 @@
  */
 
 import * as p from "@clack/prompts";
-import { writeFile, mkdir, readFile } from "fs/promises";
+import { readdir, readFile, writeFile, mkdir, copyFile } from "fs/promises";
 import { join, dirname } from "path";
 import { existsSync } from "fs";
 import { discoverComponents, composeProfile, type Component } from "./utils/components";
@@ -42,6 +42,68 @@ async function saveProfileIndex(profiles: SavedProfile[]): Promise<void> {
   await writeFile(join(SAVED_PROFILES_DIR, "index.json"), JSON.stringify(profiles, null, 2));
 }
 
+const ROOT_DIR = join(import.meta.dir, "..");
+
+async function copyDir(src: string, dest: string) {
+  await mkdir(dest, { recursive: true });
+  const entries = await readdir(src, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = join(src, entry.name);
+    const destPath = join(dest, entry.name);
+
+    if (entry.isDirectory()) {
+      await copyDir(srcPath, destPath);
+    } else {
+      await copyFile(srcPath, destPath);
+    }
+  }
+}
+
+async function installFramework() {
+  const targetDir = join(process.cwd(), ".forge", "framework");
+
+  if (existsSync(targetDir)) {
+    const overwrite = await p.confirm({
+      message: `Framework already installed at ${targetDir}. Overwrite?`,
+      initialValue: false,
+    });
+    if (p.isCancel(overwrite) || !overwrite) return;
+  }
+
+  const s = p.spinner();
+  s.start("Installing framework files...");
+
+  try {
+    const components = ["foundations", "overlays", "goals", "engines", "verification-templates"];
+
+    for (const component of components) {
+      s.message(`Copying ${component}...`);
+      const src = join(ROOT_DIR, component);
+      const dest = join(targetDir, component);
+
+      // Check if source exists (it should)
+      if (existsSync(src)) {
+        await copyDir(src, dest);
+      }
+    }
+
+    // Copy README as well
+    await copyFile(join(ROOT_DIR, "README.md"), join(targetDir, "README.md"));
+
+    s.stop(`Framework installed successfully to ${targetDir}`);
+
+    p.note(
+      `You can now customize these files or reference them directly.\nLocation: ./.forge/framework/`,
+      "Installation Complete"
+    );
+
+  } catch (error) {
+    s.stop("Installation failed");
+    p.log.error(String(error));
+  }
+}
+
 async function main() {
   console.clear();
 
@@ -54,9 +116,10 @@ async function main() {
   const action = await p.select({
     message: "What would you like to do?",
     options: [
-      { value: "create", label: "🆕 Create a new profile", hint: "Build a custom AI developer profile" },
-      { value: "saved", label: "📂 View saved profiles", hint: `${savedProfiles.length} profiles saved` },
-      { value: "list", label: "📋 List available components", hint: "See all foundations, overlays, and goals" },
+      { value: "install", label: "📥 Install framework", hint: "Copy framework files to local project" },
+      { value: "create", label: "🆕 Create a new profile", hint: "Interactive setup" },
+      { value: "load", label: "📂 Load saved profile", hint: "View or copy existing" },
+      { value: "list", label: "📄 List components", hint: "View all available options" },
     ],
   });
 
@@ -65,16 +128,14 @@ async function main() {
     process.exit(0);
   }
 
-  switch (action) {
-    case "create":
-      await createProfile(components, savedProfiles);
-      break;
-    case "saved":
-      await viewSavedProfiles(savedProfiles, components);
-      break;
-    case "list":
-      await listComponents(components);
-      break;
+  if (action === "create") {
+    await createProfile(components, savedProfiles);
+  } else if (action === "install") {
+    await installFramework();
+  } else if (action === "load") {
+    await viewSavedProfiles(savedProfiles, components);
+  } else if (action === "list") {
+    await listComponents(components);
   }
 
   p.outro("Thanks for using FORGE! 🔥");
