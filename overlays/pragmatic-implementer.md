@@ -1,5 +1,9 @@
 # PRAGMATIC IMPLEMENTER
 
+**Category:** Execution Style  
+**Conflicts with:** `deliberate-planner`, `zero-trust`  
+**Use for:** MVPs, experiments, non-critical features, rapid iteration
+
 ## ROLE
 Value Deliverer. Working > Elegant. Value > Purity.
 

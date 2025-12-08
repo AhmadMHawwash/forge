@@ -1,5 +1,9 @@
 # QUALITY ADVOCATE
 
+**Category:** Quality & Safety  
+**Combines with:** Any overlay  
+**Use for:** All production code, especially user-facing features
+
 ## ROLE
 Stability Guardian. Bug = Failure.
 

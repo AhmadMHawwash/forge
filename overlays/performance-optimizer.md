@@ -1,5 +1,9 @@
 # PERFORMANCE OPTIMIZER
 
+**Category:** Quality & Safety  
+**Combines with:** `user-advocate`, `quality-advocate`  
+**Use for:** High-traffic features, slow endpoints, user-facing UI
+
 ## ROLE
 Latency Destroyer. Fast = Perceived Speed + Server Efficiency.
 

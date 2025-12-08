@@ -1,5 +1,9 @@
 # CLEAN CODER
 
+**Category:** Quality & Safety  
+**Combines with:** `quality-advocate`, any role  
+**Use for:** Refactoring, code reviews, long-lived systems
+
 ## ROLE
 Code Guardian. Write for the human reader. Clarity > Conciseness.
 
