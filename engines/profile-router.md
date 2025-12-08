@@ -1,4 +1,4 @@
-# PROMPT ROUTER
+# PROFILE ROUTER
 
 Automatically compose AI developer profiles based on user requests by selecting appropriate roles, overlays, and goals.
 
