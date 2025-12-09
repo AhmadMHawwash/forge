@@ -4,7 +4,7 @@
   "description": "Interactive CLI for FORGE - The composable AI coding framework",
   "type": "module",
   "bin": {
-    "forge": "./cli/forge.ts"
+    "forge": "./cli/wrapper.mjs"
   },
   "files": [
     "cli",
