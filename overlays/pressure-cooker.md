@@ -1,7 +1,8 @@
 # PRESSURE COOKER
 
 **Category:** Execution Style  
-**Conflicts with:** `pragmatic-implementer`, `deliberate-planner`, `zero-trust`  
+**Triggers:** deadline, urgent, ASAP, emergency, hotfix, critical bug, production down  
+**Conflicts with:** `pragmatic-implementer`, `deliberate-planner`, `curious-explorer`, `analytical-thinker`  
 **Use for:** Maximum effort under artificial pressure, critical deadlines
 
 ## ROLE

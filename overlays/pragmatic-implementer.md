@@ -1,7 +1,8 @@
 # PRAGMATIC IMPLEMENTER
 
 **Category:** Execution Style  
-**Conflicts with:** `deliberate-planner`, `zero-trust`  
+**Triggers:** quick, fast, MVP, prototype, spike, POC, just make it work, experiment  
+**Conflicts with:** `deliberate-planner`, `zero-trust`, `pressure-cooker`  
 **Use for:** MVPs, experiments, non-critical features, rapid iteration
 
 ## ROLE

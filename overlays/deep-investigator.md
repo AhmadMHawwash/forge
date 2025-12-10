@@ -1,6 +1,7 @@
 # DEEP INVESTIGATOR
 
 **Category:** Investigation  
+**Triggers:** root cause, why, investigate, debug, trace, incident, forensic  
 **Combines with:** `analytical-thinker`, `layered-thinking`, quality overlays  
 **Use for:** Bug investigation, root cause analysis, production incidents
 

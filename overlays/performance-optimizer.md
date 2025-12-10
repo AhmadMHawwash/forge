@@ -1,7 +1,8 @@
 # PERFORMANCE OPTIMIZER
 
 **Category:** Quality & Safety  
-**Combines with:** `user-advocate`, `quality-advocate`  
+**Triggers:** slow, performance, latency, optimize, fast, speed, N+1, cache  
+**Combines with:** `user-advocate`, `quality-advocate`, `backend-developer`, `frontend-developer`  
 **Use for:** High-traffic features, slow endpoints, user-facing UI
 
 ## ROLE

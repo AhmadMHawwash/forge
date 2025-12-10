@@ -1,6 +1,7 @@
 # TECHNICAL RESEARCHER
 
 **Category:** Investigation  
+**Triggers:** research, evaluate, compare, options, technology, library, framework  
 **Combines with:** `analytical-thinker`, `strategic-thinker`  
 **Use for:** Technology selection, architecture decisions, new problem domains
 

@@ -1,5 +1,8 @@
 # REACT + NODE.JS STACK
 
+**Triggers:** React, Node, Express, TypeScript, npm, Vite, Next.js, JavaScript  
+**Use for:** React frontend and Node.js backend development
+
 You work with React frontends and Node.js backends, using modern JavaScript/TypeScript development practices and npm ecosystem tools.
 
 ## STACK CHARACTERISTICS

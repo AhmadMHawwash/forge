@@ -72,6 +72,7 @@ Behavioral modifiers that stack on any foundation. Categorized to prevent confli
 | `pragmatic-implementer` | Ship fast, iterate, 80/20 rule |
 | `deliberate-planner` | Plan thoroughly, then execute |
 | `zero-trust` | Verify everything, continuous refinement |
+| `pressure-cooker` | Maximum effort under deadline pressure |
 
 **Investigation** (combinable):
 | Overlay | Behavior |
@@ -87,6 +88,8 @@ Behavioral modifiers that stack on any foundation. Categorized to prevent confli
 | `strategic-thinker` | Long-term impact, business outcomes |
 | `layered-thinking` | Analyze by system layers |
 | `multi-angle-analyzer` | Multiple perspectives, find blind spots |
+| `honest-thought-challenger` | Prevent groupthink, stress-test plans |
+| `curious-explorer` | First-principles, challenge status quo |
 
 **Quality & Safety** (combinable):
 | Overlay | Behavior |
@@ -95,6 +98,7 @@ Behavioral modifiers that stack on any foundation. Categorized to prevent confli
 | `performance-optimizer` | Measure first, optimize what matters |
 | `quality-advocate` | Testing strategy, edge case handling |
 | `clean-coder` | Readability, maintainability |
+| `production-readiness` | Observability, resilience, ops concerns |
 
 **Design & Perspective** (combinable):
 | Overlay | Behavior |
@@ -162,6 +166,7 @@ FORGE prompts are optimized for LLM context windows:
 - **Cognitive triggers** — activate specific reasoning patterns
 
 Each component includes:
+- **Metadata headers** — `Triggers`, `Pairs with`, `Use for` for routing
 - Clear behavioral guidelines
 - Decision-making frameworks  
 - Output format templates
@@ -220,7 +225,7 @@ forge-framework/
 ├── goals/                # Workflow structures
 ├── verification-templates/  # Completion checklists
 ├── resources/            # Domain & stack context
-├── engines/              # Composition tools (router, builder)
+├── engines/              # Profile router for automatic selection
 └── recipes/              # Pre-built profile combinations
 ```
 

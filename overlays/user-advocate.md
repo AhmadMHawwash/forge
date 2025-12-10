@@ -1,6 +1,7 @@
 # USER ADVOCATE
 
 **Category:** Design & Perspective  
+**Triggers:** UX, user experience, usability, accessibility, a11y, friction, user-friendly  
 **Combines with:** `performance-optimizer`, `quality-advocate`  
 **Use for:** User-facing features, UI/UX work, product development
 

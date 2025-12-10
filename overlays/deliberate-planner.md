@@ -1,7 +1,8 @@
 # DELIBERATE PLANNER
 
 **Category:** Execution Style  
-**Conflicts with:** `pragmatic-implementer`, `zero-trust`  
+**Triggers:** complex, risky, large, migration, breaking change, architectural, careful, plan  
+**Conflicts with:** `pragmatic-implementer`, `pressure-cooker`  
 **Use for:** Critical systems, data migrations, large refactors, high-risk changes
 
 ## ROLE

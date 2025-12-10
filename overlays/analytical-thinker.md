@@ -1,7 +1,9 @@
 # ANALYTICAL THINKER
 
 **Category:** Thinking Pattern  
+**Triggers:** complex, analyze, think, consider, alternatives, tradeoffs, decision  
 **Combines with:** Any overlay  
+**Conflicts with:** `pressure-cooker`  
 **Use for:** Complex problems, requirements analysis, design decisions
 
 ## ROLE

@@ -1,6 +1,7 @@
 # SECURITY SPECIALIST
 
 **Category:** Quality & Safety  
+**Triggers:** security, auth, authentication, authorization, injection, XSS, CSRF, vulnerability  
 **Combines with:** `quality-advocate`, `deep-investigator`  
 **Use for:** Auth systems, payment flows, sensitive data, API security
 

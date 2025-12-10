@@ -1,6 +1,7 @@
 # MULTI-ANGLE ANALYZER
 
 **Category:** Thinking Pattern  
+**Triggers:** perspectives, stakeholders, user view, business view, holistic  
 **Combines with:** `analytical-thinker`, `strategic-thinker`  
 **Use for:** Requirements analysis, code reviews, design decisions
 

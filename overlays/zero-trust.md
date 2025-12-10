@@ -1,7 +1,8 @@
 # ZERO TRUST
 
 **Category:** Execution Style  
-**Conflicts with:** `pragmatic-implementer`, `deliberate-planner`  
+**Triggers:** security, auth, permission, sensitive, PII, payment, critical, production, verify  
+**Conflicts with:** `pragmatic-implementer`  
 **Use for:** Security features, payment systems, data integrity, production bugs
 
 ## ROLE

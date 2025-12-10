@@ -143,75 +143,7 @@ async function main() {
 }
 
 async function createProfile(components: Awaited<ReturnType<typeof discoverComponents>>, savedProfiles: SavedProfile[]) {
-  // Step 1: Select Foundation (Role)
-  const foundation = await p.select({
-    message: "Select a foundation role:",
-    options: components.foundations.map(f => ({
-      value: f,
-      label: formatName(f.name),
-      hint: f.description.slice(0, 60),
-    })),
-  });
-
-  if (p.isCancel(foundation)) return;
-
-  // Step 2: Select Overlays (multi-select)
-  // Sort overlays by category priority
-  const categoryPriority: Record<string, number> = {
-    "Execution Style": 1,
-    "Thinking Pattern": 2,
-    "Quality & Safety": 3,
-    "Investigation": 4,
-    "Design & Perspective": 5,
-    "Communication": 6,
-    "Experimental": 99
-  };
-
-  const sortedOverlays = [...components.overlays].sort((a, b) => {
-    const catA = a.category || "General";
-    const catB = b.category || "General";
-
-    // Compare categories based on priority
-    const priorityA = categoryPriority[catA] || 50;
-    const priorityB = categoryPriority[catB] || 50;
-
-    if (priorityA !== priorityB) return priorityA - priorityB;
-
-    // If same category, sort by category name (for non-prioritized ones)
-    if (catA !== catB) return catA.localeCompare(catB);
-
-    // If same category, sort by name
-    return a.name.localeCompare(b.name);
-  });
-
-  const overlayOptions = sortedOverlays.map(o => ({
-    value: o,
-    label: `${o.category ? `[${o.category}]` : "[General]"} ${formatName(o.name)}`,
-    hint: o.conflicts ? `⚠️ Conflicts: ${o.conflicts.join(", ")}` : undefined,
-  }));
-
-  const selectedOverlays = await p.multiselect({
-    message: "Select overlays (space to toggle, enter to confirm):",
-    options: overlayOptions,
-    required: false,
-  });
-
-  if (p.isCancel(selectedOverlays)) return;
-
-  const overlays = selectedOverlays as Component[];
-
-  // Check for conflicts
-  const conflicts = checkConflicts(overlays);
-  if (conflicts.length > 0) {
-    p.log.warning(`⚠️ Potential conflicts detected: ${conflicts.join(", ")}`);
-    const proceed = await p.confirm({
-      message: "Continue anyway?",
-      initialValue: false,
-    });
-    if (p.isCancel(proceed) || !proceed) return;
-  }
-
-  // Step 3: Select Goal
+  // Step 1: Select Goal (Workflow)
   const goal = await p.select({
     message: "Select a goal workflow:",
     options: [
@@ -226,7 +158,19 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
 
   if (p.isCancel(goal)) return;
 
-  // Step 4: Select Resources (multi-select)
+  // Step 2: Select Foundation (Role)
+  const foundation = await p.select({
+    message: "Select a foundation role:",
+    options: components.foundations.map(f => ({
+      value: f,
+      label: formatName(f.name),
+      hint: f.description.slice(0, 60),
+    })),
+  });
+
+  if (p.isCancel(foundation)) return;
+
+  // Step 3: Select Resources (multi-select)
   const resourceOptions = components.resources.map(r => ({
     value: r,
     label: `${r.category ? `[${r.category}]` : "[Resource]"} ${formatName(r.name)}`,
@@ -242,17 +186,158 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
   if (p.isCancel(selectedResources)) return;
   const resources = selectedResources as Component[];
 
+  // ---------------------------------------------------------
+  // SMART RECOMMENDATIONS ENGINE
+  // ---------------------------------------------------------
+  const { recommender } = await import("./utils/recommendations");
+
+  const context = {
+    goal: goal as Component | undefined,
+    role: foundation as Component | undefined,
+    resources: resources
+  };
+
+  const recommendations = recommender.getRecommendations(context);
+
+  const isRecommended = (comp: Component) => {
+    return recommendations.has(comp.name);
+  };
+
+  const getRecommendationReason = (comp: Component) => {
+    return recommendations.get(comp.name)?.reason;
+  };
+
+  // Step 4: Select Overlays (multi-select)
+  // Sort overlays: Recommended -> by category priority -> alphabetical
+  const categoryPriority: Record<string, number> = {
+    "Execution Style": 1,
+    "Thinking Pattern": 2,
+    "Quality & Safety": 3,
+    "Investigation": 4,
+    "Design & Perspective": 5,
+    "Communication": 6
+  };
+
+  const sortedOverlays = [...components.overlays].sort((a, b) => {
+    // 1. Sort by recommendation score (High to Low)
+    const recA = recommendations.get(a.name);
+    const recB = recommendations.get(b.name);
+
+    // If both recommended, higher score wins
+    if (recA && recB) {
+      if (recA.score !== recB.score) return recB.score - recA.score;
+    }
+
+    // If only one recommended, it wins
+    if (recA && !recB) return -1;
+    if (!recA && recB) return 1;
+
+    // 2. Sort by category priority
+    const catA = a.category || "General";
+    const catB = b.category || "General";
+
+    // ... (rest of sorting logic remains similar)
+    const priorityA = categoryPriority[catA] || 50;
+    const priorityB = categoryPriority[catB] || 50;
+    if (priorityA !== priorityB) return priorityA - priorityB;
+
+    // 3. Sort by category name
+    if (catA !== catB) return catA.localeCompare(catB);
+
+    // 4. Sort by name
+    return a.name.localeCompare(b.name);
+  });
+
+  const overlayOptions = sortedOverlays.map(o => {
+    const rec = recommendations.get(o.name);
+    const prefix = rec ? "✨ " : "";
+    const categoryLabel = o.category ? `[${o.category}]` : "[General]";
+    const hint = rec ? `💡 ${rec.reason}` : (o.conflicts ? `⚠️ Conflicts: ${o.conflicts.join(", ")}` : undefined);
+
+    return {
+      value: o,
+      label: `${prefix}${categoryLabel} ${formatName(o.name)}`,
+      hint: hint,
+    };
+  });
+
+  // Pre-select highly recommended items (score > 90)
+  let currentSelection = sortedOverlays
+    .filter(o => {
+      const rec = recommendations.get(o.name);
+      return rec && rec.score >= 90;
+    });
+
+  let overlays: Component[] = [];
+  let confirmingSelection = true;
+
+  while (confirmingSelection) {
+    const selectedOverlays = await p.multiselect({
+      message: "Select overlays (space to toggle, enter to confirm):",
+      options: overlayOptions,
+      required: false,
+      initialValues: currentSelection as any
+    });
+
+    if (p.isCancel(selectedOverlays)) return;
+
+    overlays = selectedOverlays as Component[];
+    currentSelection = overlays;
+
+    // Check for conflicts
+    const conflicts = checkConflicts(overlays);
+
+    if (conflicts.length > 0) {
+      p.log.warning(`⚠️ Potential conflicts detected:`);
+      conflicts.forEach(c => p.log.message(c)); // Print each conflict clearly
+
+      const action = await p.select({
+        message: "How would you like to proceed?",
+        options: [
+          { value: "modify", label: "⛔️ Modify selection", hint: "Go back and change your choices" },
+          { value: "ignore", label: "⚠️ Ignore and continue", hint: "Keep current selection despite conflicts" },
+          // { value: "cancel", label: "❌ Cancel", hint: "Abort profile creation" } // User can just Ctrl+C or use standard cancel
+        ]
+      });
+
+      if (p.isCancel(action)) return;
+
+      if (action === "modify") {
+        // Loop continues, currentSelection is preserved
+        continue;
+      } else if (action === "ignore") {
+        confirmingSelection = false;
+      }
+    } else {
+      confirmingSelection = false;
+    }
+  }
+
   // Step 5: Select Verification Template (optional)
+  // Smart suggest verification template
+  const verificationOptions = [
+    { value: null, label: "⏭️ Skip", hint: "No verification template" },
+    ...components.verificationTemplates
+      .sort((a, b) => {
+        // Sort by suggestion score
+        const scoreA = recommendations.get(a.name)?.score || 0;
+        const scoreB = recommendations.get(b.name)?.score || 0;
+        return scoreB - scoreA;
+      })
+      .map(v => {
+        const rec = recommendations.get(v.name);
+        const prefix = rec ? "✨ " : "";
+        return {
+          value: v,
+          label: `${prefix}${formatName(v.name)}`,
+          hint: rec ? `💡 ${rec.reason}` : v.description.slice(0, 60),
+        };
+      }),
+  ];
+
   const verification = await p.select({
     message: "Include a verification template?",
-    options: [
-      { value: null, label: "⏭️ Skip", hint: "No verification template" },
-      ...components.verificationTemplates.map(v => ({
-        value: v,
-        label: formatName(v.name),
-        hint: v.description.slice(0, 60),
-      })),
-    ],
+    options: verificationOptions,
   });
 
   if (p.isCancel(verification)) return;
@@ -271,7 +356,7 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
 
   s.stop("Profile composed!");
 
-  // Step 5: Save options
+  // Step 6: Save options
   const saveAction = await p.select({
     message: "What would you like to do with this profile?",
     options: [

@@ -1,7 +1,8 @@
 # CONCISE COMMUNICATOR
 
 **Category:** Communication  
-**Use standalone** or with any overlay  
+**Triggers:** brief, short, summary, TLDR, concise, scannable  
+**Combines with:** Any overlay  
 **Use for:** All communication, especially status updates and documentation
 
 ## ROLE

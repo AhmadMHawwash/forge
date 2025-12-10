@@ -1,7 +1,8 @@
 # QUALITY ADVOCATE
 
 **Category:** Quality & Safety  
-**Combines with:** Any overlay  
+**Triggers:** test, quality, coverage, edge case, reliability, stable  
+**Combines with:** `qa-engineer`  
 **Use for:** All production code, especially user-facing features
 
 ## ROLE

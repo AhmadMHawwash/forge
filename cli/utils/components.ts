@@ -12,6 +12,8 @@ export interface Component {
   description: string;
   category?: string;
   conflicts?: string[];
+  combinesWith?: string[];
+  useFor?: string;
 }
 
 export interface Components {
@@ -27,7 +29,7 @@ const ROOT_DIR = join(import.meta.dir, "..", "..");
 /**
  * Extract metadata from a markdown file's front matter or first lines
  */
-async function extractMetadata(filePath: string): Promise<{ description: string; category?: string; conflicts?: string[] }> {
+async function extractMetadata(filePath: string): Promise<{ description: string; category?: string; conflicts?: string[]; combinesWith?: string[]; useFor?: string }> {
   try {
     const content = await readFile(filePath, "utf-8");
     const lines = content.split("\n");
@@ -35,6 +37,8 @@ async function extractMetadata(filePath: string): Promise<{ description: string;
     let description = "";
     let category: string | undefined;
     let conflicts: string[] | undefined;
+    let combinesWith: string[] | undefined;
+    let useFor: string | undefined;
 
     // Look for description in first few lines
     for (let i = 0; i < Math.min(lines.length, 10); i++) {
@@ -58,13 +62,24 @@ async function extractMetadata(filePath: string): Promise<{ description: string;
         conflicts = conflictStr.split(",").map(c => c.trim().replace(/`/g, ""));
       }
 
+      // Look for **Combines with:** pattern
+      if (line.startsWith("**Combines with:**")) {
+        const combineStr = line.replace("**Combines with:**", "").trim();
+        combinesWith = combineStr.split(",").map(c => c.trim().replace(/`/g, ""));
+      }
+
+      // Look for **Use for:** pattern
+      if (line.startsWith("**Use for:**")) {
+        useFor = line.replace("**Use for:**", "").trim();
+      }
+
       // First non-header, non-empty line as description
       if (!line.startsWith("#") && !line.startsWith("**") && line.length > 20 && !description) {
         description = line.slice(0, 100) + (line.length > 100 ? "..." : "");
       }
     }
 
-    return { description, category, conflicts };
+    return { description, category, conflicts, combinesWith, useFor };
   } catch {
     return { description: "" };
   }
@@ -91,6 +106,8 @@ async function scanDirectory(dirPath: string, subDir?: string): Promise<Componen
           description: metadata.description,
           category: metadata.category,
           conflicts: metadata.conflicts,
+          combinesWith: metadata.combinesWith,
+          useFor: metadata.useFor,
         });
       }
     }
@@ -106,13 +123,14 @@ async function scanDirectory(dirPath: string, subDir?: string): Promise<Componen
  * Discover all available FORGE components
  */
 export async function discoverComponents(): Promise<Components> {
-  const [foundations, overlays, goals, verificationTemplates, stacks, domains] = await Promise.all([
+  const [foundations, overlays, goals, verificationTemplates, stacks, domains, rootResources] = await Promise.all([
     scanDirectory(join(ROOT_DIR, "foundations"), "roles"),
     scanDirectory(join(ROOT_DIR, "overlays")),
     scanDirectory(join(ROOT_DIR, "goals")),
     scanDirectory(join(ROOT_DIR, "verification-templates")),
     scanDirectory(join(ROOT_DIR, "resources"), "stacks"),
     scanDirectory(join(ROOT_DIR, "resources"), "domains"),
+    scanDirectory(join(ROOT_DIR, "resources")),
   ]);
 
   return {
@@ -120,7 +138,7 @@ export async function discoverComponents(): Promise<Components> {
     overlays,
     goals,
     verificationTemplates,
-    resources: [...stacks, ...domains],
+    resources: [...rootResources, ...stacks, ...domains],
   };
 }
 

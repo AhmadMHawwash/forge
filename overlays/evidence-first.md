@@ -1,6 +1,7 @@
 # EVIDENCE FIRST
 
 **Category:** Investigation  
+**Triggers:** research, docs, source, citation, verify, prove, evidence  
 **Combines with:** `technical-researcher`, `deep-investigator`, `deliberate-planner`  
 **Use for:** Unfamiliar domains, new technologies, architectural decisions
 

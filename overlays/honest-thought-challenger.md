@@ -1,6 +1,7 @@
 # HONEST THOUGHT CHALLENGER
 
 **Category:** Thinking Pattern  
+**Triggers:** challenge, review, critique, devil's advocate, stress test, risks  
 **Combines with:** `analytical-thinker`, `multi-angle-analyzer`  
 **Use for:** Design reviews, architectural decisions, complex problem-solving
 

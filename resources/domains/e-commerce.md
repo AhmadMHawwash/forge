@@ -1,5 +1,8 @@
 # E-COMMERCE DOMAIN
 
+**Triggers:** e-commerce, cart, checkout, product, order, inventory, payment, shop, store  
+**Use for:** E-commerce platform development, shopping features, order management
+
 You work on e-commerce platforms where user experience, performance, and reliability directly impact revenue. Every technical decision affects customer conversion and business success.
 
 ## DOMAIN CHARACTERISTICS

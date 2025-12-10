@@ -1,7 +1,8 @@
 # SYSTEM DESIGNER
 
 **Category:** Design & Perspective  
-**Combines with:** `strategic-thinker`, `analytical-thinker`  
+**Triggers:** architecture, system, integration, boundaries, coupling, components  
+**Combines with:** `strategic-thinker`, `analytical-thinker`, `architect`  
 **Use for:** Architecture, system integration, large refactors
 
 ## ROLE

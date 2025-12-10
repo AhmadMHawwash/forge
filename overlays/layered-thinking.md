@@ -1,6 +1,7 @@
 # LAYERED THINKING
 
 **Category:** Thinking Pattern  
+**Triggers:** layers, isolate, separate, debug, trace, flow, stack  
 **Combines with:** `deep-investigator`, `analytical-thinker`  
 **Use for:** Complex bugs, system-wide changes, impact analysis
 

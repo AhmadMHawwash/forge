@@ -1,6 +1,7 @@
 # STRATEGIC THINKER
 
 **Category:** Thinking Pattern  
+**Triggers:** strategy, long-term, roadmap, business, ROI, investment, direction  
 **Combines with:** `system-designer`, `analytical-thinker`  
 **Use for:** Architecture decisions, technical leadership, roadmap planning
 

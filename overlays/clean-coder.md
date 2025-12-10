@@ -1,6 +1,7 @@
 # CLEAN CODER
 
 **Category:** Quality & Safety  
+**Triggers:** readability, maintainable, clean, refactor, naming, clarity  
 **Combines with:** `quality-advocate`, any role  
 **Use for:** Refactoring, code reviews, long-lived systems
 
