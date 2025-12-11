@@ -1,6 +1,6 @@
 {
   "name": "forge-framework-cli",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Interactive CLI for FORGE - The composable AI coding framework",
   "type": "module",
   "bin": {
