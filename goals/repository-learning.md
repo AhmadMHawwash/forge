@@ -51,36 +51,90 @@ Repository Archaeologist. Exhaustively analyze repositories, extract actionable 
 - "Usually...", "Best practice...", assumptions
 - Citing a file without quoting the actual content
 
-## OUTPUT TEMPLATES
+## OUTPUT STRUCTURE (FIXED)
 
-### Learnings (`forge-context/learnings/{name}.md`)
-```markdown
-# [NAME]
-**Source:** [repo] | **Triggers:** [keywords] | **Category:** Learning
+> [!IMPORTANT]
+> **Always create these exact files.** No custom names. Predictable structure.
 
-## EVIDENCE
-- `[file:L45-60]` - [What it shows]
-
-## PATTERNS | CONVENTIONS | PITFALLS
-- [Item with code reference]
+```
+forge-context/
+├── stack.md          ← Dependencies, versions, build tools
+├── architecture.md   ← Data flow, state management, API design
+├── domain.md         ← Business entities, terminology, rules
+├── patterns.md       ← Code patterns, conventions, idioms
+└── boundaries.md     ← Service interfaces, integrations
 ```
 
-### Domains (`forge-context/domains/{name}.md`)
+### `forge-context/stack.md`
 ```markdown
-# [DOMAIN]
-**Source:** [repo] | **Triggers:** [keywords] | **Category:** Domain
+# STACK
 
-## ENTITIES | BUSINESS RULES | TERMINOLOGY
-- **[Term]:** [Definition, cite file]
+## Dependencies
+| Package | Version | Purpose |
+|---------|---------|---------|
+| `"next"` | `"^14.3.9"` | Framework - `package.json:12` |
+
+## Build Tools
+- [Tool]: [Evidence]
+
+## Test Framework
+- [Framework]: [Evidence]
 ```
 
-### Boundaries (`forge-context/boundaries/{name}.md`)
+### `forge-context/architecture.md`
 ```markdown
-# [SERVICE]
-**Source:** [repo] | **Triggers:** [keywords] | **Category:** Boundary
+# ARCHITECTURE
 
-## INTERFACE | DEPENDENCIES | CONSUMERS | INTEGRATION
-- [Contract/pattern, cite file]
+## Data Flow
+- [Pattern]: [Evidence]
+
+## State Management
+- [Approach]: [Evidence]
+
+## API Design
+- [Style]: [Evidence]
+```
+
+### `forge-context/domain.md`
+```markdown
+# DOMAIN
+
+## Entities
+- **[Entity]:** [Definition] - `[file:line]`
+
+## Business Rules
+- [Rule]: [Evidence]
+
+## Terminology
+- **[Term]:** [Meaning in this codebase]
+```
+
+### `forge-context/patterns.md`
+```markdown
+# PATTERNS
+
+## Code Conventions
+- [Convention]: [3+ file evidence]
+
+## Common Idioms
+- [Idiom]: [Evidence]
+
+## Anti-Patterns to Avoid
+- [What NOT to do]: [Evidence from comments/issues]
+```
+
+### `forge-context/boundaries.md`
+```markdown
+# BOUNDARIES
+
+## Service Interfaces
+- [Service]: [Contract] - `[file:line]`
+
+## External Integrations
+- [Integration]: [How it connects]
+
+## Module Boundaries
+- [Module]: [What it owns]
 ```
 
 ## WORKFLOW
