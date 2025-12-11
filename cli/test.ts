@@ -11,7 +11,6 @@ async function test() {
   console.log(`  🧭 Foundations: ${c.foundations.length}`);
   console.log(`  ⚡ Overlays: ${c.overlays.length}`);
   console.log(`  🎯 Goals: ${c.goals.length}`);
-  console.log(`  ✅ Verification Templates: ${c.verificationTemplates.length}`);
 
   console.log("\n📋 Sample Components:");
   if (c.foundations[0]) {

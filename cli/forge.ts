@@ -1,7 +1,7 @@
 #!/usr/bin/env -S bun --no-check
 
 /**
- * FORGE CLI - Interactive Profile Builder
+ * FORGE CLI - Interactive Prompt Router
  * 
  * Usage:
  *   bun run forge            # Interactive mode
@@ -76,7 +76,7 @@ async function installFramework() {
   s.start("Installing framework files...");
 
   try {
-    const components = ["foundations", "overlays", "goals", "engines", "verification-templates", "resources"];
+    const components = ["foundations", "overlays", "goals", "engines", "resources"];
 
     for (const component of components) {
       s.message(`Copying ${component}...`);
@@ -108,7 +108,7 @@ async function installFramework() {
 async function main() {
   console.clear();
 
-  p.intro("🔥 FORGE - Interactive Profile Builder");
+  p.intro("🔥 FORGE - Interactive Prompt Router");
 
   const components = await discoverComponents();
   const savedProfiles = await loadSavedProfiles();
@@ -313,35 +313,6 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
     }
   }
 
-  // Step 5: Select Verification Template (optional)
-  // Smart suggest verification template
-  const verificationOptions = [
-    { value: null, label: "⏭️ Skip", hint: "No verification template" },
-    ...components.verificationTemplates
-      .sort((a, b) => {
-        // Sort by suggestion score
-        const scoreA = recommendations.get(a.name)?.score || 0;
-        const scoreB = recommendations.get(b.name)?.score || 0;
-        return scoreB - scoreA;
-      })
-      .map(v => {
-        const rec = recommendations.get(v.name);
-        const prefix = rec ? "✨ " : "";
-        return {
-          value: v,
-          label: `${prefix}${formatName(v.name)}`,
-          hint: rec ? `💡 ${rec.reason}` : v.description.slice(0, 60),
-        };
-      }),
-  ];
-
-  const verification = await p.select({
-    message: "Include a verification template?",
-    options: verificationOptions,
-  });
-
-  if (p.isCancel(verification)) return;
-
   // Generate profile
   const s = p.spinner();
   s.start("Composing profile...");
@@ -350,7 +321,6 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
     foundation: foundation as Component,
     overlays: overlays,
     goal: goal as Component | undefined,
-    verificationTemplate: verification as Component | undefined,
     resources: resources,
   });
 
@@ -491,7 +461,6 @@ async function listComponents(components: Awaited<ReturnType<typeof discoverComp
       { value: "overlays", label: "⚡ Overlays (Behaviors)", hint: `${components.overlays.length} available` },
       { value: "goals", label: "🎯 Goals (Workflows)", hint: `${components.goals.length} available` },
       { value: "resources", label: "📚 Resources (Stacks, Domains)", hint: `${components.resources.length} available` },
-      { value: "verification", label: "✅ Verification Templates", hint: `${components.verificationTemplates.length} available` },
       { value: "all", label: "📋 All components" },
     ],
   });
@@ -544,14 +513,7 @@ async function listComponents(components: Awaited<ReturnType<typeof discoverComp
     console.log();
   }
 
-  if (category === "verification" || category === "all") {
-    console.log("✅ VERIFICATION TEMPLATES");
-    console.log("─".repeat(40));
-    for (const v of components.verificationTemplates) {
-      console.log(`  ${formatName(v.name)}`);
-    }
-    console.log();
-  }
+
 }
 
 // Helpers

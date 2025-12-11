@@ -20,7 +20,6 @@ export interface Components {
   foundations: Component[];
   overlays: Component[];
   goals: Component[];
-  verificationTemplates: Component[];
   resources: Component[];
 }
 
@@ -123,11 +122,10 @@ async function scanDirectory(dirPath: string, subDir?: string): Promise<Componen
  * Discover all available FORGE components
  */
 export async function discoverComponents(): Promise<Components> {
-  const [foundations, overlays, goals, verificationTemplates, stacks, domains, rootResources] = await Promise.all([
+  const [foundations, overlays, goals, stacks, domains, rootResources] = await Promise.all([
     scanDirectory(join(ROOT_DIR, "foundations"), "roles"),
     scanDirectory(join(ROOT_DIR, "overlays")),
     scanDirectory(join(ROOT_DIR, "goals")),
-    scanDirectory(join(ROOT_DIR, "verification-templates")),
     scanDirectory(join(ROOT_DIR, "resources"), "stacks"),
     scanDirectory(join(ROOT_DIR, "resources"), "domains"),
     scanDirectory(join(ROOT_DIR, "resources")),
@@ -137,7 +135,6 @@ export async function discoverComponents(): Promise<Components> {
     foundations,
     overlays,
     goals,
-    verificationTemplates,
     resources: [...rootResources, ...stacks, ...domains],
   };
 }
@@ -156,7 +153,6 @@ export async function composeProfile(components: {
   foundation?: Component;
   overlays: Component[];
   goal?: Component;
-  verificationTemplate?: Component;
   resources?: Component[];
 }): Promise<string> {
   const parts: string[] = [];
@@ -199,12 +195,7 @@ export async function composeProfile(components: {
     parts.push("\n---\n");
   }
 
-  // Add verification template
-  if (components.verificationTemplate) {
-    const content = await readComponent(components.verificationTemplate.path);
-    parts.push(`\n## VERIFICATION: ${components.verificationTemplate.name.toUpperCase()}\n`);
-    parts.push(content);
-  }
+
 
   // Add resources
   if (components.resources && components.resources.length > 0) {
