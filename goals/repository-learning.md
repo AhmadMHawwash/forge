@@ -32,8 +32,24 @@ Repository Archaeologist. Exhaustively analyze repositories, extract actionable 
 | Boundaries | Service interfaces, integrations | 10 min |
 
 ## EVIDENCE STANDARDS
-✅ **Valid:** Code refs (`file.ts:45-60`), 3+ file patterns, explicit docs, config files  
-❌ **Invalid:** "Usually...", "Best practice...", single instances, assumptions
+
+### Anti-Hallucination Rules
+> [!CAUTION]
+> **QUOTE EXACTLY. NEVER PARAPHRASE.**
+> - Versions: Copy exact string (e.g., `"next": "^14.3.9"` not "Next.js 14")
+> - Names: Use exact casing from code
+> - Numbers: Never round or estimate
+
+### What Counts
+✅ **Valid:** 
+- Direct quotes from files: `"next": "^14.3.9"` from `package.json:12`
+- Exact file:line references
+- Patterns appearing in 3+ files
+
+❌ **Invalid:** 
+- Paraphrased versions ("Next.js 14" instead of exact `"^14.3.9"`)
+- "Usually...", "Best practice...", assumptions
+- Citing a file without quoting the actual content
 
 ## OUTPUT TEMPLATES
 
