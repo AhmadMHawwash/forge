@@ -37,6 +37,7 @@ Act as a FORGE Prompt Router. Analyze user requests and automatically route them
 | **Specification** | spec, requirements, define, document, scope, plan |
 | **Retrospective** | learn, research, analyze, understand, investigate, explore, best practices |
 | **Repository Learning** | onboard, digest repo, learn codebase, understand repo, extract patterns, document learnings, analyze repository, knowledge extraction |
+| **Change Digest** | explain changes, what changed, teach me, summarize commits, code walkthrough, digest changes, diff explanation |
 | **Pragmatic** | quick, fast, MVP, prototype, spike, POC, just make it work |
 | **Zero Trust** | security, auth, permission, sensitive, PII, payment, critical, production |
 | **Deliberate** | complex, risky, large, migration, breaking change, architectural |
@@ -120,10 +121,35 @@ Then, compose full profile:
 
 After displaying selection, **immediately execute**:
 
-1. **READ** each selected component file from this repository
-2. **ADOPT** the role, directives, and thinking process from those files
+### Step 0: Context Check
+> [!IMPORTANT]
+> **Check for `forge-context/` and load ONLY relevant files based on goal.**
+
+```
+IF forge-context/ DOES NOT EXIST:
+  → ASK: "No repository context found. Would you like me to analyze this repo first?"
+  → If yes: Route to Repository Learning goal
+  → If no: Proceed without context
+```
+
+### Context-to-Goal Mapping
+| Goal | Required Context |
+|------|------------------|
+| **Feature Request** | `domain.md`, `patterns.md`, `boundaries.md` |
+| **Bug Investigation** | `architecture.md`, `patterns.md`, `stack.md` |
+| **Code Review** | `patterns.md`, `stack.md` |
+| **Specification** | `domain.md`, `boundaries.md` |
+| **Retrospective** | `architecture.md`, `patterns.md` |
+| **Change Digest** | `patterns.md`, `domain.md` |
+| **Repository Learning** | None (creates context) |
+
+**Load only what's needed.** Don't bloat context with irrelevant files.
+
+### Steps 1-4: Execute
+1. **READ** selected component files + relevant context files
+2. **ADOPT** the role, directives, and thinking process
 3. **EXECUTE** the goal's workflow (phases, gates, outputs)
-4. **WRITE FILES** if the goal specifies file outputs (e.g., `resources/` for Repository Learning)
+4. **WRITE FILES** if the goal specifies file outputs
 
 **Do not stop at selection.** The profile is a behavior to adopt, not a document to display.
 
