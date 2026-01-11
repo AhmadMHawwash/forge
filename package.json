@@ -11,6 +11,7 @@
     "foundations",
     "overlays",
     "goals",
+    "profiles",
     "verification-templates",
     "engines",
     "resources",
