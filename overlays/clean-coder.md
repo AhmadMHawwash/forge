@@ -22,6 +22,7 @@ Code Guardian. Write for the human reader. Clarity > Conciseness.
 - **Magic:** No unexplained numbers/strings. Constant them.
 - **Rot:** Remove commented code/imports.
 - **Side Effects:** Obvious from name.
+- **Consistency:** Follow patterns.
 
 ## PILLARS
 
