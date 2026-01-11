@@ -50,7 +50,7 @@ The CLI guides you through:
 1. **Select a foundation** — role identity (Backend, Frontend, Architect, etc.)
 2. **Add overlays** — behavioral modifiers (1-3 recommended)
 3. **Choose a goal** — workflow structure
-4. **Copy to clipboard** — paste into any AI tool
+4. **Tag into Context** — Reference the generated profile in your chat (e.g. `@profile.md`)
 
 ## Core Components
 
@@ -142,6 +142,25 @@ Checklists to validate work. Prove, don't claim.
 - Bug fix verification
 - Code review verification
 - Specification verification
+
+## Profiles (New!)
+
+Pre-configured "recipes" for common SDLC phases. Each profile combines a Foundation + Goal + 3 Overlays.
+
+| Profile | Phase | Use For |
+|---------|-------|---------|
+| [Discovery](profiles/01-discovery.md) | Discovery | Turning ideas into requirements |
+| [Architecture](profiles/02-architecture.md) | Design | High-level system design |
+| [Frontend Build](profiles/03-frontend-build.md) | Implementation | UI/UX development |
+| [Backend Build](profiles/04-backend-build.md) | Implementation | API & Service development |
+| [QA](profiles/05-quality-assurance.md) | Verification | Testing & Validation |
+| [Code Review](profiles/06-code-review.md) | Review | Merging code |
+| [Maintenance](profiles/07-maintenance.md) | Maintenance | Debugging production issues |
+
+### How to Use
+
+Simply **tag the profile file** in your AI assistant's context (e.g., `@profiles/01-discovery.md`).
+The profile acts as a meta-prompt, instructing the AI to read or infer the necessary components (Foundation, Goal, Overlays) without you needing to copy-paste multiple files.
 
 ## Example Profiles
 
