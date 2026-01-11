@@ -17,12 +17,14 @@ Structured workflows for common development scenarios. Each goal provides a two-
 All goals follow a gate-based approach:
 
 ### 📋 Planning Phase
+
 - Understand the problem
 - Analyze constraints
 - Design the approach
 - **Gate:** Review before proceeding
 
 ### 🚀 Execution Phase
+
 - Implement the solution
 - Verify results
 - Document outcomes
@@ -30,6 +32,7 @@ All goals follow a gate-based approach:
 ## Goal Structure
 
 Each goal includes:
+
 - **ROLE** — Task-specific identity
 - **DIRECTIVES** — Workflow constraints
 - **THINKING PROCESS** — Step-by-step reasoning

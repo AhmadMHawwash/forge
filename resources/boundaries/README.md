@@ -12,6 +12,7 @@ Service interfaces and integration points documented from analyzed repositories.
 ## File Format
 
 Each boundary file should include:
+
 - **Source:** Which repository it was extracted from
 - **Triggers:** Keywords for prompt-router detection
 - **Interface:** API contracts with code references

@@ -2,7 +2,7 @@
 
 **F**oundations **O**verlays **R**esources **G**oals **E**ngines
 
-A composable prompt framework for AI-assisted development. FORGE gives you modular building blocks—role foundations, behavioral overlays, and structured goals—that combine into focused AI developer profiles.
+A composable prompt framework for AI-assisted development. FORGE gives you modular building blocks—role foundations, behavioral overlays, and structured goals—that combine into focused AI engineer profiles.
 
 ## The FORGE Approach
 
@@ -18,16 +18,18 @@ FORGE occupies a unique space in AI-assisted development:
 Profile = Foundation (Role) + Overlays (Behaviors) + Goals (Workflow)
 ```
 
-Think of it like character classes in games: start with a base class (Backend Developer), add traits (Security Specialist + Deep Investigator), and apply to a quest type (Bug Investigation).
+Think of it like character classes in games: start with a base class (Senior Backend Engineer), add traits (Security Specialist + Deep Investigator), and apply to a quest type (Bug Investigation).
 
 ## Why Composable Components?
 
 Most AI coding approaches optimize for one thing:
+
 - **Spec-driven tools** excel at requirements → tasks but assume you want planning overhead
 - **Multi-agent frameworks** excel at complex workflows but require orchestration setup
 - **Prompt libraries** offer templates but don't compose—you get conflicts and bloat
 
 **FORGE optimizes for flexibility:**
+
 - Grab the behaviors you need for *this* task
 - Skip what you don't need
 - Stay under 4K tokens
@@ -44,6 +46,7 @@ bunx forge-framework-cli@latest
 ```
 
 The CLI guides you through:
+
 1. **Select a foundation** — role identity (Backend, Frontend, Architect, etc.)
 2. **Add overlays** — behavioral modifiers (1-3 recommended)
 3. **Choose a goal** — workflow structure
@@ -52,29 +55,33 @@ The CLI guides you through:
 ## Core Components
 
 ### 🧭 Foundations (Who You Are)
+
 Role-based identity that defines expertise and instincts.
 
 | Foundation | Focus |
 |------------|-------|
 | Principal Architect | System design, boundaries, integration patterns |
-| Senior Frontend Developer | UI/UX, accessibility, client-side performance |
-| Senior Backend Developer | APIs, services, scalability, reliability |
+| Senior Frontend Engineer | UI/UX, accessibility, client-side performance |
+| Senior Backend Engineer | APIs, services, scalability, reliability |
 | Senior Database Specialist | Schema design, query optimization, migrations |
 | Senior QA Engineer | Test strategy, coverage, quality assurance |
 | Senior Product Manager | Requirements clarity, feasibility, specifications |
 
 ### ⚡ Overlays (How You Work)
+
 Behavioral modifiers that stack on any foundation. Categorized to prevent conflicts.
 
 **Execution Style** (pick ONE):
+
 | Overlay | Behavior |
 |---------|----------|
-| `pragmatic-implementer` | Ship fast, iterate, 80/20 rule |
+
 | `deliberate-planner` | Plan thoroughly, then execute |
 | `zero-trust` | Verify everything, continuous refinement |
 | `pressure-cooker` | Maximum effort under deadline pressure |
 
 **Investigation** (combinable):
+
 | Overlay | Behavior |
 |---------|----------|
 | `deep-investigator` | Find root causes, never settle for symptoms |
@@ -82,6 +89,7 @@ Behavioral modifiers that stack on any foundation. Categorized to prevent confli
 | `evidence-first` | Cite sources, no fabrication |
 
 **Thinking Patterns** (combinable):
+
 | Overlay | Behavior |
 |---------|----------|
 | `analytical-thinker` | Challenge assumptions, consider alternatives |
@@ -92,6 +100,7 @@ Behavioral modifiers that stack on any foundation. Categorized to prevent confli
 | `curious-explorer` | First-principles, challenge status quo |
 
 **Quality & Safety** (combinable):
+
 | Overlay | Behavior |
 |---------|----------|
 | `security-specialist` | Threat modeling, security by design |
@@ -101,17 +110,20 @@ Behavioral modifiers that stack on any foundation. Categorized to prevent confli
 | `production-readiness` | Observability, resilience, ops concerns |
 
 **Design & Perspective** (combinable):
+
 | Overlay | Behavior |
 |---------|----------|
 | `system-designer` | Component boundaries, contracts |
 | `user-advocate` | User experience, accessibility |
 
 **Communication**:
+
 | Overlay | Behavior |
 |---------|----------|
 | `concise-communicator` | Brief, scannable output |
 
 ### 🎯 Goals (What You're Doing)
+
 Structured workflows with two-phase approach: **Planning → Execution**.
 
 | Goal | Workflow |
@@ -123,6 +135,7 @@ Structured workflows with two-phase approach: **Planning → Execution**.
 | `retrospective` | Learn from completed work, actionable improvements |
 
 ### ✅ Verification Templates
+
 Checklists to validate work. Prove, don't claim.
 
 - Feature verification
@@ -133,27 +146,27 @@ Checklists to validate work. Prove, don't claim.
 ## Example Profiles
 
 **🐛 Security Bug Hunt**
+
 ```
-Backend Developer + Zero Trust + Security Specialist + Deep Investigator + Bug Investigation
+Senior Backend Engineer + Zero Trust + Security Specialist + Deep Investigator + Bug Investigation
 ```
+
 *AI verifies every assumption, thinks like an attacker, digs to root cause*
 
-**⚡ Rapid Prototyping**
-```
-Frontend Developer + Pragmatic Implementer + User Advocate + Feature Development
-```
-*AI ships fast while keeping UX in focus*
-
 **🏗️ Architecture Decision**
+
 ```
 Architect + Deliberate Planner + Strategic Thinker + System Designer + Code Review
 ```
+
 *AI evaluates long-term impact, documents tradeoffs, defines boundaries*
 
 **📋 Requirements Clarity**
+
 ```
 Product Manager + Analytical Thinker + Multi-Angle Analyzer + Specification
 ```
+
 *AI asks the right questions, considers all stakeholders, produces testable specs*
 
 ## Token-Efficient Design
@@ -166,6 +179,7 @@ FORGE prompts are optimized for LLM context windows:
 - **Cognitive triggers** — activate specific reasoning patterns
 
 Each component includes:
+
 - **Metadata headers** — `Triggers`, `Pairs with`, `Use for` for routing
 - Clear behavioral guidelines
 - Decision-making frameworks  
@@ -197,17 +211,20 @@ npx forge-framework-cli@latest
 ## Installation Options
 
 **No installation (recommended):**
+
 ```bash
 npx forge-framework-cli@latest
 ```
 
 **Global installation:**
+
 ```bash
 npm install -g forge-framework-cli
 forge
 ```
 
 **Local development:**
+
 ```bash
 git clone https://github.com/your-org/forge-framework
 cd forge-framework
@@ -240,7 +257,7 @@ FORGE improves through real-world usage:
 
 ---
 
-**Compose your AI developer. Ship better code.**
+**Compose your AI engineer. Ship better code.**
 
 ```bash
 npx forge-framework-cli@latest
