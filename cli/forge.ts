@@ -76,7 +76,7 @@ async function installFramework() {
   s.start("Installing framework files...");
 
   try {
-    const components = ["foundations", "overlays", "goals", "engines", "resources"];
+    const components = ["foundations", "overlays", "goals", "engines", "resources", "profiles"];
 
     for (const component of components) {
       s.message(`Copying ${component}...`);
