@@ -92,6 +92,8 @@ async function installFramework() {
     // Copy README as well
     await copyFile(join(ROOT_DIR, "README.md"), join(targetDir, "README.md"));
 
+    await ensureGitIgnore();
+
     s.stop(`Framework installed successfully to ${targetDir}`);
 
     p.note(
@@ -102,6 +104,29 @@ async function installFramework() {
   } catch (error) {
     s.stop("Installation failed");
     p.log.error(String(error));
+  }
+}
+
+async function ensureGitIgnore() {
+  const gitIgnorePath = join(process.cwd(), ".gitignore");
+  const ignoreEntry = ".forge";
+
+  try {
+    if (existsSync(gitIgnorePath)) {
+      const content = await readFile(gitIgnorePath, "utf-8");
+      const lines = content.split("\n").map(l => l.trim());
+
+      if (!lines.includes(ignoreEntry) && !lines.includes(`${ignoreEntry}/`)) {
+        const newContent = content.endsWith("\n") ? content : content + "\n";
+        await writeFile(gitIgnorePath, newContent + ignoreEntry + "\n");
+        p.log.success("Added .forge to .gitignore");
+      }
+    } else {
+      await writeFile(gitIgnorePath, ignoreEntry + "\n");
+      p.log.success("Created .gitignore and added .forge");
+    }
+  } catch (error) {
+    p.log.warning(`Failed to automatically update .gitignore. Please add '${ignoreEntry}' manually.`);
   }
 }
 
