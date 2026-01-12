@@ -121,14 +121,15 @@ async function scanDirectory(dirPath: string, subDir?: string): Promise<Componen
 /**
  * Discover all available FORGE components
  */
-export async function discoverComponents(): Promise<Components> {
+export async function discoverComponents(rootDir?: string): Promise<Components> {
+  const root = rootDir || ROOT_DIR;
   const [foundations, overlays, goals, stacks, domains, rootResources] = await Promise.all([
-    scanDirectory(join(ROOT_DIR, "foundations"), "roles"),
-    scanDirectory(join(ROOT_DIR, "overlays")),
-    scanDirectory(join(ROOT_DIR, "goals")),
-    scanDirectory(join(ROOT_DIR, "resources"), "stacks"),
-    scanDirectory(join(ROOT_DIR, "resources"), "domains"),
-    scanDirectory(join(ROOT_DIR, "resources")),
+    scanDirectory(join(root, "foundations"), "roles"),
+    scanDirectory(join(root, "overlays")),
+    scanDirectory(join(root, "goals")),
+    scanDirectory(join(root, "resources"), "stacks"),
+    scanDirectory(join(root, "resources"), "domains"),
+    scanDirectory(join(root, "resources")),
   ]);
 
   return {
@@ -154,7 +155,8 @@ export async function composeProfile(components: {
   overlays: Component[];
   goal?: Component;
   resources?: Component[];
-}): Promise<string> {
+}, rootDir?: string): Promise<string> {
+  const root = rootDir || ROOT_DIR;
   const parts: string[] = [];
 
   // Add header
@@ -164,7 +166,7 @@ export async function composeProfile(components: {
 
   // Add core doctrine first
   try {
-    const coreDoctrine = await readFile(join(ROOT_DIR, "foundations", "core-doctrine.md"), "utf-8");
+    const coreDoctrine = await readFile(join(root, "foundations", "core-doctrine.md"), "utf-8");
     parts.push(coreDoctrine);
     parts.push("\n---\n");
   } catch {

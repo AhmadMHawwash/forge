@@ -13,10 +13,12 @@ import { dirname, join } from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const forgeScript = join(__dirname, "forge.ts");
+const forgeScript = join(__dirname, "..", "dist", "forge.js");
+const tsconfigPath = join(__dirname, "..", "tsconfig.json");
 
-// Spawn bun with the forge script, filtering out tsconfig warnings from stderr
-const child = spawn("bun", [forgeScript], {
+// Spawn bun with the forge script, explicitly using our own tsconfig
+// to avoid issues with the user's local tsconfig (e.g. comments, trailing commas, or strict parsing)
+const child = spawn("bun", ["--tsconfig", tsconfigPath, forgeScript], {
   stdio: ["inherit", "inherit", "pipe"],
   env: { ...process.env },
 });

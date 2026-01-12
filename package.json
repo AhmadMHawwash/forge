@@ -15,12 +15,14 @@
     "verification-templates",
     "engines",
     "resources",
-    "README.md"
+    "README.md",
+    "tsconfig.json",
+    "dist"
   ],
   "scripts": {
     "forge": "bun run cli/forge.ts",
-    "build": "bun build cli/forge.ts --compile --outfile bin/forge",
-    "prepublishOnly": "echo 'Run bun install before publishing'"
+    "build": "bun build cli/forge.ts --outfile dist/forge.js --target bun",
+    "prepublishOnly": "bun run build"
   },
   "keywords": [
     "ai",

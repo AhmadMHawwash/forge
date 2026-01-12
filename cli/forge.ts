@@ -110,7 +110,7 @@ async function main() {
 
   p.intro("🔥 FORGE - Interactive Prompt Router");
 
-  const components = await discoverComponents();
+  const components = await discoverComponents(ROOT_DIR);
   const savedProfiles = await loadSavedProfiles();
 
   // Main menu
@@ -322,7 +322,7 @@ async function createProfile(components: Awaited<ReturnType<typeof discoverCompo
     overlays: overlays,
     goal: goal as Component | undefined,
     resources: resources,
-  });
+  }, ROOT_DIR);
 
   s.stop("Profile composed!");
 
