@@ -14,7 +14,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const forgeScript = join(__dirname, "..", "dist", "forge.js");
-const tsconfigPath = join(__dirname, "..", "tsconfig.json");
 
 import { existsSync } from "fs";
 
@@ -23,9 +22,8 @@ if (!existsSync(forgeScript)) {
   process.exit(1);
 }
 
-// Spawn bun with the forge script, explicitly using our own tsconfig
-// to avoid issues with the user's local tsconfig (e.g. comments, trailing commas, or strict parsing)
-const child = spawn("bun", ["--tsconfig", tsconfigPath, forgeScript], {
+// Spawn bun with the pre-bundled forge script
+const child = spawn("bun", [forgeScript], {
   stdio: "inherit",
   env: { ...process.env },
 });
