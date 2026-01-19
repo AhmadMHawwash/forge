@@ -16,10 +16,17 @@ const __dirname = dirname(__filename);
 const forgeScript = join(__dirname, "..", "dist", "forge.js");
 const tsconfigPath = join(__dirname, "..", "tsconfig.json");
 
+import { existsSync } from "fs";
+
+if (!existsSync(forgeScript)) {
+  console.error("Error: dist/forge.js not found at:", forgeScript);
+  process.exit(1);
+}
+
 // Spawn bun with the forge script, explicitly using our own tsconfig
 // to avoid issues with the user's local tsconfig (e.g. comments, trailing commas, or strict parsing)
 const child = spawn("bun", ["--tsconfig", tsconfigPath, forgeScript], {
-  stdio: ["inherit", "inherit", "pipe"],
+  stdio: "inherit",
   env: { ...process.env },
 });
 
@@ -33,20 +40,6 @@ child.on("error", (err) => {
     console.error("Failed to start FORGE:", err.message);
   }
   process.exit(1);
-});
-
-child.stderr.on("data", (data) => {
-  const output = data.toString();
-  // Filter out tsconfig path warnings
-  const lines = output.split("\n").filter((line) => {
-    return !line.includes("Non-relative path") &&
-      !line.includes('did you forget a leading "./"') &&
-      !line.includes("is not allowed when");
-  });
-  const filtered = lines.join("\n");
-  if (filtered.trim()) {
-    process.stderr.write(filtered);
-  }
 });
 
 child.on("exit", (code) => {
