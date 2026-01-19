@@ -23,8 +23,6 @@ export interface Components {
   resources: Component[];
 }
 
-const ROOT_DIR = join(import.meta.dir, "..", "..");
-
 /**
  * Extract metadata from a markdown file's front matter or first lines
  */
@@ -121,8 +119,8 @@ async function scanDirectory(dirPath: string, subDir?: string): Promise<Componen
 /**
  * Discover all available FORGE components
  */
-export async function discoverComponents(rootDir?: string): Promise<Components> {
-  const root = rootDir || ROOT_DIR;
+export async function discoverComponents(rootDir: string): Promise<Components> {
+  const root = rootDir;
   const [foundations, overlays, goals, stacks, domains, rootResources] = await Promise.all([
     scanDirectory(join(root, "foundations"), "roles"),
     scanDirectory(join(root, "overlays")),
@@ -155,8 +153,8 @@ export async function composeProfile(components: {
   overlays: Component[];
   goal?: Component;
   resources?: Component[];
-}, rootDir?: string): Promise<string> {
-  const root = rootDir || ROOT_DIR;
+}, rootDir: string): Promise<string> {
+  const root = rootDir;
   const parts: string[] = [];
 
   // Add header
