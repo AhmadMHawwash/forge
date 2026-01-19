@@ -23,6 +23,18 @@ const child = spawn("bun", ["--tsconfig", tsconfigPath, forgeScript], {
   env: { ...process.env },
 });
 
+child.on("error", (err) => {
+  if (err.code === "ENOENT") {
+    console.error("\x1b[31mError: Bun is required but not installed.\x1b[0m");
+    console.error("\nInstall Bun with:");
+    console.error("  curl -fsSL https://bun.sh/install | bash");
+    console.error("\nOr visit: https://bun.sh/docs/installation");
+  } else {
+    console.error("Failed to start FORGE:", err.message);
+  }
+  process.exit(1);
+});
+
 child.stderr.on("data", (data) => {
   const output = data.toString();
   // Filter out tsconfig path warnings
