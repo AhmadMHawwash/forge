@@ -4,6 +4,7 @@
   "description": "Interactive CLI for FORGE - The composable AI coding framework",
   "type": "module",
   "bin": {
+    "forge-framework-cli": "./cli/wrapper.mjs",
     "forge": "./cli/wrapper.mjs"
   },
   "files": [
@@ -12,7 +13,6 @@
     "overlays",
     "goals",
     "profiles",
-    "verification-templates",
     "engines",
     "resources",
     "README.md",
