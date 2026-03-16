@@ -10,9 +10,7 @@ Overlays are categorized to prevent conflicts. Choose **one** execution style, c
 
 | Overlay | Behavior |
 |---------|----------|
-
 | [deliberate-planner](deliberate-planner.md) | Plan thoroughly, then execute |
-| [zero-trust](zero-trust.md) | Verify everything, refine continuously |
 | [pressure-cooker](pressure-cooker.md) | Maximum effort under deadline |
 
 ### Investigation (Combinable)
@@ -37,6 +35,7 @@ Overlays are categorized to prevent conflicts. Choose **one** execution style, c
 
 | Overlay | Behavior |
 |---------|----------|
+| [zero-trust](zero-trust.md) | Verify everything, refine continuously |
 | [security-specialist](security-specialist.md) | Threat modeling |
 | [performance-optimizer](performance-optimizer.md) | Measure, then optimize |
 | [quality-advocate](quality-advocate.md) | Testing strategy |
@@ -46,18 +45,18 @@ Overlays are categorized to prevent conflicts. Choose **one** execution style, c
 
 | Overlay | Behavior |
 |---------|----------|
-| [system-designer](system-designer.md) | Component boundaries |
 | [user-advocate](user-advocate.md) | UX, accessibility |
 
-### Communication
+### Code Discipline (Combinable)
 
 | Overlay | Behavior |
 |---------|----------|
-| [concise-communicator](concise-communicator.md) | Brief, scannable output |
+| [anti-slop](anti-slop.md) | Prevent formulaic AI output, enforce craft |
 
 ## Conflict Rules
 
-- **Execution styles conflict** — Don't combine deliberate + zero-trust
+- **Execution styles conflict** — Don't combine `deliberate-planner` + `pressure-cooker`
+- **`pressure-cooker` also conflicts with** — `curious-explorer`, `analytical-thinker`
 - **Everything else combines** — Stack freely
 
 ## Overlay Structure

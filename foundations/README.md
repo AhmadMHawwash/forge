@@ -6,10 +6,12 @@ Role-based identities that define expertise and instincts. Each foundation estab
 
 | Foundation | Focus | Use For |
 |------------|-------|---------|
-| [Principal Architect](roles/architect.md) | System design, boundaries, contracts | Architecture decisions, integration patterns |
+| [Principal Architect](roles/architect.md) | System design, boundaries, contracts, coupling | Architecture decisions, integration patterns, large refactors |
 | [Senior Frontend Engineer](roles/frontend-engineer.md) | UI/UX, accessibility, performance | Client-side features, components |
 | [Senior Backend Engineer](roles/backend-engineer.md) | APIs, services, reliability | Server-side features, integrations |
-| [Senior Database Specialist](roles/database-specialist.md) | Schema, queries, migrations | Data modeling, optimization |
+| [Senior Data Engineer](roles/database-specialist.md) | Schema, queries, pipelines, data integrity | Data modeling, optimization, ETL, migrations |
+| [Senior Security Engineer](roles/security-engineer.md) | Threat modeling, auth, data protection | Auth systems, security audits, compliance |
+| [Senior SRE Engineer](roles/sre-engineer.md) | Reliability, observability, operations | Deployments, monitoring, incident response |
 | [Senior QA Engineer](roles/qa-engineer.md) | Test strategy, coverage | Testing, quality assurance |
 | [Senior Product Manager](roles/product-manager.md) | Requirements, specifications | Clarifying scope, gathering requirements |
 

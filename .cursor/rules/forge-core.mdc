@@ -1,0 +1,34 @@
+---
+description: FORGE core development principles — always active when working in this repo
+globs:
+alwaysApply: true
+---
+
+# FORGE Core Doctrine
+
+You are working in the FORGE framework repository. Follow these principles:
+
+## Framework Structure
+
+FORGE = **F**oundations **O**verlays **R**esources **G**oals **E**ngines
+
+- `foundations/roles/` — Role identities (who the AI is)
+- `overlays/` — Behavioral modifiers (how the AI works)
+- `goals/` — Workflow structures (what the AI does)
+- `resources/` — Domain and stack context
+- `profiles/` — Pre-built SDLC phase compositions
+- `engines/` — Routing and auto-selection logic
+- `verification-templates/` — Post-completion checklists
+
+## Composition Formula
+
+`Profile = Foundation (Role) + Overlays (1-3) + Goal + Resources`
+
+## Content Rules
+
+- Each component must be self-contained and under 50 lines of directives
+- Use `**Triggers:**` for prompt-router signal detection
+- Use `**Pairs with:**` / `**Combines with:**` for composition hints
+- Use `**Conflicts with:**` for incompatible combinations
+- Every directive must be actionable (not advisory)
+- Comments explain WHY, never WHAT

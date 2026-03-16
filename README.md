@@ -60,10 +60,12 @@ Role-based identity that defines expertise and instincts.
 
 | Foundation | Focus |
 |------------|-------|
-| Principal Architect | System design, boundaries, integration patterns |
+| Principal Architect | System design, boundaries, contracts, coupling |
 | Senior Frontend Engineer | UI/UX, accessibility, client-side performance |
 | Senior Backend Engineer | APIs, services, scalability, reliability |
-| Senior Database Specialist | Schema design, query optimization, migrations |
+| Senior Data Engineer | Schema design, pipelines, query optimization, data integrity |
+| Senior Security Engineer | Threat modeling, auth, data protection, compliance |
+| Senior SRE Engineer | Reliability, observability, deployments, incident response |
 | Senior QA Engineer | Test strategy, coverage, quality assurance |
 | Senior Product Manager | Requirements clarity, feasibility, specifications |
 
@@ -113,14 +115,13 @@ Behavioral modifiers that stack on any foundation. Categorized to prevent confli
 
 | Overlay | Behavior |
 |---------|----------|
-| `system-designer` | Component boundaries, contracts |
-| `user-advocate` | User experience, accessibility |
+| `user-advocate` | User experience, accessibility, conversion |
 
-**Communication**:
+**Code Discipline** (combinable):
 
 | Overlay | Behavior |
 |---------|----------|
-| `concise-communicator` | Brief, scannable output |
+| `anti-slop` | Prevent formulaic AI output, enforce craft |
 
 ### 🎯 Goals (What You're Doing)
 
@@ -128,11 +129,22 @@ Structured workflows with two-phase approach: **Planning → Execution**.
 
 | Goal | Workflow |
 |------|----------|
+| `full-cycle` | Complete SDLC from requirements through committed code (9 phases) |
 | `specification` | Turn vague ideas into clear, testable specs |
 | `feature-request` | Build features systematically with risk awareness |
 | `bug-investigation` | Find root causes, fix with regression protection |
+| `find-online` | Research solutions online, grounded in project context |
 | `code-review` | Thorough, prioritized, educational feedback |
+| `refactor` | Detect code smells, apply named refactoring patterns |
+| `tdd` | Test-driven development with red-green-refactor cycles |
+| `verify` | Multi-layer verification (6 layers) before shipping |
+| `pre-mortem` | Identify failure modes before shipping |
+| `smart-commit` | Structured git commit messages from staged changes |
+| `documentation` | Write docs, ADRs, API documentation |
 | `retrospective` | Learn from completed work, actionable improvements |
+| `project-init` | Initialize project context for persistent multi-session work |
+| `session-handoff` | Pause/resume work across AI sessions with zero context loss |
+| `next` | Progress navigator — find plan, show progress, suggest and load next goal |
 
 ### ✅ Verification Templates
 
@@ -175,7 +187,7 @@ Senior Backend Engineer + Zero Trust + Security Specialist + Deep Investigator +
 **🏗️ Architecture Decision**
 
 ```
-Architect + Deliberate Planner + Strategic Thinker + System Designer + Code Review
+Architect + Deliberate Planner + Strategic Thinker + Layered Thinking + Code Review
 ```
 
 *AI evaluates long-term impact, documents tradeoffs, defines boundaries*
@@ -204,6 +216,35 @@ Each component includes:
 - Decision-making frameworks  
 - Output format templates
 - Quality gates
+
+## Persistent Context & Session Management
+
+FORGE supports multi-session development through lightweight state protocols:
+
+**Project Initialization** (`project-init`):
+- Scans existing codebases or gathers requirements for new ones
+- Generates `forge-context/` with PROJECT, STATE, ROADMAP, and codebase knowledge
+- Templates in `resources/templates/` provide starting structures
+
+**Session Handoff** (`session-handoff`):
+- Captures full work state in `.continue-here.md` when pausing
+- Updates `forge-context/STATE.md` with current progress
+- On resume: loads project + session context, presents status, recommends next action
+
+**State Tracking** (built into `full-cycle`):
+- STATE.md updated after each phase gate
+- Progress routing: "what's next?" after every completed phase
+- Works across sessions via `session-handoff`
+
+**Debug Sessions** (built into `bug-investigation`):
+- Persistent debug logs in `forge-context/debug/`
+- Hypothesis tracking with evidence
+- Timeline of investigation steps survives session resets
+
+**Interactive UAT** (built into `verify`):
+- Walk through acceptance criteria with the user
+- Capture pass/fail with evidence per criterion
+- Handle failures as fix tasks or known limitations
 
 ## Prompt Engineering Foundation
 
@@ -261,8 +302,26 @@ forge-framework/
 ├── goals/                # Workflow structures
 ├── verification-templates/  # Completion checklists
 ├── resources/            # Domain & stack context
+│   └── templates/        # PROJECT, STATE, ROADMAP templates
 ├── engines/              # Profile router for automatic selection
-└── recipes/              # Pre-built profile combinations
+└── profiles/             # Pre-built profile combinations
+```
+
+### Project Context (Generated)
+
+When using `project-init`, FORGE creates a `forge-context/` directory in your project:
+
+```
+your-project/
+└── forge-context/
+    ├── PROJECT.md        # Identity, purpose, constraints
+    ├── STATE.md          # Current progress, blockers
+    ├── ROADMAP.md        # Phased plan with success criteria
+    ├── stack.md          # Tech stack, dependencies
+    ├── architecture.md   # System structure, data flow
+    ├── patterns.md       # Code conventions
+    ├── domain.md         # Business terms, entities
+    └── boundaries.md     # Service interfaces
 ```
 
 ## Contributing

@@ -1,0 +1,37 @@
+---
+description: Auto-select FORGE components based on file and task context
+globs: "**/*.{ts,tsx,js,jsx,py,go,rs,java,sql,md}"
+---
+
+# FORGE Context-Aware Routing
+
+When working on code, automatically select FORGE components. Follow `engines/prompt-router.md` for the full protocol. Below are quick-select rules for common file contexts.
+
+## File-Type → Foundation
+
+- **Frontend** (`.tsx`, `.jsx`, CSS, `components/`, `pages/`, `app/`) → `foundations/roles/frontend-engineer.md`
+- **Backend** (`routes/`, `controllers/`, `services/`, `api/`, `.server.`) → `foundations/roles/backend-engineer.md`
+- **Data** (`.sql`, `migrations/`, `schema/`, `prisma/`, `models/`) → `foundations/roles/database-specialist.md`
+- **Security** (`auth/`, `middleware/`, `permissions/`, `rbac/`) → `foundations/roles/security-engineer.md`
+- **Infrastructure** (`Dockerfile`, `k8s/`, `.github/workflows/`, `terraform/`) → `foundations/roles/sre-engineer.md`
+- **Tests** (`*.test.*`, `*.spec.*`, `__tests__/`, `e2e/`) → `foundations/roles/qa-engineer.md`
+- **Docs** (`*.md`, `docs/`, `ADR/`) → Use `goals/documentation.md` directly
+
+## Task → Goal + Overlay
+
+- **Bug fix** → `goals/bug-investigation.md` + `overlays/deep-investigator.md`
+- **New feature** → `goals/feature-request.md` + `overlays/deliberate-planner.md`
+- **Code review** → `goals/code-review.md` + `overlays/honest-thought-challenger.md`
+- **Refactor** → `goals/refactor.md` + `overlays/clean-coder.md`
+- **Testing** → `goals/tdd.md` + `overlays/quality-advocate.md`
+- **Shipping** → `goals/verify.md` + `overlays/zero-trust.md`
+- **Continue work / what's next / progress** → `goals/next.md`
+
+## Context Loading
+
+If `forge-context/` exists in the project root, load relevant context files per the goal mapping in `engines/prompt-router.md` Step 2E.
+
+## Always Active
+
+- `foundations/core-doctrine.md` principles apply to all AI-generated code
+- `overlays/anti-slop.md` directives apply to all output

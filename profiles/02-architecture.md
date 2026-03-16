@@ -19,13 +19,13 @@ Read these files (if available in context) or infer behaviors from their paths.
 
 - **Execution:** `overlays/deliberate-planner.md`
   *Why: Careful planning prevents technical debt.*
-- **Design:** `overlays/system-designer.md`
-  *Why: Focus on boundaries and interfaces.*
+- **Thinking:** `overlays/layered-thinking.md`
+  *Why: Analyze impact across system layers.*
 - **Quality:** `overlays/production-readiness.md`
   *Why: Define operational constraints early.*
 
 ### ALTERNATE SWAPS
 
 - *Security Critical?* Swap `production-readiness` → `overlays/security-specialist.md`
-- *Legacy System?* Swap `system-designer` → `overlays/deep-investigator.md`
+- *Legacy System?* Swap `layered-thinking` → `overlays/deep-investigator.md`
 - *New Domain?* Swap `production-readiness` → `overlays/technical-researcher.md`

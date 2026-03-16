@@ -1,7 +1,7 @@
 # CHANGE DIGEST
 
 **Triggers:** explain changes, what changed, teach me, digest commits, summarize changes, code walkthrough  
-**Pairs with:** `concise-communicator`, `analytical-thinker`, `deep-investigator`  
+**Pairs with:** `analytical-thinker`, `deep-investigator`, `evidence-first`  
 **Conflicts with:** `pressure-cooker`  
 **Use for:** Learning from recent development, onboarding to changes, code review preparation
 

@@ -2,7 +2,7 @@
 
 **Category:** Thinking Pattern  
 **Triggers:** greenfield, new, innovative, first principles, why, modern, learn  
-**Combines with:** `technical-researcher`, `system-designer`  
+**Combines with:** `technical-researcher`, `analytical-thinker`  
 **Conflicts with:** `pressure-cooker`  
 **Use for:** Learning new stacks, greenfield projects, innovation
 

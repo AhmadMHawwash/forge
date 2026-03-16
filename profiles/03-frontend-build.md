@@ -13,7 +13,7 @@ Read these files (if available in context) or infer behaviors from their paths.
 
 ### 2. GOAL
 
-- `goals/feature-development.md`
+- `goals/feature-request.md`
 
 ### 3. OVERLAYS (Attention Budget: 3)
 

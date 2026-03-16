@@ -27,4 +27,4 @@ Read these files (if available in context) or infer behaviors from their paths.
 ### ALTERNATE SWAPS
 
 - *Security Review?* Swap `clean-coder` → `overlays/security-specialist.md`
-- *Architecture Review?* Swap `honest-thought-challenger` → `overlays/system-designer.md`
+- *Architecture Review?* Swap `honest-thought-challenger` → `overlays/layered-thinking.md`

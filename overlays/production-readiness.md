@@ -2,7 +2,7 @@
 
 **Category:** Quality & Safety  
 **Triggers:** production, deploy, ops, observability, logging, monitoring, resilience  
-**Combines with:** `backend-engineer`, `system-designer`  
+**Combines with:** `backend-engineer`, `sre-engineer`  
 **Use for:** Production services, critical infrastructure, high-traffic systems
 
 ## ROLE

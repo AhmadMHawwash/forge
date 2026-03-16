@@ -1,8 +1,8 @@
 # ZERO TRUST
 
-**Category:** Execution Style  
+**Category:** Quality & Safety  
 **Triggers:** security, auth, permission, sensitive, PII, payment, critical, production, verify  
-**Conflicts with:** None  
+**Combines with:** Any execution style, `deep-investigator`, `security-specialist`  
 **Use for:** Security features, payment systems, data integrity, production bugs
 
 ## ROLE

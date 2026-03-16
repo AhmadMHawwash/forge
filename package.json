@@ -15,14 +15,16 @@
     "profiles",
     "engines",
     "resources",
+    "verification-templates",
     "README.md",
     "tsconfig.json",
     "dist"
   ],
   "scripts": {
     "forge": "bun run cli/forge.ts",
+    "validate": "bun run cli/validate.ts",
     "build": "bun build cli/forge.ts --outfile dist/forge.js --target bun",
-    "prepublishOnly": "bun run build"
+    "prepublishOnly": "bun run validate && bun run build"
   },
   "keywords": [
     "ai",

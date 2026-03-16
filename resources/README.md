@@ -25,6 +25,16 @@ Repository-specific knowledge extracted using the `repository-learning` goal. Ea
 |----------|----------|
 | *(Add entries as repositories are analyzed)* | |
 
+### Templates
+
+Markdown templates for the `forge-context/` directory. Used by `goals/project-init.md`.
+
+| Template | Purpose |
+|----------|---------|
+| [PROJECT.md](templates/PROJECT.md) | Project identity, constraints, principles |
+| [STATE.md](templates/STATE.md) | Current progress, blockers, next actions |
+| [ROADMAP.md](templates/ROADMAP.md) | Phased plan with deliverables and criteria |
+
 ### Boundaries
 
 Service interfaces and integration points documented from analyzed repositories.
